@@ -31,6 +31,16 @@ def sync(src, dst):
     return "copied"
 
 
+def write_if_changed(path, text):
+    """write only when the content differs: an unchanged file keeps its mtime, so renders keyed on it stay current"""
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            if f.read() == text:
+                return
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("slug")
@@ -92,8 +102,7 @@ def main():
     keep = set()
     os.makedirs(out, exist_ok=True)
     sb_out = os.path.join(out, "storyboard.json")
-    with open(sb_out, "w") as f:  # written (not copied): carries the SFX peak offsets added above
-        json.dump(sb, f, indent=1)
+    write_if_changed(sb_out, json.dumps(sb, indent=1))  # written (not copied): carries the SFX peak offsets added above
     keep.add(os.path.abspath(sb_out))
     for s, d in jobs:
         keep.add(os.path.abspath(d))
@@ -102,8 +111,7 @@ def main():
                 "files": sorted(os.path.relpath(d, out) for _, d in jobs)}
     mp = os.path.join(out, "manifest.json")
     keep.add(os.path.abspath(mp))
-    with open(mp, "w") as f:
-        json.dump(manifest, f, indent=1)
+    write_if_changed(mp, json.dumps(manifest, indent=1))
     removed = 0
     if a.clean:
         for dp, _, fs in os.walk(out):

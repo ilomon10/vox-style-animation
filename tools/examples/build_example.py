@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -76,7 +77,7 @@ def main() -> int:
         starts = {}
         for line in table.splitlines():
             parts = line.split()
-            if len(parts) >= 4 and parts[0] in {s["id"] for s in sb["scenes"]} and parts[2].isdigit():
+            if len(parts) >= 4 and parts[0] in {s["id"] for s in sb["scenes"]} and re.fullmatch(r"-?\d+", parts[2]):
                 starts[parts[0]] = int(parts[2])
         for sid, f in starts.items():
             frame = f + int(1.2 * sb.get("fps", 25))
