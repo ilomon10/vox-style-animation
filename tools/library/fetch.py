@@ -78,7 +78,10 @@ def select(cat: dict, a) -> list[dict]:
             return
         seen.add(x["id"])
         b = x.get("build", {})
-        for n in b.get("needs", []) + (b.get("rebuild") or {}).get("needs", []):
+        # a release item's rebuild inputs matter only for a local rebuild: queued with --rebuild, else fetched by
+        # build_release() if the release download fails
+        later = b.get("from") == "release" and not a.rebuild
+        for n in b.get("needs", []) + ([] if later else (b.get("rebuild") or {}).get("needs", [])):
             if n in ids:
                 visit(ids[n])
         order.append(x)
@@ -166,6 +169,14 @@ def build_release(x: dict, cat: dict, rebuild: bool) -> str:
     rb = b.get("rebuild")
     if not rb:
         raise RuntimeError("no local rebuild recipe")
+    ids = L.by_id(cat)
+    for n in rb.get("needs", []):  # the rebuild's inputs (the source picture), when they are not on disk yet
+        dep = ids.get(n)
+        if dep and not state(dep, False)[0]:
+            if dep.get("build", {}).get("from", "download") == "download":
+                print(f"  get     {dep['path']}  (input of the rebuild: {build_download(dep)})")
+            else:
+                run_cmd(dep["build"]["cmd"], dep["id"])
     run_cmd(rb["cmd"], x["id"])
     ok, how = L.verify(L.local(x), x.get("file"))
     return f"rebuilt locally ({how})" if ok else f"rebuilt locally (differs from the catalog: {how}; fine for use)"
