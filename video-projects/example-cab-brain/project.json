@@ -1,0 +1,12 @@
+{
+  "slug": "example-cab-brain",
+  "script": "script.md",
+  "fps": 24.0,
+  "idea": "How learning London changes a cab driver's brain",
+  "vo": "video-projects/example-cab-brain/audio/vo_scratch.wav",
+  "voSource": "scratch",
+  "voice": "am_michael",
+  "cues": "public/audio/example-cab-brain/vo.cues.json",
+  "vo_static": "audio/example-cab-brain/vo.wav",
+  "cues_name": "example-cab-brain/vo"
+}

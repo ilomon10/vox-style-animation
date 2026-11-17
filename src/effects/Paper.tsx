@@ -42,7 +42,8 @@ const SPEC: Record<PaperKind, Spec> = {
   light: { file: "paper_cool.jpg", color: "#EAEAEA", meanLum: 0.84 }, // flat, texture layer skipped
   lightGrid: { file: "paper_cool.jpg", color: "#EAEAEA", meanLum: 0.84 },
   lightGhost: { file: "paper_cool.jpg", color: "#E9E9E9", meanLum: 0.84 },
-  crumpled: { file: "paper_crumpled.jpg", color: "#C9C0B5", meanLum: 0.74 }, // pre-vignette; reads #BCB5A9 mid-frame (highlight@1.2)
+  crumpled: { file: "paper_crumpled.jpg", color: "#C9C0B5", meanLum: 0.74 },
+  watercolour: { file: "paper_watercolour.jpg", color: "#EFEFEF", meanLum: 0.92 }, // tinted per section with `color` // pre-vignette; reads #BCB5A9 mid-frame (highlight@1.2)
 };
 
 // Porsche S110 grid paper: pitch 23 px@720 → 35 px, lines rgba(90,80,70,.12) (porsche-part3-stills.md §6)

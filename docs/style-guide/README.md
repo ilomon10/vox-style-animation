@@ -16,7 +16,7 @@ This guide tells you (a person or an AI agent) **exactly** how to build explaine
 
 You then record the voice-over, and the edit re-times itself to your recording ([14](14-production-pipeline.md)).
 
-## The six looks
+## The seven looks
 
 | Style id | Reference | One-line description | Ground | Accent | fps |
 |---|---|---|---|---|---|
@@ -25,6 +25,7 @@ You then record the voice-over, and the edit re-times itself to your recording (
 | `darkCollage` | Dracula collage (Behance), 56 s | B&W engraving cut-outs on scratched black card, theatrical tableaux, film weave | black card `#2B2B2B` | crimson `#8A0315` | 24 (graphics 12) |
 | `voxExplainer` | Vox "Epigenetics" excerpt, 51 s | a researcher's desk from above: dotted notebook paper, prints, tape labels, sticky notes, pencil annotations | dotted paper `#D6D3D3` | sticky yellow `#F3DA44` | 24 (on twos) |
 | `voxEditorial` | "The Highlight by Vox", 16 s | a single newspaper sheet: big serif title, mustard dry-brush highlighter, clippings | crumpled paper `#B3ACA0` | mustard `#BB923A` | 24 (on ones, long holds) |
+| `voxScrapbook` | a Vox brand-studio explainer on the brain and travel, 256 s **with sound** | **the scientific scrapbook**: watercolour paper in one colour per chapter, torn scraps and title strips, engravings multiplied onto the paper, specimen plates with "fig." labels and a magnifier, sheets that slide in from a corner | watercolour paper `#EFEFEF` (pink, mint, blue, coral per chapter) | none (pastel data marks) | 24 (graphics 12) |
 | `voxEarworm` | Vox *Earworm* "Quiet Storm", 154 s **with sound** | the *Earworm* series look: near-black collage of B&W cut-outs with torn white borders, condensed caps, karaoke captions, audio visualizers, every cut timed to the voice and music | black paper `#0A0A0A` | periwinkle `#6B74DE` | 25 (graphics 12) |
 
 **Choosing one**
@@ -33,6 +34,7 @@ You then record the voice-over, and the edit re-times itself to your recording (
 - Science or policy explainers with diagrams, data and evidence → `voxExplainer`.
 - A title sequence, a newsletter or an article read-along → `voxEditorial`.
 - Politics, science, data or policy explainers in today's Vox look, or a viewer's question → `voxLight` (it gets the `standard` sync profile: doc 11 §10).
+- Science stories told as a sequence of studies, or anything chaptered with diagrams of a thing's parts → `voxScrapbook` (the `scrapbook` profile; doc 15).
 - Music or culture stories, anything built around archival audio → `voxEarworm`. Its sound-sync rules (the `earworm` profile) are the most tightly measured; the `standard` profile is what the other Vox series do.
 
 Mixing is allowed per section: wrap each section in its own `<StyleProvider style=…>`.
@@ -79,6 +81,7 @@ Mixing is allowed per section: wrap each section in its own `<StyleProvider styl
 | 12 | [12-vox-earworm.md](12-vox-earworm.md) | the `voxEarworm` look: colour, type, layout, motion, transitions with sound, recipes, the asset library cut from the episode |
 | 13 | [13-story-to-screen.md](13-story-to-screen.md) | **idea → script → shots**: the Vox story arc, targets per minute, voice-over formulas, script markup, claim → recipe lookup, asset and music plans, a worked 60 s example |
 | 14 | [14-production-pipeline.md](14-production-pipeline.md) | **the pipeline**: commands from idea to final render, `storyboard.json` (word anchors, no frames, sync profiles), the recipes, publishing, re-timing to your own recording, licensing |
+| 15 | [15-vox-scrapbook.md](15-vox-scrapbook.md) | the `voxScrapbook` look: devices with their measured timing, colour, type, layout, finish, sound and what is not built yet |
 | — | [../../analysis/vox-framework-coverage.md](../../analysis/vox-framework-coverage.md) | **cross-series coverage**: how Vox builds videos across six official videos (2019–26), the device frequency and coverage matrices, rule conflicts, ranked gaps and build specs |
 
 ## Quick start

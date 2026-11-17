@@ -1,0 +1,486 @@
+{
+ "$schema": "../../src/studio/storyboard.schema.json",
+ "version": 1,
+ "title": "How learning London changes a cab driver's brain (framework example: the scrapbook look)",
+ "fps": 24,
+ "look": "voxScrapbook",
+ "vo": {
+  "gainDb": 0
+ },
+ "music": [
+  {
+   "id": "bed",
+   "src": "kit:assets/library/music/light/music-carefree.wav",
+   "kind": "bed",
+   "in": {
+    "sec": 0
+   },
+   "out": {
+    "end": true
+   },
+   "gainDb": -11,
+   "fadeInSec": 0.7,
+   "fadeOutSec": 0.6,
+   "ride": false
+  }
+ ],
+ "sfx": [
+  {
+   "src": "stamp_thud",
+   "at": {
+    "word": "Sixteen",
+    "offset": 4
+   },
+   "gainDb": -8,
+   "peak": true
+  },
+  {
+   "src": "chime",
+   "at": {
+    "word": "Learning",
+    "nth": 2,
+    "offset": 2
+   },
+   "gainDb": -16,
+   "peak": true
+  }
+ ],
+ "scenes": [
+  {
+   "id": "ch1",
+   "recipe": "ChapterCard",
+   "start": {
+    "word": "To"
+   },
+   "props": {
+    "number": "One",
+    "title": "The test",
+    "ground": "pink",
+    "pieces": [
+     {
+      "src": "kit:assets/library/engravings/cities/engr-charing-cross-trafalgar-square.jpg",
+      "x": 930,
+      "y": 40,
+      "w": 930,
+      "h": 672,
+      "kind": "engraving"
+     },
+     {
+      "src": "kit:assets/library/photos/cities/photo-fine-day-london-1890s.jpg",
+      "x": 1250,
+      "y": 600,
+      "w": 560,
+      "h": 456,
+      "rotate": -3,
+      "kind": "print"
+     }
+    ]
+   },
+   "events": [
+    {
+     "id": "title",
+     "at": {
+      "word": "test",
+      "kind": "title"
+     }
+    }
+   ],
+   "note": "block torn-paper-chapter-card; slot=hook claim=fact (RESEARCH 1)"
+  },
+  {
+   "id": "streets",
+   "recipe": "PaperStat",
+   "start": {
+    "word": "It"
+   },
+   "transitionIn": {
+    "kind": "paperSlide",
+    "variant": "in",
+    "corner": "bl"
+   },
+   "props": {
+    "value": "25,000",
+    "unit": "streets",
+    "context": "within six miles of Charing Cross",
+    "payoff": "BY HEART",
+    "image": "kit:assets/library/maps/cities/map-london-bacon-1890.jpg"
+   },
+   "events": [
+    {
+     "id": "value",
+     "at": {
+      "word": "twenty-five",
+      "kind": "object"
+     }
+    },
+    {
+     "id": "context",
+     "at": {
+      "word": "within",
+      "kind": "object"
+     }
+    },
+    {
+     "id": "payoff",
+     "at": {
+      "word": "miles",
+      "kind": "object"
+     }
+    }
+   ],
+   "note": "block torn-paper-stat; slot=context claim=number (RESEARCH 1)"
+  },
+  {
+   "id": "driver",
+   "recipe": "SpecimenInterview",
+   "start": {
+    "word": "On"
+   },
+   "props": {
+    "src": "kit:assets/library/photos/transport/photo-london-cab-driver-thomson-1884.jpg",
+    "fig": "fig. a",
+    "name": "A London cab driver",
+    "roles": [
+     "photographed by",
+     "John Thomson, 1884"
+    ],
+    "ground": "mint",
+    "grade": "bw",
+    "watermark": "kit:assets/library/maps/cities/map-london-temple-ordnance-1890s.jpg"
+   },
+   "note": "block specimen-interview; slot=context claim=fact (RESEARCH 2)"
+  },
+  {
+   "id": "ch2",
+   "recipe": "ChapterCard",
+   "start": {
+    "word": "In",
+    "nth": 2
+   },
+   "props": {
+    "number": "Two",
+    "title": "The scan",
+    "ground": "blue",
+    "pieces": [
+     {
+      "src": "kit:assets/library/maps/cities/map-london-temple-ordnance-1890s.jpg",
+      "x": 880,
+      "y": 30,
+      "w": 1000,
+      "h": 655,
+      "kind": "engraving"
+     },
+     {
+      "src": "kit:assets/library/engravings/anatomy/engr-brain-lateral-sobotta-1909.jpg",
+      "x": 1180,
+      "y": 600,
+      "w": 620,
+      "h": 420,
+      "rotate": 4,
+      "kind": "print"
+     }
+    ]
+   },
+   "events": [
+    {
+     "id": "title",
+     "at": {
+      "word": "scanned",
+      "kind": "title"
+     }
+    }
+   ],
+   "note": "block torn-paper-chapter-card; claim=fact (RESEARCH 3)"
+  },
+  {
+   "id": "sixteen",
+   "recipe": "StampedStat",
+   "start": {
+    "word": "Sixteen"
+   },
+   "props": {
+    "value": "16",
+    "caption": "CAB DRIVERS SCANNED",
+    "sub": "AND 50 OTHER MEN · 2000",
+    "ink": "purple",
+    "ground": "sky"
+   },
+   "events": [
+    {
+     "id": "stamp",
+     "at": {
+      "word": "Sixteen",
+      "offset": 4
+     }
+    }
+   ],
+   "note": "block stamped-stat; claim=number (RESEARCH 3)"
+  },
+  {
+   "id": "plate",
+   "recipe": "SpecimenPlate",
+   "start": {
+    "word": "The",
+    "nth": 3
+   },
+   "transitionIn": {
+    "kind": "paperSlide",
+    "variant": "in",
+    "corner": "br",
+    "sfx": false
+   },
+   "props": {
+    "title": "DIAGRAM OF THE HIPPOCAMPUS",
+    "subject": {
+     "src": "kit:assets/library/engravings/anatomy/engr-brain-horizontal-section-sobotta-1909.jpg",
+     "x": 330,
+     "y": 170,
+     "w": 760,
+     "h": 752
+    },
+    "magnifier": {
+     "x": 591,
+     "y": 701,
+     "r": 40,
+     "bx": 1460,
+     "by": 400,
+     "br": 220,
+     "zoom": 2.4
+    },
+    "labels": [
+     {
+      "fig": "fig. b",
+      "lines": [
+       "Posterior hippocampus",
+       "larger in cab drivers"
+      ],
+      "x": 1250,
+      "y": 700,
+      "from": {
+       "x": 632,
+       "y": 708
+      },
+      "width": 560
+     }
+    ],
+    "swap": {
+     "labels": [
+      [
+       "Posterior hippocampus",
+       "larger with every",
+       "year at the wheel"
+      ]
+     ]
+    },
+    "source": "Maguire et al., PNAS, 2000 · plate: Sobotta, 1909"
+   },
+   "events": [
+    {
+     "id": "magnifier",
+     "at": {
+      "word": "hippocampus",
+      "kind": "object"
+     }
+    },
+    {
+     "id": "label0",
+     "at": {
+      "word": "larger",
+      "kind": "object"
+     }
+    },
+    {
+     "id": "swap",
+     "at": {
+      "word": "longer",
+      "kind": "object"
+     }
+    }
+   ],
+   "note": "block specimen-plate; slot=evidence claim=fact (RESEARCH 3, 4, 7)"
+  },
+  {
+   "id": "ch3",
+   "recipe": "ChapterCard",
+   "start": {
+    "word": "But"
+   },
+   "props": {
+    "number": "Three",
+    "title": "The proof",
+    "ground": "coral",
+    "pieces": [
+     {
+      "src": "kit:assets/library/engravings/cities/engr-charing-cross-medland-1795.jpg",
+      "x": 960,
+      "y": 30,
+      "w": 800,
+      "h": 689,
+      "kind": "engraving"
+     },
+     {
+      "src": "kit:assets/library/maps/cities/map-london-bacon-1890.jpg",
+      "x": 1210,
+      "y": 610,
+      "w": 560,
+      "h": 429,
+      "rotate": -4,
+      "kind": "print"
+     }
+    ]
+   },
+   "events": [
+    {
+     "id": "title",
+     "at": {
+      "word": "born",
+      "kind": "title"
+     }
+    }
+   ],
+   "note": "block torn-paper-chapter-card; slot=turn claim=question (RESEARCH 5)"
+  },
+  {
+   "id": "trainees",
+   "recipe": "PaperStat",
+   "start": {
+    "word": "followed",
+    "kind": "cut"
+   },
+   "props": {
+    "value": "79",
+    "unit": "trainees",
+    "context": "followed through the Knowledge",
+    "payoff": "FROM THE START",
+    "ground": "sky",
+    "source": "Woollett & Maguire, Current Biology, 2011"
+   },
+   "events": [
+    {
+     "id": "value",
+     "at": {
+      "word": "seventy-nine",
+      "kind": "object"
+     }
+    },
+    {
+     "id": "context",
+     "at": {
+      "word": "through",
+      "kind": "object"
+     }
+    },
+    {
+     "id": "payoff",
+     "at": {
+      "word": "trainees",
+      "kind": "object"
+     }
+    }
+   ],
+   "note": "block torn-paper-stat; claim=number (RESEARCH 6)"
+  },
+  {
+   "id": "compare",
+   "recipe": "SpecimenCompare",
+   "start": {
+    "word": "The",
+    "nth": 8
+   },
+   "transitionIn": {
+    "kind": "paperSlide",
+    "variant": "out",
+    "corner": "tr",
+    "sfx": false
+   },
+   "props": {
+    "left": {
+     "fig": "fig. c",
+     "title": "Qualified",
+     "src": "kit:assets/library/engravings/anatomy/engr-brain-lateral-sobotta-1909.jpg",
+     "callouts": [
+      "more grey matter in the",
+      "posterior hippocampus"
+     ]
+    },
+    "right": {
+     "fig": "fig. d",
+     "title": "Did not qualify",
+     "src": "kit:assets/library/engravings/anatomy/engr-brain-lateral-sobotta-1909.jpg",
+     "callouts": [
+      "no such change, nor in",
+      "31 men who never trained"
+     ]
+    },
+    "legend": [
+     "Woollett & Maguire, Current Biology, 2011"
+    ],
+    "ground": "pink"
+   },
+   "events": [
+    {
+     "id": "right",
+     "at": {
+      "word": "did",
+      "nth": 2,
+      "kind": "object"
+     }
+    },
+    {
+     "id": "callouts",
+     "at": {
+      "word": "showed",
+      "kind": "object"
+     }
+    }
+   ],
+   "note": "block specimen-comparison; slot=payoff claim=comparison (RESEARCH 6)"
+  },
+  {
+   "id": "end",
+   "recipe": "ChapterCard",
+   "start": {
+    "word": "Learning",
+    "nth": 2
+   },
+   "props": {
+    "kicker": "A KIT EXAMPLE",
+    "title": "Learning a city",
+    "ground": "creamMap",
+    "pieces": [
+     {
+      "src": "kit:assets/library/engravings/anatomy/engr-brain-lateral-sobotta-1909.jpg",
+      "x": 1000,
+      "y": 60,
+      "w": 860,
+      "h": 583,
+      "kind": "engraving"
+     },
+     {
+      "src": "kit:assets/library/photos/transport/photo-london-cab-driver-thomson-1884.jpg",
+      "x": 1250,
+      "y": 620,
+      "w": 560,
+      "h": 383,
+      "rotate": 3,
+      "kind": "print"
+     }
+    ]
+   },
+   "events": [
+    {
+     "id": "title",
+     "at": {
+      "word": "reshape",
+      "kind": "title"
+     }
+    }
+   ],
+   "note": "ending (RESEARCH 6)"
+  }
+ ],
+ "end": {
+  "scene": "end",
+  "tailSec": 6.0
+ }
+}

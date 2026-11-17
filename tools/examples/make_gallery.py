@@ -9,7 +9,9 @@
 What it reads:
 - `examples/blocks/<block>.md`: a block page. Front matter (`key: value` lines between `---`):
   `block`, `title`, `section`, `recipe`, `summary`, `example: <slug>#<scene id>`,
-  and optionally `preview_from` (seconds after the scene start, default 0) and `preview_sec` (default: the scene, max 3.5).
+  and optionally `look` (the collection it belongs to, a key of LOOKS; default voxEarworm), `preview_from` (seconds
+  after the scene start, may be negative to include the transition into it, default 0) and `preview_sec` (default: the
+  scene, max 3.5).
 - `examples/starters/<name>.md`: a starter page. Front matter: `name`, `title`, `summary`, `example: <slug>`,
   `reel: <scene>:<from s>:<seconds>, …` (the preview reel, cut in that order).
 
@@ -21,7 +23,7 @@ What it writes:
   and the timing are the delivery render's.
 - In each block page, the scene's storyboard JSON between `<!-- scene-json -->` and `<!-- /scene-json -->`.
 - In `examples/README.md`, the tables between `<!-- starters-gallery -->`/`<!-- blocks-gallery -->` and their closing
-  markers.
+  markers; the blocks as one table per collection (look), in the order of LOOKS.
 """
 from __future__ import annotations
 
@@ -40,6 +42,16 @@ OUT = ROOT / "out" / "gallery"
 LADDER = {
     "block": (2_000_000, [(96, 480, 12), (64, 480, 12), (48, 480, 12), (64, 420, 12), (48, 420, 10)]),
     "starter": (4_000_000, [(96, 560, 12), (64, 560, 12), (64, 480, 12), (48, 480, 10)]),
+}
+# the block collections, in gallery order: look -> (heading, one line under it)
+LOOKS = {
+    "voxEarworm": ("The Earworm collection",
+                   "The default look (`voxEarworm`): a dark collage of torn prints and cut-outs, edited to the sound. "
+                   "The time-zones and world-time starters use it."),
+    "voxScrapbook": ("The scrapbook collection",
+                     "Set `\"look\": \"voxScrapbook\"`: watercolour paper in one colour per chapter, torn scraps, specimen "
+                     "plates and \"fig.\" labels, measured on a Vox brand piece "
+                     "([analysis](../analysis/vox-sample/vox_braintravel.md)). The cab-brain starter uses it."),
 }
 
 
@@ -76,7 +88,7 @@ def scene_table(slug: str) -> tuple[dict[str, tuple[int, int]], int]:
     table = {}
     for line in out.splitlines():
         p = line.split()
-        if len(p) >= 4 and p[0] in ids and p[2].isdigit() and p[3].isdigit():
+        if len(p) >= 4 and p[0] in ids and re.fullmatch(r"-?\d+", p[2]) and re.fullmatch(r"-?\d+", p[3]):
             table[p[0]] = (int(p[2]), int(p[3]))
     return table, int(sb.get("fps", 25))
 
@@ -138,13 +150,18 @@ def refresh_docs(blocks: list[tuple[Path, dict]], starters: list[tuple[Path, dic
         pair = items[i:i + 2] + [""] * (2 - len(items[i:i + 2]))
         rows.append(f"| {pair[0]} | {pair[1]} |")
     starters_md = "| | |\n|---|---|\n" + "\n".join(rows)
-    rows = []
-    items = [cell(f"blocks/{p.name}", f"blocks/{p.stem}.gif", fm["title"], f"{fm['section']} · <code>{fm['recipe']}</code>",
-                  f"<code>[block: {fm['block']}]</code>") for p, fm in blocks]
-    for i in range(0, len(items), 2):
-        pair = items[i:i + 2] + [""] * (2 - len(items[i:i + 2]))
-        rows.append(f"| {pair[0]} | {pair[1]} |")
-    blocks_md = "| | |\n|---|---|\n" + "\n".join(rows)
+    groups = []
+    for look, (heading, line) in LOOKS.items():
+        items = [cell(f"blocks/{p.name}", f"blocks/{p.stem}.gif", fm["title"], f"{fm['section']} · <code>{fm['recipe']}</code>",
+                      f"<code>[block: {fm['block']}]</code>") for p, fm in blocks if fm.get("look", "voxEarworm") == look]
+        if not items:
+            continue
+        rows = []
+        for i in range(0, len(items), 2):
+            pair = items[i:i + 2] + [""] * (2 - len(items[i:i + 2]))
+            rows.append(f"| {pair[0]} | {pair[1]} |")
+        groups.append(f"### {heading}\n\n{line}\n\n| | |\n|---|---|\n" + "\n".join(rows))
+    blocks_md = "\n\n".join(groups)
     readme = EX / "README.md"
     text = put_between(readme.read_text(encoding="utf-8"), "starters-gallery", starters_md)
     readme.write_text(put_between(text, "blocks-gallery", blocks_md), encoding="utf-8")
@@ -164,6 +181,8 @@ def main() -> int:
                 raise SystemExit(f"{path.relative_to(ROOT)}: front matter needs {k}")
         if fm["block"] != path.stem:
             raise SystemExit(f"{path.relative_to(ROOT)}: block name {fm['block']!r} must match the file name")
+        if fm.get("look", "voxEarworm") not in LOOKS:
+            raise SystemExit(f"{path.relative_to(ROOT)}: look {fm['look']!r} is not a collection ({', '.join(LOOKS)})")
     refresh_docs(blocks, starters)
     if a.docs_only:
         return 0

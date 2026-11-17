@@ -55,7 +55,7 @@ Skip any question the request already answers.
 | Question (header) | Options, recommended first |
 |---|---|
 | How long should the video be? (`Length`) | 90 s explainer (Recommended): 7–9 sections · 60 s Short, 9:16 with captions · 3 minutes: room for a person and a document · 30 s teaser: 5–7 sections |
-| Which look? (`Look`) | Earworm collage (Recommended): black collage, torn prints, periwinkle; every block is built for it · Light paper: today's Vox explainer; some blocks still draw the collage look · Paper desk: a warm scrapbook |
+| Which look? (`Look`) | Earworm collage (Recommended): black collage, torn prints, periwinkle; every Earworm block is built for it · Scientific scrapbook: watercolour paper per chapter, specimen plates and "fig." labels; its own 7 blocks (best for studies, anatomy, how a thing works) · Light paper: today's Vox explainer; some blocks still draw the collage look · Paper desk: a warm scrapbook. Recommend the scrapbook first when the topic is a run of studies or the parts of a thing |
 | Who is it for? (`Audience`) | Curious general viewers (Recommended) · Students · People who know the field · Kids and families |
 | How involved do you want to be? (`Mode`) | Guide me step by step (Recommended) · Only the big decisions · Autopilot: decide everything |
 
@@ -70,13 +70,18 @@ narration for that angle. A second question picks the hook:
 | a striking number | [giant-word-card](../../../examples/blocks/giant-word-card.md) |
 | a single word | [keyword-cut](../../../examples/blocks/keyword-cut.md) |
 
+In the scrapbook look the video opens on its first chapter card ([torn-paper-chapter-card](../../../examples/blocks/torn-paper-chapter-card.md)),
+then goes straight to the hook's picture: a [torn-paper-stat](../../../examples/blocks/torn-paper-stat.md) for a number,
+a [specimen-plate](../../../examples/blocks/specimen-plate.md) for a thing.
+
 ### C3 · Section plan
 1. Show the plan as a short list: `section → block → one line of content`.
 2. Build the board, `tools/py tools/studio/board.py <slug> --open`, and say where it is (below: "Previews").
 3. Ask only about sections where the choice is open, one question per section, at most 4. Offer the recommended block
    and 1–2 alternatives, each with its wireframe as the preview; "Drop this section" may be one of the options.
 
-`tools/py tools/studio/director.py --suggest "<the section's narration>"` ranks the blocks that fit a line.
+`tools/py tools/studio/director.py --suggest "<the section's narration>"` ranks the blocks that fit a line; add
+`--look voxScrapbook` for a scrapbook video (`director.py <slug>` reads the look from the storyboard).
 
 ### C4 · Script (`guided` and `key`: always)
 Show the script with its section marks. Options:
@@ -125,7 +130,7 @@ was chosen and how to change it.
 
 | Missing for a section | Recommend, in this order |
 |---|---|
-| A picture | 1. the catalog (`director.py` lists hits); 2. the web, public domain or CC0 (`source_images.py`); 3. a block that needs no picture: giant-word-card, data-counter, quote-card, or keyword-cut over a texture; 4. a Natural Earth map (map-route) when the line is about a place |
+| A picture | 1. the catalog (`director.py` lists hits); 2. the web, public domain or CC0 (`source_images.py`); 3. a block that needs no picture: giant-word-card, data-counter, quote-card, or keyword-cut over a texture (scrapbook: stamped-stat, or torn-paper-stat on a paper colour); 4. a Natural Earth map (map-route) when the line is about a place |
 | Footage | catalog footage (NASA, Prelinger); else montage-crane or photo-collage with stills, so the section still moves |
 | A portrait of the person | the name card needs a public-domain picture of that person. Without one: keyword-cut with the name over a place or document photo, or a quote-card with their words. Never a look-alike, never a generic portrait with their name on it |
 | A document scan | the catalog's documents; the Library of Congress or Chronicling America for newspapers before 1930; else a quote-card with the exact words |

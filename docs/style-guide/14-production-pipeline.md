@@ -59,8 +59,8 @@ Loop: write script -> scratch VO + cues -> source assets -> write storyboard -> 
 TypeScript: `src/studio/types.ts`. JSON Schema: `src/studio/storyboard.schema.json`.
 
 ```jsonc
-{ "version": 1, "fps": 25, "look": "voxEarworm",            // voxEarworm | voxLight | voxExplainer | voxEditorial | paperDesk | darkCollage
-  "profile": "earworm",                                      // optional sync + mix profile (doc 11 §10); default: voxEarworm -> earworm, any other look -> standard
+{ "version": 1, "fps": 25, "look": "voxEarworm",            // voxEarworm | voxLight | voxScrapbook | voxExplainer | voxEditorial | paperDesk | darkCollage
+  "profile": "earworm",                                      // optional sync + mix profile (doc 11 §10); default: voxEarworm -> earworm, voxScrapbook -> scrapbook, any other look -> standard
   "vo":    { "gainDb": 0, "leadSec": 0 },                   // leadSec = music-only pre-roll before the voice starts
   "music": [ { "id": "bed", "src": "audio/music/bed.wav", "cues": "audio/music/bed.cues.json", "kind": "bed",
                "in": {"sec": 0}, "out": {"end": true}, "gainDb": -9.6, "fadeInSec": 0.7, "ride": true } ],
@@ -83,7 +83,7 @@ TypeScript: `src/studio/types.ts`. JSON Schema: `src/studio/storyboard.schema.js
 | `{"end": true}` | the end of the video |
 
 `kind` supplies the **default offset and edge** from `SYNC` (doc 11 §2) when `offset`/`edge` are omitted; an explicit `offset` replaces the default.
-Scene starts default to the profile's cut kind (`cut` in `earworm`, `phrase` in `standard`); events default to `object`; `until` anchors default to offset 0.
+Scene starts default to the profile's cut kind (`cut` in `earworm`, `phrase` in `standard` and `scrapbook`); events default to `object`; `until` anchors default to offset 0.
 
 | kind | edge | offset (f @25) | for |
 |---|---|---|---|
@@ -110,7 +110,7 @@ Offsets scale with `fps / 25`. `"snap": "beat"\|"eighth"` moves an anchor onto t
 - **Assets in props:** any string `assets/...` or `audio/...` is project-relative (published to `public/projects/<slug>/`); `kit:assets/cc0/...` is a kit file under `public/`. Every file needs a line in `CREDITS.md` (or a sourcing sidecar `.json`).
 - **Anchors in props:** a key named `at`, `until`, or ending `At`/`Until` that holds an anchor object becomes frames **relative to the scene start** (`items[].at`, `rings[].at`).
 - **Events:** `{id, at, until?, kind?}`; the recipe reads the ids it documents (table below) and falls back to a measured default relative to the cut. Unknown ids produce a validator warning.
-- **Transitions** (`kind`): `cut` (default), `blurThrough` (4 f in / 14 f settle, sub-boom peak on the cut +1), `spinSwap` (whoosh on the swap), `dip` (`variant` act 18/17/36 or chapter 5/9/8, thump on the first black frame), `drop` (27/13/17), `glitchCut` (6 f dip, 4 f zoom blur, hard cut on a bass hit, 18 f glitch build: use for the end card). `sfx: false` mutes a transition's own sound. The scene's `start` is **the cut frame**. For `dip`/`drop` it is the first frame after the black: the fade-up *starts* there, and the new picture is fully up 17 f later for a `drop`. To land the full picture on a word, give that scene's start `offset: -17` (proven in a maintainer's test project). The engine renders both scenes inside the kit transition's window, time-shifted so each keeps its own clock. SFX budget ~1 per 13 s (validator warns).
+- **Transitions** (`kind`): `cut` (default), `blurThrough` (4 f in / 14 f settle, sub-boom peak on the cut +1), `spinSwap` (whoosh on the swap), `dip` (`variant` act 18/17/36 or chapter 5/9/8, thump on the first black frame), `drop` (27/13/17), `glitchCut` (6 f dip, 4 f zoom blur, hard cut on a bass hit, 18 f glitch build: use for the end card), `paperSlide` (scrapbook look; `variant: "in"` 10 f: the new scene arrives on its own sheet from `corner` `bl`\|`br`\|`tl`\|`tr`, turning −25° → 0, ease-out; `"out"` 12 f: the old sheet leaves towards `corner`, turning +12°, accelerating; a paper swoosh peaks 2 f / 4 f in; measured 8 slides in 4:16). `sfx: false` mutes a transition's own sound. The scene's `start` is **the cut frame**. For `dip`/`drop` it is the first frame after the black: the fade-up *starts* there, and the new picture is fully up 17 f later for a `drop`. To land the full picture on a word, give that scene's start `offset: -17` (proven in a maintainer's test project). The engine renders both scenes inside the kit transition's window, time-shifted so each keeps its own clock. SFX budget ~1 per 13 s (validator warns).
 - **Music:** `kind: "bed"` is a `MusicBed` ridden under the voice (measured duck: -2.4 dB under speech, 0.16 s attack, 0.26 s release; `ride: false` or `{duckDb, attackSec, releaseSec}`); `gainDb` is the gap level: set it so the bed's loudness sits ~7.6 dB under the voice (LUFS-matched: bed -20.1 LUFS vs voice -22.1 -> -9.6 dB). `kind: "song"` is a `SongExcerpt` (`startFromSec`, hard in, `fadeOutSec`), never under narration.
 
 ### Validator rules (`validate_storyboard.py`)
@@ -122,7 +122,7 @@ Offsets scale with `fps / 25`. `"snap": "beat"\|"eighth"` moves an anchor onto t
 5. text-type events (`text`, `title`, `name`, `caption`, `lyric`, `pop`) stay **>= 0.6 s** on screen (until `until` or the scene end);
 6. beats: `snap` on a cut under narration is an error; a cut under narration within +-2 f of a bed beat is a warning (rule 3 of doc 11);
 7. warnings: SFX budget, overlapping transition windows, scenes < 1 s, events a recipe does not read;
-8. `standard` profile only: a `phrase` cut whose word has less than `pause_ms` of silence before it; SFX above 1.5 per minute (+1); more than 2 music cue changes per minute; a music boundary more than 1.5 s from a cut; a `hole` outside 5–29 f; cuts 3 f apart only into a `burst` scene.
+8. `standard` and `scrapbook` profiles: a `phrase` cut whose word has less than `pause_ms` of silence before it; SFX above the profile's budget (1.5 per minute in `standard`, 3 in `scrapbook`; +1); more than 2 music cue changes per minute; a music boundary more than 1.5 s from a cut; a `hole` outside 5–29 f; cuts 3 f apart only into a `burst` scene.
 
 ### Shorts (9:16): `format: "short"`
 
@@ -170,6 +170,17 @@ All take typed props + `ctx` (frames, events, cues, missing assets), are built o
 | `FootageClip` | `src` (mp4/webm, needs a `CREDITS.md` line), `startFromSec`, `endAtSec`, `audio` (true), `audioDb` (re the voice), `audioLeadF` (J-cut 6–31 f), `bed: "duck"\|"out"\|"keep"`, `fit`, `pillarbox` (aspect, e.g. 1.3333), `grade: "native"\|"bw"`, `tag` (corner source tag), `dateTag{text,at?,style:"corner"\|"spine",life?}`, `lowerThird{name,role?,…}`, `subtitles[{text,t,until}]` (s after the cut) | `lowerThird` (cut +2), `date` | full-bleed `OffthreadVideo` in native colour; `CornerTag`, `DateTag`, `Subtitles`, `LowerThird`; its sound and the bed drop are played by `StoryAudio` |
 | `SeriesIdent` | `title` (our own series name), `tagline?`, `style: "overPicture"\|"card"`, `src?`, `cardColor?`, `holdSec?` (4.2), `holeF?` | none; the sting goes in `sfx[]` (`sub_boom` / `bass_hit`) and the silence via `transitionIn: {kind: "cut", hole: N}` on the next scene (card 6, overPicture 13, EL-style 24 f @24) | `TitleRise`-style baseline mask, typed tagline, camera push |
 
+**Scrapbook look (`voxScrapbook`, profile `scrapbook`).** Re-created from a Vox brand piece measured frame by frame (`analysis/vox-sample/vox_braintravel.md`, devices M1–M19; style guide doc 15): watercolour paper in one colour per chapter (`paper: "watercolour"`), torn scraps with a soft shadow, engravings multiplied onto the paper, a slate halftone serif, Caslon "fig." labels. 24 fps, 12 drawings/s. The recipes live in `src/recipes/scrapbook/`, their devices in `src/scrapbook/kit.tsx`. Colours are palette names (`pink`, `mint`, `blue`, `coral`, `white`, `cork`, `creamMap`, `sky`) or hex. The blocks in `examples/blocks/` with `look: voxScrapbook` show each one.
+
+| Recipe | Props | Events (default) | Kit devices |
+|---|---|---|---|
+| `ChapterCard` | `number?` ("One": "Chapter One" on an aged scrap) or `kicker?` (a title or end card), `title`, `ground` (pink), `pieces[{src,x,y,w,h,rotate?,kind:"engraving"\|"print",at?}]`, `strip?`, `ink?` | `number` (14), `title` (number +4) | `ScrapGround`, `Scrap`, halftone title strip with a label wipe (8 f); engravings fade in multiplied (6 f), prints rise with a shadow (8 f). Holds 3–4 s |
+| `PaperStat` | `value` (as it reads: "25,000"), `unit?`, `context?`, `payoff?` (caps), `image?` (full frame in a paper mat) or `ground` (sky), `source?` | `value` (2), `context` (value +4), `payoff` (value +10) | three torn scraps: the number on white, the context on a grey strip, the payoff in condensed caps on kraft; long lines shrink to one line |
+| `StampedStat` | `value`, `caption?`, `sub?`, `page?` (ephemera image; default a drawn ledger page), `ink` (red\|purple\|black\|hex), `rotate` (−8°), `ground` (sky), `source?` | `stamp` (18) | the page rises (10 f), the camera pushes 1.3 → 1 (12 f), the stamp pops (3 f) with a distressed mask re-inked every 24 f; pair it with the `stamp_thud` SFX |
+| `SpecimenPlate` | `title?` ("DIAGRAM OF …"), `subject{src,x,y,w,h,blend?,tumble?}` (w/h in the image's aspect), `backdrop?{color,d,cx,cy}\|false`, `magnifier?{x,y,r,bx,by,br,zoom,at?}`, `labels[{fig?,lines[],x,y,from?,at?,align?,width?}]`, `swap?{subject?,labels?[[]]}`, `source?`, `ground` (white) | `subject` (4), `backdrop` (subject +4), `magnifier` (subject +22), `label0`…`label3` (magnifier +4, +6 each), `source`, `swap` | `PlateFrame` (rounded hairline frame, tracked title), the subject tumbles +45° → 0 with a scale-up (14 f), a disc unfolds (12 f), magnifier ring + tangents + an enlarged circle, `SpecimenLabel` leaders |
+| `SpecimenCompare` | `left` / `right` `{fig?,title,src?,callouts[],blend?}`, `legend?[]`, `ground` (pink), `reveal: "split"\|"pullback"`, `source?` | `left` (2), `right` (left +22), `callouts` (right +8) | a dashed rule at x 960 draws down (6 f); each half pops 0.82 → 1 (8 f); `pullback` starts ×1.6 on the left and pulls back in 10 f |
+| `SpecimenInterview` | `src` (clip or still), `startFromSec?`, `fig?`, `name?`, `roles[]`, `ground` (pink), `watermark?`, `grade: "bw"\|"native"`, `window?{x,y,w,h}` | `label` (0: there from the first frame, as measured) | a deckle-edged print on the person's paper colour, a faint multiplied watermark, a `SpecimenLabel` on a leader; the clip's sound goes in the storyboard's audio plan |
+
 **Portrait recipes** (layout `portrait`; only in a `format: "short"` storyboard; 1080×1920 design px). Rect coordinates in `ShortDocument` are in page-image pixels and need `size`.
 
 | Recipe | Props | Events (default) | Kit devices |
@@ -208,6 +219,11 @@ section: PhotoCollageUnfold, SeriesIdent, MontageCrane, NameCardInterview, DataC
 DocumentHighlight with word-anchored rings, QuoteCard, FootageClip and EndCard. The block gallery in `examples/` is
 cut from these two projects by `tools/examples/make_gallery.py`. It renders with `"preview": true` (no grain,
 weave, dust or pulse) and writes the GIFs, the scene JSON on each block page and the gallery tables.
+
+**`video-projects/example-cab-brain`** ("How learning London changes a cab driver's brain", 49 s, 24 fps) is the scrapbook look's example:
+ten scenes from the six scrapbook recipes and two `paperSlide` transitions, seven sourced facts (Maguire et al. 2000; Woollett & Maguire 2011),
+engravings, maps and 1880s–1890s photographs from the catalog, a CC BY bed and two of the kit's sounds (`stamp_thud`, `chime`). Build it with
+`tools/py tools/examples/build_example.py example-cab-brain`; the scrapbook blocks in the gallery are cut from it.
 
 The maintainer's earlier pipeline builds are measured above and in doc 11 (a 71.8 s daylight-saving explainer; a
 35.6 s filibuster test with a re-timed second read; recipe and profile builds). They stay in the maintainer's archive

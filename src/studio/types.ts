@@ -46,18 +46,21 @@ export type Captions = {
   replace?: Record<string, string>;
 };
 
-export type Look = "voxLight" | "voxEarworm" | "voxExplainer" | "voxEditorial" | "paperDesk" | "darkCollage";
+export type Look = "voxLight" | "voxEarworm" | "voxExplainer" | "voxEditorial" | "paperDesk" | "darkCollage" | "voxScrapbook";
 
-export type TransitionKind = "cut" | "blurThrough" | "spinSwap" | "dip" | "drop" | "glitchCut";
+export type TransitionKind = "cut" | "blurThrough" | "spinSwap" | "dip" | "drop" | "glitchCut" | "paperSlide";
 /** boundary treatment into a scene (or out of the previous one). Sound-locked kinds bring their SFX (sub_boom, whoosh, black_thump, bass_hit) */
 export type Transition = {
   kind: TransitionKind;
-  /** dip only: "act" (18/17/36 f, once per film) or "chapter" (5/9/8 f) */
-  variant?: "act" | "chapter";
+  /** dip: "act" (18/17/36 f, once per film) or "chapter" (5/9/8 f). paperSlide: "in" (the next scene arrives on a sheet,
+   *  10 f, default) or "out" (the current sheet leaves and reveals the next, 12 f) */
+  variant?: "act" | "chapter" | "in" | "out";
+  /** paperSlide: the corner the sheet comes from ("in", default "bl") or leaves to ("out", default "tr") */
+  corner?: "tl" | "tr" | "bl" | "br";
   /** false mutes the transition's own SFX (`standard` profile: silent unless true) */
   sfx?: boolean;
   /** `cut` only: chapter hole. The running music bed ends `hole` frames (5–29) before the cut and the next music cue
-   *  starts the profile's `cueAfterCutF` after it (standard +3 f, earworm -3.5 f). Frames @ the storyboard fps */
+   *  starts the profile's `cueAfterCutF` after it (standard +3 f, scrapbook 0 f, earworm -3.5 f). Frames @ the storyboard fps */
   hole?: number;
 };
 

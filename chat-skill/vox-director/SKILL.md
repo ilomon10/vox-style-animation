@@ -1,6 +1,6 @@
 ---
 name: vox-director
-description: Plan a Vox-style explainer video with the user in Claude chat, one decision at a time. Covers research with sources, the angle, a section plan from ready-made scene blocks (a cold open on a year, a map with a route, a highlighted document, a quote card, a bar chart, and more), the script, a storyboard and a visual board. Hands over a project pack that the open-source vox-style-animation framework renders in Claude Code. Use when the user wants to plan or start a Vox-style video in chat, asks which scene blocks exist, or pastes a starter or [block: …] prompt.
+description: Plan a Vox-style explainer video with the user in Claude chat, one decision at a time. Covers research with sources, the angle, a section plan from ready-made scene blocks (a cold open on a year, a map with a route, a highlighted document, a quote card, a bar chart, a specimen plate with "fig." labels, and more), the script, a storyboard and a visual board. Hands over a project pack that the open-source vox-style-animation framework renders in Claude Code. Use when the user wants to plan or start a Vox-style video in chat, asks which scene blocks exist, or pastes a starter or [block: …] prompt.
 ---
 
 # Vox director: plan the video together, in chat
@@ -59,7 +59,7 @@ Interactive by default.
 7. **C7 · Music:** pick a catalog bed (`kind` = `music`). CC BY beds need their attribution line in CREDITS.md.
 8. **Storyboard:** write `storyboard.json` following `reference/14-production-pipeline.md` §2–3 and the scenes on
    the block pages.
-   - `"fps": 25`, the look, the music, and one scene per section.
+   - `"fps": 25` (24 for `voxScrapbook`), the look, the music, and one scene per section.
    - Starts and events are word anchors from the script, never frames: Claude Code checks them against the voice-over.
    - Validate it against `reference/storyboard.schema.json` with Python's `jsonschema` if it is installed.
 9. **The board:** put the files in a folder `<slug>/`, then run
@@ -74,7 +74,8 @@ Interactive by default.
     > against it, publish, show me the board with stills, then render.
 
 `project.json`:
-`{"slug": "<slug>", "script": "script.md", "fps": 25, "idea": "<title>", "voice": "am_michael", "voSource": "scratch", "mode": "guided"}`.
+`{"slug": "<slug>", "script": "script.md", "fps": 25, "idea": "<title>", "voice": "am_michael", "voSource": "scratch", "mode": "guided"}`
+(the same fps as the storyboard).
 
 `HANDOFF.md` lists:
 - the decisions made (all of them on autopilot);
@@ -83,6 +84,10 @@ Interactive by default.
 - anything the user must supply.
 
 ## Blocks
+
+Two collections, one per look. Build a video from one collection.
+
+**Earworm look** (`voxEarworm`, the default):
 
 | Block | For | Recipe |
 |---|---|---|
@@ -100,6 +105,18 @@ Interactive by default.
 | quote-card | exact words, typed out | QuoteCard |
 | footage-clip | film footage, the turn to today | FootageClip |
 | end-card | our series name at the end | EndCard |
+
+**Scrapbook look** (`voxScrapbook`, 24 fps: watercolour paper in one colour per chapter, specimen plates):
+
+| Block | For | Recipe |
+|---|---|---|
+| torn-paper-chapter-card | each chapter's start; with a kicker instead of a number, the end card | ChapterCard |
+| torn-paper-stat | a number with its context and a payoff, over a picture or paper | PaperStat |
+| stamped-stat | a count stamped onto a page, as a record | StampedStat |
+| specimen-plate | a diagram of a thing: a magnifier and "fig." labels | SpecimenPlate |
+| specimen-comparison | two groups side by side | SpecimenCompare |
+| specimen-interview | a person in a deckle print with a "fig." label | SpecimenInterview |
+| paper-sheet-slide | a transition: the next scene arrives on its own sheet | `transitionIn` `paperSlide` |
 
 Starter requests built from them: `reference/starters/`.
 Previews: https://github.com/ilomon10/vox-style-animation/tree/main/examples

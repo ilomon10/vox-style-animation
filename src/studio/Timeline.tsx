@@ -8,6 +8,7 @@ import { RECIPES, RecipeCtxProvider, type RecipeCtx } from "../recipes";
 import { warnOnce } from "../recipes/shared";
 import type { CueIndex } from "../audio";
 import type { ResolvedScene } from "./resolve";
+import { PAPER_SLIDE, PaperSlide } from "../scrapbook/PaperSlide";
 
 /** one scene at local time 0 = its start frame. `short` (storyboard format "short"): portrait recipes get the 1080×1920 design
  *  space, landscape recipes 1920×1080 (DesignSpace letterboxes them as a centred band; RecipeFrame grounds the whole frame). */
@@ -31,9 +32,10 @@ export const transitionSpan = (s: ResolvedScene): { pre: number; post: number } 
   switch (t.kind) {
     case "blurThrough": return { pre: BLUR_CUT.blurFrames, post: BLUR_CUT.settleFrames };
     case "spinSwap": return { pre: SPIN.outFrames, post: SPIN.inFrames };
-    case "dip": { const v = DIP[t.variant ?? "act"]; return { pre: v.out + v.black, post: v.in }; }
+    case "dip": { const v = DIP[t.variant === "chapter" ? "chapter" : "act"]; return { pre: v.out + v.black, post: v.in }; }
     case "drop": return { pre: DROP.out + DROP.black, post: DROP.in };
     case "glitchCut": return { pre: GLITCH.dip + GLITCH.blur, post: 1 + GLITCH.build };
+    case "paperSlide": return { pre: 0, post: t.variant === "out" ? PAPER_SLIDE.outFrames : PAPER_SLIDE.inFrames };
   }
 };
 
@@ -71,8 +73,9 @@ export const Timeline: React.FC<{ scenes: ResolvedScene[]; cues: CueIndex; fps: 
         switch (t.kind) {
           case "blurThrough": body = <BlurThroughCut at={span.pre} outgoing={outgoing} incoming={incoming} sfx={sfx} />; break;
           case "spinSwap": body = <SpinSwap at={span.pre} outgoing={outgoing} incoming={incoming} sfx={sfx} />; break;
-          case "dip": body = <DipToBlack at={0} variant={t.variant ?? "act"} outgoing={outgoing} incoming={incoming} sfx={sfx} />; break;
+          case "dip": body = <DipToBlack at={0} variant={t.variant === "chapter" ? "chapter" : "act"} outgoing={outgoing} incoming={incoming} sfx={sfx} />; break;
           case "drop": body = <Drop at={0} outgoing={outgoing} incoming={incoming} sfx={sfx} />; break;
+          case "paperSlide": body = <PaperSlide variant={t.variant === "out" ? "out" : "in"} corner={t.corner} outgoing={outgoing} incoming={incoming} sfx={sfx} />; break;
           default: body = <GlitchCut at={0} outgoing={outgoing} card={() => incoming} sfx={sfx} />;
         }
         return (

@@ -90,13 +90,15 @@
         "voxExplainer",
         "voxEditorial",
         "paperDesk",
-        "darkCollage"
+        "darkCollage",
+        "voxScrapbook"
       ]
     },
     "profile": {
       "enum": [
         "earworm",
-        "standard"
+        "standard",
+        "scrapbook"
       ],
       "description": "sync + mix defaults (src/audio/profiles.ts); default: voxEarworm / no look -> earworm, any other look -> standard"
     },
@@ -308,13 +310,24 @@
             "spinSwap",
             "dip",
             "drop",
-            "glitchCut"
+            "glitchCut",
+            "paperSlide"
           ]
         },
         "variant": {
           "enum": [
             "act",
-            "chapter"
+            "chapter",
+            "in",
+            "out"
+          ]
+        },
+        "corner": {
+          "enum": [
+            "tl",
+            "tr",
+            "bl",
+            "br"
           ]
         },
         "sfx": {
@@ -357,6 +370,12 @@
             "EndCard",
             "SeriesIdent",
             "FootageClip",
+            "ChapterCard",
+            "SpecimenPlate",
+            "PaperStat",
+            "StampedStat",
+            "SpecimenCompare",
+            "SpecimenInterview",
             "ShortHook",
             "ShortPhoto",
             "ShortDocument",

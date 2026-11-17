@@ -35,7 +35,11 @@ ROOT = HERE.parents[2] if (HERE.parents[2] / "src" / "studio").exists() else Non
 RECIPE_BLOCK = {"ColdOpenYear": "cold-open-year", "KeywordCut": "keyword-cut", "GiantWordCard": "giant-word-card",
                 "MapRoute": "map-route", "EndCard": "end-card", "PhotoCollageUnfold": "photo-collage",
                 "SeriesIdent": "series-ident", "MontageCrane": "montage-crane", "NameCardInterview": "name-card",
-                "DocumentHighlight": "document-highlight", "QuoteCard": "quote-card", "FootageClip": "footage-clip"}
+                "DocumentHighlight": "document-highlight", "QuoteCard": "quote-card", "FootageClip": "footage-clip",
+                # the scrapbook collection (look voxScrapbook)
+                "ChapterCard": "torn-paper-chapter-card", "PaperStat": "torn-paper-stat", "StampedStat": "stamped-stat",
+                "SpecimenPlate": "specimen-plate", "SpecimenCompare": "specimen-comparison",
+                "SpecimenInterview": "specimen-interview"}
 SLOT_LABEL = {"hook": "Hook", "context": "Context", "question": "The question", "turn": "The turn", "payoff": "Payoff",
               "evidence": "Evidence", "expert": "A person", "ending": "Ending", "thesis": "Thesis"}
 

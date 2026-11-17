@@ -98,5 +98,10 @@
   "path": "reference/vox-sample/shorts/aH1J_S2U_sk_does_creatine_really_make_you_stronger.mp4",
   "fps": 23.976023976023978,
   "style": "vox-short-2026"
+ },
+ "vox_braintravel": {
+  "path": "reference/vox-sample/f0KLHiJLbL0_your_brain_on_travel.mp4",
+  "fps": 23.976023976023978,
+  "style": "vox-sample/brand-2022"
  }
 }

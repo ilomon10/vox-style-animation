@@ -13,7 +13,8 @@ Errors:
     and the gallery previews in examples/ (GIFs: blocks <= 2 MB, starter reels <= 4 MB, 30 MB together)
   - a file over 5 MB
   - a home-directory path, an e-mail address, or something that looks like a token or private key, in a text file
-  - `assets/vox-earworm` (the maintainer's private library) mentioned in a published file
+  - a private library cut from a Vox video (`assets/vox-<name>`, e.g. the maintainer's Earworm library) mentioned in a
+    published file, or any file under public/assets/vox-*
   - the name of a local project that does not ship (a folder in video-projects/ with no published file) mentioned in a
     published file: storyboard defaults, registries and docs must not point at someone's private work
   - catalog check errors (tools/library/catalog.py check)
@@ -31,12 +32,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 MAX_BYTES = 5 << 20
-PRIVATE = ["reference/*", "public/_private/*", "public/assets/vox-earworm/*", "public/audio/_private/*", "public/projects/*",
+PRIVATE = ["reference/*", "public/_private/*", "public/assets/vox-*", "public/audio/_private/*", "public/projects/*",
            "analysis/frames/*", "analysis/stills/*", "analysis/sheets/*", "analysis/strips/*", "analysis/segments/*",
            "analysis/av/*", "analysis/compare/*", "analysis/audio/*_words.json", "analysis/audio/*_transcript.md",
            "analysis/audio/*_phrases.json", "analysis/audio/*_sync.json", "video-projects/*/reference/*",
            "video-projects/*/assets/ref/*", "*vo_user*", "tools/local.env", "tools/analysis/sources.local.json",
            "tools/voice/models/*", "out/*", "node_modules/*", "tools/.venv/*"]
+PRIVATE_LIB = re.compile(r"assets/vox-[a-z0-9][a-z0-9-]*")  # libraries cut from Vox videos stay on the maintainer's disk
 MEDIA = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".tif", ".tiff", ".bmp", ".psd", ".wav", ".mp3", ".flac", ".ogg", ".oga",
          ".m4a", ".aac", ".mp4", ".mov", ".webm", ".mkv", ".avi", ".onnx", ".bin", ".pt", ".pdf", ".zip", ".npz", ".npy"}
 MEDIA_OK = ["analysis/palettes/*.png", "examples/blocks/*.gif", "examples/starters/*.gif"]
@@ -123,9 +125,10 @@ def main() -> int:
                         continue
                     line = text.count("\n", 0, m.start()) + 1
                     errors.append(f"{what} in {p}:{line}: {s[:60]}")
-            if "assets/vox-earworm" in text and p != "tools/dev/release_audit.py":
-                line = text.count("\n", 0, text.index("assets/vox-earworm")) + 1
-                errors.append(f"mentions the private library assets/vox-earworm: {p}:{line}")
+            m = PRIVATE_LIB.search(text) if p != "tools/dev/release_audit.py" else None
+            if m:
+                line = text.count("\n", 0, m.start()) + 1
+                errors.append(f"mentions the private library {m.group(0)}: {p}:{line}")
             for rx in private_projects:
                 for m in rx.finditer(text):
                     line = text.count("\n", 0, m.start()) + 1

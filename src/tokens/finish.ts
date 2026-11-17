@@ -84,6 +84,11 @@ export const FINISH = {
     vignette: { strength: 0.15, power: 1.4 },
     pulse: { periodSec: 0.3, gainCenter: 0.011, gainCorner: 0.021 },
   },
+  /** scientific scrapbook (vox_braintravel §4.4): only a paper grain, re-seeded every 6 f (4 Hz) during holds. No weave,
+   *  split, vignette or dust. */
+  voxScrapbook: {
+    grain: { sigma: 3, sizePx: 1.5, rate: 4, afterSplit: true },
+  },
 } as const satisfies Record<string, FinishPreset>;
 
 /**
@@ -97,6 +102,8 @@ export const PHOTO_GRADE = {
   darkCollage: { bw: "grayscale(1) contrast(1.2) brightness(0.92)", color: "grayscale(1) contrast(1.2) brightness(0.92)" },
   voxExplainer: { bw: "grayscale(1)", color: "none" },
   voxLight: { bw: "grayscale(1)", color: "none" },
+  /** people are B&W die-cuts; stock photos and footage keep their native colour */
+  voxScrapbook: { bw: "grayscale(1)", color: "none" },
   voxEditorial: { bw: "grayscale(1) sepia(0.15)", color: "grayscale(1) sepia(0.15)" },
   /** archive is fully desaturated (sat 0.01–0.05); only interview footage keeps colour */
   voxEarworm: { bw: "grayscale(1) contrast(1.1)", color: "saturate(0.9)" },

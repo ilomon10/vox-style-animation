@@ -20,7 +20,8 @@ don't improvise the style.
   a time; concurrency from `tools/local.env`). To wait for a render started elsewhere: `tools/remotion-locked.sh --wait`.
 
 **Read before the first step of a new video:** `docs/style-guide/13-story-to-screen.md` (script + shot rules),
-`11-audio-sync.md` (timing; §10 profiles), `12-vox-earworm.md` (default look), `14-production-pipeline.md` (storyboard + commands),
+`11-audio-sync.md` (timing; §10 profiles), `12-vox-earworm.md` (default look; `15-vox-scrapbook.md` for the scrapbook
+look), `14-production-pipeline.md` (storyboard + commands),
 `analysis/vox-framework-coverage.md` §1–2 (how Vox builds videos across six official videos, and which of our rules are
 Earworm-only), `src/studio/README.md`, `public/assets/library/README.md` (the shared asset catalog), `examples/README.md`
 (the blocks: one working scene per recipe) — skim, then use as reference.
@@ -43,9 +44,14 @@ Looks:
 - `voxLight`: today's main-channel Vox explainer, light paper. So far only `DocumentHighlight` v2, `SeriesIdent`,
   `EndCard mode: "credits"`, `NameCardInterview card: "lowerThird"` and `FootageClip` are drawn for it; the other
   recipes still draw Earworm content on it. Offer it, and say so.
+- `voxScrapbook`: the scientific scrapbook (doc 15; watercolour paper in one colour per chapter, specimen plates,
+  "fig." labels). It has its own recipes: `ChapterCard`, `PaperStat`, `StampedStat`, `SpecimenPlate`,
+  `SpecimenCompare` and `SpecimenInterview`, plus the `paperSlide` transition: the blocks with `look: voxScrapbook`.
+  Build a scrapbook video from those. An Earworm block keeps its own look there: use one only when no scrapbook
+  block fits, and say so. Its example is `video-projects/example-cab-brain/`.
 - `voxExplainer` desk, `paperDesk` scrapbook, `darkCollage`, `voxEditorial`.
 
-Any look other than `voxEarworm` gets the `standard` sync profile.
+`voxEarworm` gets the `earworm` sync profile and `voxScrapbook` the `scrapbook` profile; every other look gets `standard`.
 
 ## 0c · Prompts with blocks (`examples/`)
 Users often paste a starter from `examples/starters/`, or write one `[block: <name>]` line per section.
@@ -180,7 +186,8 @@ Give the user:
 - the board, `out/studio/<slug>-board.html` (`tools/py tools/studio/board.py <slug>`).
 
 Examples of complete projects (text only; `tools/py tools/examples/build_example.py <slug>` builds their media):
-`video-projects/example-time-zones/` (`npm run example`) and `video-projects/example-world-time/` (the block gallery).
+`video-projects/example-time-zones/` (`npm run example`), `video-projects/example-world-time/` (the Earworm block
+gallery) and `video-projects/example-cab-brain/` (the scrapbook look and its blocks).
 
 ## 8 · User recording → final
 When they return a WAV: `tools/py tools/studio/recue.py video-projects/<slug> <file>` → read the report

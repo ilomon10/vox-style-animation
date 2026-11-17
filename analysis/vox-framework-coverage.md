@@ -790,3 +790,37 @@ The light look is `voxLight` (tokens, paper kinds, no finish). The packaging col
 - The resolved timelines of the maintainer's three regression projects (not shipped) are byte-identical before and after.
 - The recipe gallery project re-renders bit-identical, video and audio.
 - The voice test project re-renders with identical audio. Its video checksum changed between two renders three minutes apart with no code change in between (bisected). At the source level its frames match the pre-build baseline to within encoder noise: no 16×16 block deviates more than 1 level beyond the encoder's own error. So it is a sub-level rendering wobble amplified by H.264, not a regression.
+
+## 8. A seventh video: the scrapbook brand piece (2026-11-17)
+
+**BT** `vox_braintravel`: a Vox brand-studio explainer (advertiser content, 2022) on what travel does to the brain.
+4:16 (255.9 s) at 23.976 fps, 4 voiced chapters and 2 remote experts. Report: `analysis/vox-sample/vox_braintravel.md`.
+It is a sponsored brand piece, not an editorial video, so it is **not counted** in the n/6 matrices above. Like EW, it is
+a separate reference: the source of the `voxScrapbook` look.
+
+**What it confirms about the sample (§2.6, §5):**
+- Cuts lead the narrator's phrase: 60 % of 35 editorial cuts and slide starts fall within 12 f of a phrase onset
+  (median −5.7 f). There is no word lock (39 % within ±2 f vs 40 % by chance) and no beat lock.
+- The bed is static and unducked: per-phrase duck median +0.2 dB, voice 9.0 dB over the music. It changes once per
+  chapter (5 cues).
+- Chapter joints get short holes (4–13 f, one of them digital silence) instead of a dip.
+
+**Where it differs:**
+- **Graphics on twos** (12 drawings/s on 23.976) throughout, as in CE and DA (EL and AM animate on ones, CR at about
+  15/s), under a full-frame grain re-seeded every 6 f (4 Hz).
+- **Colour carries the structure:** one paper colour per chapter and one per expert, and no single accent.
+- **More sound effects** than the `standard` budget: 2.1 likely per minute (5.4 with the possible ones). Its
+  transitions carry sound (paper swooshes on the sheet slides).
+- **Voiced chapter cards** (4, at 10 %, 36 %, 52 % and 74 % of the runtime), and specimen-style labels ("fig. a") in
+  place of lower thirds.
+
+**Built from it** (the same day):
+- the `voxScrapbook` look (tokens, watercolour paper, finish) and the `scrapbook` profile (doc 11 §10);
+- six recipes: `ChapterCard`, `PaperStat`, `StampedStat`, `SpecimenPlate`, `SpecimenCompare` and `SpecimenInterview`;
+- the `paperSlide` transition;
+- five procedural sounds: `paper_swoosh`, `paper_flick`, `stamp_thud`, `sub_swell` and `chime`;
+- seven blocks in `examples/blocks/` and the example `video-projects/example-cab-brain`;
+- doc 15 (the look) and the doc 14 §3 table.
+
+The report's §9 ranks the rest of its devices; doc 15 §7 lists those not built yet. Nothing cut from the video ships:
+its frames and sounds stay on the maintainer's machine for study, as with EW.

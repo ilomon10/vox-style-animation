@@ -34,6 +34,7 @@ a storyboard of animated collage scenes and a rendered video, re-timed to your o
 |---|---|---|
 | <img src="examples/blocks/cold-open-year.gif" width="260" alt="cold-open-year"><br>`cold-open-year` | <img src="examples/blocks/map-route.gif" width="260" alt="map-route"><br>`map-route` | <img src="examples/blocks/document-highlight.gif" width="260" alt="document-highlight"><br>`document-highlight` |
 | <img src="examples/blocks/name-card.gif" width="260" alt="name-card"><br>`name-card` | <img src="examples/blocks/quote-card.gif" width="260" alt="quote-card"><br>`quote-card` | <img src="examples/blocks/data-bars.gif" width="260" alt="data-bars"><br>`data-bars` |
+| <img src="examples/blocks/specimen-plate.gif" width="260" alt="specimen-plate"><br>`specimen-plate` | <img src="examples/blocks/torn-paper-chapter-card.gif" width="260" alt="torn-paper-chapter-card"><br>`torn-paper-chapter-card` | <img src="examples/blocks/stamped-stat.gif" width="260" alt="stamped-stat"><br>`stamped-stat` |
 
 **Step by step: [GETTING_STARTED.md](GETTING_STARTED.md). All prompts and blocks: [the gallery](examples/README.md).
 Planning in Claude chat: [the `vox-director` skill](GETTING_STARTED.md#plan-in-claude-chat).**
@@ -146,9 +147,9 @@ and checksum.
 | [`docs/style-guide/`](docs/style-guide/README.md) | the rules, every number measured from the references (start here) |
 | `.claude/skills/` | the canonical skills (`vox-video`, `vox-reference`, `vox-assets`) |
 | `plugin/`, `.claude-plugin/` | the Claude Code plugin (`vox-studio`) and its marketplace: launchers that install the framework and follow the canonical skills |
-| `src/` | the kit:<br>• tokens, effects, collage, camera/motion, transitions, type, annotations<br>• audio sync (`src/audio`)<br>• the Earworm look (`src/earworm`)<br>• the storyboard engine (`src/studio`) and its recipes (`src/recipes`)<br>• proof shots, galleries |
+| `src/` | the kit:<br>• tokens, effects, collage, camera/motion, transitions, type, annotations<br>• audio sync (`src/audio`)<br>• the Earworm look (`src/earworm`) and the scrapbook look (`src/scrapbook`)<br>• the storyboard engine (`src/studio`) and its recipes (`src/recipes`)<br>• proof shots, galleries |
 | `tools/` | • `setup.sh`, `doctor.py`, `py`, `remotion-locked.sh`<br>• `library/`: catalog, fetch, search, add, marks, maps<br>• `reference/`: ingest, scan<br>• `assets/`: extract, cut-outs<br>• `studio/`: new project, validate, publish, re-time<br>• `examples/`: build an example, make the gallery<br>• `voice/`, `source/`, `audio/`, `analysis/`, `textures/`<br>• `dev/release_audit.py` |
-| `video-projects/` | one folder per video (the examples: `example-time-zones/`, `example-world-time/`) |
+| `video-projects/` | one folder per video (the examples: `example-time-zones/`, `example-world-time/`, `example-cab-brain/`) |
 | `analysis/` | the evidence: frame-by-frame reports of the reference videos, metrics, shot tables, palettes |
 | `public/` | where Remotion reads media. Here git keeps only the catalog and README files: everything else is fetched or generated (the only media in git are the gallery previews in `examples/`) |
 

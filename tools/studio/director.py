@@ -5,7 +5,7 @@ vox-video skill's director mode (.claude/skills/vox-video/DIRECTOR.md).
   tools/py tools/studio/director.py <slug>                 # sections, gaps with recommendations, the next checkpoint
   tools/py tools/studio/director.py <slug> --json          # the same, for the agent
   tools/py tools/studio/director.py <slug> --mode auto     # guided | key | auto, saved in project.json ("mode")
-  tools/py tools/studio/director.py --suggest "<a line of narration>"   # the blocks that fit it, best first
+  tools/py tools/studio/director.py --suggest "<a line of narration>" [--look voxScrapbook]   # the blocks that fit it
 
 It only reads the project (and writes `mode` with --mode). Asset states: `ok` (on disk), `fetch` (in the catalog;
 publish_project.py downloads it), `missing` (neither: a gap).
@@ -28,11 +28,23 @@ MEDIA_EXT = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".tif", ".mp4", ".webm", 
 RECIPE_BLOCK = {"ColdOpenYear": "cold-open-year", "KeywordCut": "keyword-cut", "GiantWordCard": "giant-word-card",
                 "MapRoute": "map-route", "EndCard": "end-card", "PhotoCollageUnfold": "photo-collage",
                 "SeriesIdent": "series-ident", "MontageCrane": "montage-crane", "NameCardInterview": "name-card",
-                "DocumentHighlight": "document-highlight", "QuoteCard": "quote-card", "FootageClip": "footage-clip"}
+                "DocumentHighlight": "document-highlight", "QuoteCard": "quote-card", "FootageClip": "footage-clip",
+                # the scrapbook collection (look voxScrapbook)
+                "ChapterCard": "torn-paper-chapter-card", "PaperStat": "torn-paper-stat", "StampedStat": "stamped-stat",
+                "SpecimenPlate": "specimen-plate", "SpecimenCompare": "specimen-comparison",
+                "SpecimenInterview": "specimen-interview"}
 # recipes that need a picture (the prop that holds it)
 NEEDS_PICTURE = {"ColdOpenYear": "pieces", "KeywordCut": "src", "PhotoCollageUnfold": "items", "MontageCrane": "items",
-                 "NameCardInterview": "src", "DocumentHighlight": "src", "FootageClip": "src", "MapRoute": "map"}
-NO_PICTURE_BLOCKS = "giant-word-card, data-counter or quote-card"
+                 "NameCardInterview": "src", "DocumentHighlight": "src", "FootageClip": "src", "MapRoute": "map",
+                 "SpecimenPlate": "subject", "SpecimenInterview": "src"}
+NO_PICTURE_BLOCKS = {"voxEarworm": "giant-word-card, data-counter or quote-card",
+                     "voxScrapbook": "stamped-stat or torn-paper-stat (without an image)"}
+# look voxScrapbook: an Earworm block -> the scrapbook block that does its job (the others keep their own look)
+SCRAPBOOK_OF = {"cold-open-year": "torn-paper-chapter-card", "photo-collage": "torn-paper-chapter-card",
+                "keyword-cut": "torn-paper-chapter-card", "giant-word-card": "stamped-stat", "data-counter": "torn-paper-stat",
+                "data-bars": "specimen-comparison", "name-card": "specimen-interview"}
+SCRAPBOOK_BLOCKS = {"torn-paper-chapter-card", "torn-paper-stat", "stamped-stat", "specimen-plate", "specimen-comparison",
+                    "specimen-interview", "paper-sheet-slide"}
 
 
 def block_of(scene: dict) -> str:
@@ -70,14 +82,28 @@ RULES = [  # (block, regex, why)
 ]
 
 
-def suggest(line: str) -> list[dict]:
+SCRAPBOOK_RULES = [  # look voxScrapbook: checked before RULES
+    ("specimen-plate", r"\b(part|region|organ|brain|heart|lung|cell|structure|inside|section|diagram|anatomy|mechanism|engine|layer)s?\b",
+     "points at a part of something"),
+    ("stamped-stat", rf"\b({SPELLED}|\d+)\b[^.]*\b(people|men|women|drivers|patients|volunteers|participants|subjects|votes|members|workers|children)\b",
+     "counts people: stamp it on the record"),
+]
+
+
+def suggest(line: str, look: str = "voxEarworm") -> list[dict]:
+    scrap = look == "voxScrapbook"
     out = []
-    for block, rx, why in RULES:
+    for block, rx, why in (SCRAPBOOK_RULES if scrap else []) + RULES:
         if re.search(rx, line, flags=re.I if block != "name-card" else 0):
             out.append({"block": block, "why": why})
     # name-card's capitalised-pair rule fires on any sentence start + name: keep it only with a role word or mid-sentence
     if not out or all(o["block"] in ("name-card",) for o in out):
-        out.append({"block": "keyword-cut", "why": "one word carries the line"})
+        out.append({"block": "keyword-cut", "why": "one word carries the line"} if not scrap else
+                   {"block": "torn-paper-chapter-card", "why": "a title card (a kicker and a few words) carries the line"})
+    if scrap:  # the scrapbook block that does the same job; an Earworm block without one keeps its own look
+        out = [o if o["block"] in SCRAPBOOK_BLOCKS else
+               {"block": SCRAPBOOK_OF[o["block"]], "why": o["why"]} if o["block"] in SCRAPBOOK_OF else
+               {"block": o["block"], "why": o["why"] + " (an Earworm block: it keeps its own look)"} for o in out]
     seen, ranked = set(), []
     for o in out:
         if o["block"] not in seen:
@@ -115,7 +141,7 @@ def scene_table(slug: str, sb: dict) -> tuple[dict[str, tuple[int, int]], list[s
     table = {}
     for line in r.stdout.splitlines():
         p = line.split()
-        if len(p) >= 4 and p[0] in ids and p[2].isdigit() and p[3].isdigit():
+        if len(p) >= 4 and p[0] in ids and re.fullmatch(r"-?\d+", p[2]) and re.fullmatch(r"-?\d+", p[3]):
             table[p[0]] = (int(p[2]), int(p[3]))
     problems = [ln.strip() for ln in (r.stdout + r.stderr).splitlines() if ln.startswith(("ERROR", "WARN"))]
     return table, problems
@@ -188,6 +214,7 @@ def status(slug: str) -> dict:
     words = (cues or {}).get("words", [])
     k = fps / (cues or {}).get("fps", fps)
     lead = round(sb.get("vo", {}).get("leadSec", 0) * fps)
+    look = sb.get("look", "voxEarworm")
 
     def word_frame(w: dict) -> int:  # as validate_storyboard.py resolves a word anchor (its onset, at the storyboard fps)
         return round(w.get("onset_frame", w.get("frame_start", round(w["start"] * fps))) * k) + lead
@@ -237,7 +264,7 @@ def status(slug: str) -> dict:
             kinds = ("footage",) if sc.get("recipe") == "FootageClip" else tuple(k for k in PICTURE_KINDS if k != "footage")
             hits = catalog_hits(" ".join([text, sc.get("note", ""), json.dumps(sc.get("props", {}))]), kinds)
             recs = [f"catalog: {h['kit']} ({h['title']})" for h in hits]
-            recs.append(f"or a block that needs no picture: {NO_PICTURE_BLOCKS} (DIRECTOR.md, 'When something is missing')")
+            recs.append(f"or a block that needs no picture: {NO_PICTURE_BLOCKS.get(look, NO_PICTURE_BLOCKS["voxEarworm"])} (DIRECTOR.md, 'When something is missing')")
         out_sections.append({
             "n": i + 1, "id": sid, "recipe": sc.get("recipe", ""), "block": block_of(sc),
             "start_s": round(start / fps, 2) if start is not None else None, "end_s": round(end / fps, 2) if end is not None else None,
@@ -246,7 +273,7 @@ def status(slug: str) -> dict:
         gaps += [f"section {i + 1} ({sid}): {g}" for g in sgaps]
     if not scenes:  # before the storyboard: the script's sections, with block suggestions
         for i, s in enumerate(spoken):
-            sug = suggest(s["text"])
+            sug = suggest(s["text"], look)
             out_sections.append({"n": i + 1, "id": None, "recipe": s["recipe"], "block": RECIPE_BLOCK.get(s["recipe"], ""),
                                  "narration": s["text"], "assets": [], "gaps": [], "recommendations": [f"block {x['block']}: {x['why']}" for x in sug]})
 
@@ -298,12 +325,12 @@ def show(st: dict) -> None:
     mtxt = ", ".join(Path(m["src"]).stem + ("" if m["state"] == "ok" else f" [{m['state']}]") for m in st["music"]) or "none yet"
     print(f"{st['slug']} · {st['title']} · mode: {st['mode']}")
     print(f"  voice: {vtxt} | music: {mtxt} | research: {st['research_facts']} facts | draft: {st['draft'] or 'not rendered'}")
-    print(f"\n  {'#':>2}  {'scene':<12} {'block':<20} {'time':<13} narration")
+    print(f"\n  {'#':>2}  {'scene':<12} {'block':<24} {'time':<13} narration")
     for s in st["sections"]:
         t = f"{s['start_s']:.1f}-{s['end_s']:.1f} s" if s.get("start_s") is not None else ""
         nar = s["narration"] if len(s["narration"]) <= 60 else s["narration"][:57] + "..."
         flag = "  !" if s["gaps"] else ""
-        print(f"  {s['n']:>2}  {str(s['id'] or '-'):<12} {s['block'] or s['recipe'] or '-':<20} {t:<13} {nar}{flag}")
+        print(f"  {s['n']:>2}  {str(s['id'] or '-'):<12} {s['block'] or s['recipe'] or '-':<24} {t:<13} {nar}{flag}")
         for g in s["gaps"]:
             print(f"        gap: {g}")
         for r in s["recommendations"]:
@@ -322,9 +349,10 @@ def main() -> int:
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--mode", choices=MODES)
     ap.add_argument("--suggest", metavar="LINE")
+    ap.add_argument("--look", default="voxEarworm", help="with --suggest: the look the video uses (voxScrapbook suggests its own blocks)")
     a = ap.parse_args()
     if a.suggest:
-        res = suggest(a.suggest)
+        res = suggest(a.suggest, a.look)
         if a.json:
             print(json.dumps(res, indent=1))
         else:

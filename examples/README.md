@@ -14,7 +14,8 @@ Every preview below was rendered by this repository from the prompt on its page.
 <!-- starters-gallery -->
 | | |
 |---|---|
-| <a href="starters/time-zones.md"><img src="starters/time-zones.gif" width="400" alt="Why railroads gave America time zones"></a><br><b>Why railroads gave America time zones</b><br>30 s · 7 scenes from 5 blocks · the first video to try<br><code>video-projects/example-time-zones</code> | <a href="starters/world-time.md"><img src="starters/world-time.gif" width="400" alt="How the world agreed on time"></a><br><b>How the world agreed on time</b><br>39 s · 10 scenes from 10 blocks · every evidence block in one story<br><code>video-projects/example-world-time</code> |
+| <a href="starters/cab-brain.md"><img src="starters/cab-brain.gif" width="400" alt="How learning London changes a cab driver's brain"></a><br><b>How learning London changes a cab driver's brain</b><br>49 s · 10 scenes from 7 blocks · the scrapbook look<br><code>video-projects/example-cab-brain</code> | <a href="starters/time-zones.md"><img src="starters/time-zones.gif" width="400" alt="Why railroads gave America time zones"></a><br><b>Why railroads gave America time zones</b><br>30 s · 7 scenes from 5 blocks · the first video to try<br><code>video-projects/example-time-zones</code> |
+| <a href="starters/world-time.md"><img src="starters/world-time.gif" width="400" alt="How the world agreed on time"></a><br><b>How the world agreed on time</b><br>39 s · 10 scenes from 10 blocks · every evidence block in one story<br><code>video-projects/example-world-time</code> |  |
 <!-- /starters-gallery -->
 
 ## Write your own
@@ -55,6 +56,10 @@ Click a block for its prompt template, the prompt behind the preview, the scene 
 follows when it sees the tag.
 
 <!-- blocks-gallery -->
+### The Earworm collection
+
+The default look (`voxEarworm`): a dark collage of torn prints and cut-outs, edited to the sound. The time-zones and world-time starters use it.
+
 | | |
 |---|---|
 | <a href="blocks/cold-open-year.md"><img src="blocks/cold-open-year.gif" width="400" alt="Cold open on a year"></a><br><b>Cold open on a year</b><br>Hook · <code>ColdOpenYear</code><br><code>[block: cold-open-year]</code> | <a href="blocks/data-bars.md"><img src="blocks/data-bars.gif" width="400" alt="Bar chart"></a><br><b>Bar chart</b><br>Evidence: a comparison · <code>DataChart</code><br><code>[block: data-bars]</code> |
@@ -64,6 +69,17 @@ follows when it sees the tag.
 | <a href="blocks/map-route.md"><img src="blocks/map-route.gif" width="400" alt="Map with a route"></a><br><b>Map with a route</b><br>Where it happened · <code>MapRoute</code><br><code>[block: map-route]</code> | <a href="blocks/montage-crane.md"><img src="blocks/montage-crane.gif" width="400" alt="Montage crane"></a><br><b>Montage crane</b><br>Context: a list of things · <code>MontageCrane</code><br><code>[block: montage-crane]</code> |
 | <a href="blocks/name-card.md"><img src="blocks/name-card.gif" width="400" alt="Name card"></a><br><b>Name card</b><br>A person, first appearance · <code>NameCardInterview</code><br><code>[block: name-card]</code> | <a href="blocks/photo-collage.md"><img src="blocks/photo-collage.gif" width="400" alt="Photo collage"></a><br><b>Photo collage</b><br>Hook / setting the scene · <code>PhotoCollageUnfold</code><br><code>[block: photo-collage]</code> |
 | <a href="blocks/quote-card.md"><img src="blocks/quote-card.gif" width="400" alt="Quote card"></a><br><b>Quote card</b><br>Evidence: a quotation · <code>QuoteCard</code><br><code>[block: quote-card]</code> | <a href="blocks/series-ident.md"><img src="blocks/series-ident.gif" width="400" alt="Series ident"></a><br><b>Series ident</b><br>After the question (10–17 % of the runtime) · <code>SeriesIdent</code><br><code>[block: series-ident]</code> |
+
+### The scrapbook collection
+
+Set `"look": "voxScrapbook"`: watercolour paper in one colour per chapter, torn scraps, specimen plates and "fig." labels, measured on a Vox brand piece ([analysis](../analysis/vox-sample/vox_braintravel.md)). The cab-brain starter uses it.
+
+| | |
+|---|---|
+| <a href="blocks/paper-sheet-slide.md"><img src="blocks/paper-sheet-slide.gif" width="400" alt="Paper-sheet slide"></a><br><b>Paper-sheet slide</b><br>Any transition · <code>paperSlide (transition)</code><br><code>[block: paper-sheet-slide]</code> | <a href="blocks/specimen-comparison.md"><img src="blocks/specimen-comparison.gif" width="400" alt="Specimen comparison"></a><br><b>Specimen comparison</b><br>A comparison · <code>SpecimenCompare</code><br><code>[block: specimen-comparison]</code> |
+| <a href="blocks/specimen-interview.md"><img src="blocks/specimen-interview.gif" width="400" alt="Specimen interview"></a><br><b>Specimen interview</b><br>A person · <code>SpecimenInterview</code><br><code>[block: specimen-interview]</code> | <a href="blocks/specimen-plate.md"><img src="blocks/specimen-plate.gif" width="400" alt="Specimen plate"></a><br><b>Specimen plate</b><br>Evidence: a diagram · <code>SpecimenPlate</code><br><code>[block: specimen-plate]</code> |
+| <a href="blocks/stamped-stat.md"><img src="blocks/stamped-stat.gif" width="400" alt="Stamped stat"></a><br><b>Stamped stat</b><br>A number, as a record · <code>StampedStat</code><br><code>[block: stamped-stat]</code> | <a href="blocks/torn-paper-chapter-card.md"><img src="blocks/torn-paper-chapter-card.gif" width="400" alt="Torn-paper chapter card"></a><br><b>Torn-paper chapter card</b><br>Chapter break · <code>ChapterCard</code><br><code>[block: torn-paper-chapter-card]</code> |
+| <a href="blocks/torn-paper-stat.md"><img src="blocks/torn-paper-stat.gif" width="400" alt="Torn-paper stat"></a><br><b>Torn-paper stat</b><br>A number · <code>PaperStat</code><br><code>[block: torn-paper-stat]</code> |  |
 <!-- /blocks-gallery -->
 
 ### A typical order (60–90 s)
@@ -77,6 +93,18 @@ follows when it sees the tag.
 | Evidence | [document-highlight](blocks/document-highlight.md), [quote-card](blocks/quote-card.md), [name-card](blocks/name-card.md), [data-counter](blocks/data-counter.md), [data-bars](blocks/data-bars.md) |
 | The turn | [footage-clip](blocks/footage-clip.md), [giant-word-card](blocks/giant-word-card.md) |
 | Ending | [end-card](blocks/end-card.md) |
+
+In the scrapbook look, a video is a run of chapters. Each chapter opens on a card and keeps one paper colour:
+
+| Section | Blocks that fit |
+|---|---|
+| Each chapter's start (the first one is the hook) | [torn-paper-chapter-card](blocks/torn-paper-chapter-card.md) |
+| A number with its context | [torn-paper-stat](blocks/torn-paper-stat.md), [stamped-stat](blocks/stamped-stat.md) (a count on the record) |
+| A person | [specimen-interview](blocks/specimen-interview.md) |
+| Evidence: a part of something | [specimen-plate](blocks/specimen-plate.md) |
+| Evidence: two groups | [specimen-comparison](blocks/specimen-comparison.md) |
+| Between sections, about once a minute | [paper-sheet-slide](blocks/paper-sheet-slide.md) |
+| Ending | [torn-paper-chapter-card](blocks/torn-paper-chapter-card.md) with a kicker instead of a number |
 
 ### Not in the gallery yet
 

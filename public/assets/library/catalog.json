@@ -439,6 +439,50 @@
    }
   },
   {
+   "id": "photo-fine-day-london-1890s",
+   "kind": "photos",
+   "path": "assets/library/photos/cities/photo-fine-day-london-1890s.jpg",
+   "title": "Fine day in London: a cab in a foggy street (about 1891-1896)",
+   "tags": [
+    "london",
+    "fog",
+    "street",
+    "cab",
+    "horse",
+    "atmosphere",
+    "1890s",
+    "photograph"
+   ],
+   "era": "1890s",
+   "region": "GB",
+   "pd_basis": "CC0 dedication by the Rijksmuseum (RP-F-F25501-S); photograph of about 1891-1896",
+   "license": "cc0",
+   "license_name": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Rijksmuseum",
+   "attribution": "\"Fine day in London, RP-F-F25501-S (c1)\" by Rijksmuseum, via commons; CC0 (https://commons.wikimedia.org/wiki/File:Fine_day_in_London,_RP-F-F25501-S_(c1).jpg)",
+   "source": {
+    "site": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:Fine_day_in_London,_RP-F-F25501-S_(c1).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Fine_day_in_London%2C_RP-F-F25501-S_%28c1%29.jpg/1920px-Fine_day_in_London%2C_RP-F-F25501-S_%28c1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "retrieved": "2026-11-17"
+   },
+   "build": {
+    "from": "download",
+    "steps": [
+     "resize:2400",
+     "jpeg:88"
+    ]
+   },
+   "file": {
+    "bytes": 1447305,
+    "sha256": "41713c8daccb6aa1bb6f5188591b2827a944887632848eb15136ab4d0bd43345",
+    "w": 1920,
+    "h": 1563,
+    "fp": "d1c7cbcdcdcbcdcdced1d1cfccc1b2c6ad8aa8abaaa7aaacaeb4b7aca1917394a27898acaaa7a9abaeb3b1a39e957593a27886a3adaaa7a7acb2a69c9c917d95a0738592a5a9abaaacaca197938d80969f73838993a1a7a5a6a194908a857c9ba2747e838f969b9b99948c85827e7b9da07278808b8c8c969087807a7c797798a574797d84837b6c817f7b7477767194a274797f878a836e757e797071757192a6767a818a908c7d7f827a7173747093a97b808390918c7f8a837b7276717194ae8181939a93928f938f857a79706f92b38c919c908386919491877e7c73708fb794929b958d8f8f9090867d7b736e8ed5c9c6c9c5c2c0c2c3c3c0bbbab6b5c5"
+   }
+  },
+  {
    "id": "photo-luna-park-night-1905",
    "kind": "photos",
    "path": "assets/library/photos/cities/photo-luna-park-night-1905.jpg",
@@ -2582,6 +2626,50 @@
    }
   },
   {
+   "id": "photo-london-cab-driver-thomson-1884",
+   "kind": "photos",
+   "path": "assets/library/photos/transport/photo-london-cab-driver-thomson-1884.jpg",
+   "title": "A horse-drawn London cab and its driver (photograph by John Thomson, 1884)",
+   "tags": [
+    "london",
+    "cab",
+    "cab driver",
+    "horse",
+    "street",
+    "transport",
+    "1880s",
+    "photograph"
+   ],
+   "era": "1884",
+   "region": "GB",
+   "pd_basis": "Photograph of 1884; John Thomson died 1921 (Library of Congress LCCN96509047)",
+   "license": "pd",
+   "license_name": "Public domain",
+   "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "author": "Thomson, J. (John), 1837-1921, photographer",
+   "attribution": "\"Horse-drawn cab of T. Tilling, with boy inside and driver, London LCCN96509047\" by Thomson, J. (John), 1837-1921, photographer, via commons; Public domain (https://commons.wikimedia.org/wiki/File:Horse-drawn_cab_of_T._Tilling,_with_boy_inside_and_driver,_London_LCCN96509047.jpg)",
+   "source": {
+    "site": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:Horse-drawn_cab_of_T._Tilling,_with_boy_inside_and_driver,_London_LCCN96509047.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Horse-drawn_cab_of_T._Tilling%2C_with_boy_inside_and_driver%2C_London_LCCN96509047.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "retrieved": "2026-11-17"
+   },
+   "build": {
+    "from": "download",
+    "steps": [
+     "resize:2400",
+     "jpeg:88"
+    ]
+   },
+   "file": {
+    "bytes": 168136,
+    "sha256": "ea534ece2017dc1559267f8ceee0e169c146e13724f610ae1dfd086df03e57d2",
+    "w": 1536,
+    "h": 1051,
+    "fp": "bcada59e9e9c98979390938f8f9599ab8a6e635b595a4f48424143423e3e437086675b432f2f332922252a2c2d2b33648866503425272e271e1f28312f2c31628f878836282b82662326211b312b33639290813d2e31826c3233443f3c303767967d624a323c67663d3d2e2023363a6a974f3947272f34417581491e26667e8c8a3f2b313747242667583e3e3b677b8b73606246371c3956352f273b1d7c4f7192739a8752463460687d4d2d1d949ba6c4aab8a26a61638d93a792656eb3c7c9ccbab0855b404e5f7673817bacb7bdc2d2c5bdbbb1acb0bbbebec0c3c4c6c9c9d4c6c1bfc0c1c1c2c4c6c7cacdd0d3d0d7cacac8c7c5c5c1c4cacbced1d6d6d0"
+   }
+  },
+  {
    "id": "photo-steam-locomotive-side-1901",
    "kind": "photos",
    "path": "assets/library/photos/transport/photo-steam-locomotive-side-1901.jpg",
@@ -3115,6 +3203,91 @@
    "notes": "Kit test pack (public/assets/cc0/CREDITS.md has the full licence evidence)."
   },
   {
+   "id": "engr-brain-horizontal-section-sobotta-1909",
+   "kind": "engravings",
+   "path": "assets/library/engravings/anatomy/engr-brain-horizontal-section-sobotta-1909.jpg",
+   "title": "Horizontal section of the brain, hippocampus labelled (Sobotta's atlas, 1909)",
+   "tags": [
+    "brain",
+    "anatomy",
+    "hippocampus",
+    "section",
+    "memory",
+    "science",
+    "engraving",
+    "1900s"
+   ],
+   "era": "1909",
+   "pd_basis": "Published 1909 (Sobotta, Atlas and Text-book of Human Anatomy); Johannes Sobotta died 1945",
+   "license": "pd",
+   "license_name": "Public domain",
+   "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "author": "Dr. Johannes Sobotta",
+   "attribution": "\"Sobo 1909 637\" by Dr. Johannes Sobotta, via commons; Public domain (https://commons.wikimedia.org/wiki/File:Sobo_1909_637.png)",
+   "source": {
+    "site": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:Sobo_1909_637.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Sobo_1909_637.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "retrieved": "2026-11-17"
+   },
+   "build": {
+    "from": "download",
+    "steps": [
+     "resize:2400",
+     "jpeg:88"
+    ]
+   },
+   "file": {
+    "bytes": 207223,
+    "sha256": "435366594b7f32e62331eb2362b715c4c547e4af9bc0e867db1f9139889f807d",
+    "w": 1061,
+    "h": 1050,
+    "fp": "fffffffffffffffffdf2eaedeefffffffff7f4f4f5c9aaa09e92bfdde9e8fefffffcf4f6caa6c1bfa6b69ba4ede8e8f8f3f2f5df9bafd6a6b5d7b699c6eaf0f7fffff9b7a0c0cd94a1b8ccaa9ef2f5f8fdfbfda086bbbe7070c5cfaaa2d8ecf6f1f2ef5e4c81bc76a5bdadd3aad4fcffffffc57181b5bc94c9cc74ddc1b6ebf2ffffb78e96a49598a6b662bfada2ffffefefbcb8bcbcbe708fad78bfaca5fffff5f2cda6c8bcdd838dcc8dd7b5c7fffff7efeab5d4acb08e92c59bbebce0fffffaf2f4c1bcbfae85a7cbcfb8b8fffffffffff1edb2deca9ea1bbada4e8fafffffffbfbfbf0afc5a7acb4b8ebfffffffffffafbfafafbe3e3d8e8f8f4f6ffffff"
+   }
+  },
+  {
+   "id": "engr-brain-lateral-sobotta-1909",
+   "kind": "engravings",
+   "path": "assets/library/engravings/anatomy/engr-brain-lateral-sobotta-1909.jpg",
+   "title": "The brain seen from the side, with labelled gyri (Sobotta's atlas, 1909)",
+   "tags": [
+    "brain",
+    "anatomy",
+    "cerebrum",
+    "lateral view",
+    "science",
+    "engraving",
+    "1900s"
+   ],
+   "era": "1909",
+   "pd_basis": "Published 1909 (Sobotta, Atlas and Text-book of Human Anatomy); Johannes Sobotta died 1945",
+   "license": "pd",
+   "license_name": "Public domain",
+   "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "author": "Dr. Johannes Sobotta",
+   "attribution": "\"Sobo 1909 626\" by Dr. Johannes Sobotta, via commons; Public domain (https://commons.wikimedia.org/wiki/File:Sobo_1909_626.png)",
+   "source": {
+    "site": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:Sobo_1909_626.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Sobo_1909_626.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "retrieved": "2026-11-17"
+   },
+   "build": {
+    "from": "download",
+    "steps": [
+     "resize:2400",
+     "jpeg:88"
+    ]
+   },
+   "file": {
+    "bytes": 216464,
+    "sha256": "7e3b211dc2d7c60be9e75804ca048661e3239011bd3af723aa74916772f2a646",
+    "w": 1326,
+    "h": 899,
+    "fp": "fff0f0f0f0f7f0faffeef5fffffffffffffffff7c3a08988a9e2e4e9fffffffffffffec2b0bac29c8084c7f0e8f6fffff8eddaafc0ac9aa16c8779b4f7f9fffffffabdb6cbceb5a2aa956166d3f1f0fbffd8bed4ce9cab94ca93855c68f3f0f7f4bec8c0b7c2c4abab9c886746d2eff7f9cecba8aeb5b0b79ba27e6b38a0f2f8ffc792afb69284756c88875e3984e6fef5cb8c908e8ed4bfa8a276654475e1eae1d8d6ceafc5999189788850436ffbfcfdece7eac6acbca583725f51496bedf6fffffffab7b982846871504e487efbfffff7f1efea72766063734d4e4ba6fffffffff4f0e2e4eaf0fcffeee5a9def0fffffffffffff0e6e8edfaeeeee3e1f0ff"
+   }
+  },
+  {
    "id": "engr-barnum-elephant-ploughing-1855",
    "kind": "engravings",
    "path": "assets/library/engravings/animals/engr-barnum-elephant-ploughing-1855.jpg",
@@ -3507,6 +3680,90 @@
     "w": 1920,
     "h": 1242,
     "fp": "a0c2c8c9cecdc8c5c7cacececac7bc98aac6ccced1cec9c9c8ccd2d3cca2b090b0c9cacfd0ccc9c9cccfd3c6b599ae56b6cbcbcfcecac8c9c9cdd09a99859261bbcebecdcdc6c8c9cbc8cd9172747165bbb68baecec3c8c7c5c3c4666a55657f8ba66b9dcec0c9c7caa7bd7179797380686c737da8adcdcabf9ea572856d7b89436d7d8c679dbdcc9ea8ad7c8965758549807b7766878ca4a47a9d817a4f889555697674717071859776898e926b887f52695d6356657d91a074a38c946e896f5d7353665d768ea7b2a2a77085617a69546e5159627d9dafb6c2a0808d62745c4766647b7e91a9bcb2b8aca3886d8a663a66758a999c909891a3b0b7b5908560"
+   }
+  },
+  {
+   "id": "engr-charing-cross-medland-1795",
+   "kind": "engravings",
+   "path": "assets/library/engravings/cities/engr-charing-cross-medland-1795.jpg",
+   "title": "Charing Cross (engraving by Thomas Medland, 1795)",
+   "tags": [
+    "london",
+    "charing cross",
+    "statue",
+    "street",
+    "engraving",
+    "1790s"
+   ],
+   "era": "1795",
+   "region": "GB",
+   "pd_basis": "CC0 dedication by the Yale Center for British Art (B1977.14.15617); published 1795",
+   "license": "cc0",
+   "license_name": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "Thomas Medland",
+   "attribution": "\"Thomas Medland - Charing Cross - B1977.14.15617 - Yale Center for British Art\" by Thomas Medland, via commons; CC0 (https://commons.wikimedia.org/wiki/File:Thomas_Medland_-_Charing_Cross_-_B1977.14.15617_-_Yale_Center_for_British_Art.jpg)",
+   "source": {
+    "site": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:Thomas_Medland_-_Charing_Cross_-_B1977.14.15617_-_Yale_Center_for_British_Art.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Thomas_Medland_-_Charing_Cross_-_B1977.14.15617_-_Yale_Center_for_British_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "retrieved": "2026-11-17"
+   },
+   "build": {
+    "from": "download",
+    "steps": [
+     "resize:2400",
+     "jpeg:88"
+    ]
+   },
+   "file": {
+    "bytes": 832194,
+    "sha256": "4d26189394003dfe304d42e6e3f1bbdad9493efac4a77182886f6caf5c7953cd",
+    "w": 1920,
+    "h": 1653,
+    "fp": "e1e3e8eaebeaeae9e8e8e4e7e4e4e2dde5e4dddddfdedfdedfdddcdcdddbe1e0e9e0c7c6c3c3c6cfc5c1c2c8c7bfdce2e9e3c5c3bcc7c9d1d2a0b7bcbebfdce2eae59fbfc8cdcdcaca84b6cac2a0d6e6ecda8ba6b6d1b0b4ba97af8d6356c2e9ecdb95938db480bb91946b5c5753c0e8edd88d8d808c89b1807762625c56bee7ecda84807e795a897f77625c5b5bbee7ebda827d786e7781756f6162615ebee7e9d3816c5c676f7d6a54626d6f62bee5e8d289704f515b769c7563837b75c1e4e6e7d7dadad9d9dcdfd7d7d6d5d2dee1e3eaeae9e7e6e3d1c9dfe1e2e2e4e3dfe3e7e8e7e6e6e7dcdbe4dfded7dbdfdbdde0e5e4e5e4e0dfdedee1e1e0dfddd9"
+   }
+  },
+  {
+   "id": "engr-charing-cross-trafalgar-square",
+   "kind": "engravings",
+   "path": "assets/library/engravings/cities/engr-charing-cross-trafalgar-square.jpg",
+   "title": "Charing Cross and the new Trafalgar Square, with horse cabs (anonymous engraving)",
+   "tags": [
+    "london",
+    "charing cross",
+    "trafalgar square",
+    "cabs",
+    "street",
+    "engraving",
+    "19th century"
+   ],
+   "region": "GB",
+   "pd_basis": "CC0 dedication by the Yale Center for British Art (B1977.14.15640)",
+   "license": "cc0",
+   "license_name": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "author": "anonymous",
+   "attribution": "\"Anonymous - Charing Cross - New Trafalgar Square - B1977.14.15640 - Yale Center for British Art\" by anonymous, via commons; CC0 (https://commons.wikimedia.org/wiki/File:Anonymous_-_Charing_Cross_-_New_Trafalgar_Square_-_B1977.14.15640_-_Yale_Center_for_British_Art.jpg)",
+   "source": {
+    "site": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:Anonymous_-_Charing_Cross_-_New_Trafalgar_Square_-_B1977.14.15640_-_Yale_Center_for_British_Art.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Anonymous_-_Charing_Cross_-_New_Trafalgar_Square_-_B1977.14.15640_-_Yale_Center_for_British_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "retrieved": "2026-11-17"
+   },
+   "build": {
+    "from": "download",
+    "steps": [
+     "resize:2400",
+     "jpeg:88"
+    ]
+   },
+   "file": {
+    "bytes": 614681,
+    "sha256": "14d1cd6ee32d0d35358f956b4d3617f67c9497d740296a070632deec395e3268",
+    "w": 1920,
+    "h": 1388,
+    "fp": "dad6d7d7d7d9dbdcdbdad9d6d4d3d3d8dec6c8c9cacbcccac2bebebcb6b0acd8e2c7cacbcbcdcecbc9c2c1bfbcb1a6dbe4c6c8cbcdcdcccacbc9c6bfb38e7ddae5c6c8c1cccdcccacac8c4b8a98aa3dde4b2b8bacfcfcfcfcdc0c2b6a99597dce4b3b2b6b5bccac4c3aac1b2ad9ba3dce4aa9bada3a9b9b9b6a7b2a599a0a6dee495908e8483999eaca1b2a88c9ea9dde49a9190887b918da9a2a0a48e9292dce6876c8986757d798996698088878cdce57ca4ab7499927e88686b83938883dde46572846d8ca8a7a29598a17a94a3dde2979a9993979ba3afb6b7b8b7aeb6dde0e0e0e0e0e0e0e1e1e0dfdfdedddcdbdcdcdcdddcdddedfdfdedcdbdad9d8d6"
    }
   },
   {
@@ -5368,6 +5625,92 @@
     "fp": "a0bebbbcbebdbcbdbbbabcbbb9b5b09bbfbfa5a5a6a9aaaba5a4b4b6acb4beb3bebd9f9da1a4a6a795a2b5aa9cabbfb7bfbe9da5969c9e9798a4a4a79da9bdb8bdbca5ac9c9c9c8f9ca0a4a5a592b9b9bebe9fa59ba3948e98909ea3a58dbdb9bebe98949ea2a0999a97999c9e9ab8bac0be97969aa2a9999794989ea1a1bfbabfbf979aa1988d8e8b969ca2a190b8bbbfbd95959c918e8d87979f9da29ab8b9c0be9391928c7f858c8c9e99958fbab9c0be8f8c858c8999958b9d9c969ababbbfbd8f7e93928d8b8b91a1a2a299bdb8bebc938b9093968c8e8e989bb0a8b9b7bcbeaaa8aaaea89fa09ea5a3babcbfb49dabaeadacaba9ababaaacacaaa8a595"
    },
    "notes": "Kit test pack (public/assets/cc0/CREDITS.md has the full licence evidence)."
+  },
+  {
+   "id": "map-london-bacon-1890",
+   "kind": "maps",
+   "path": "assets/library/maps/cities/map-london-bacon-1890.jpg",
+   "title": "Pocket map of London (G. W. Bacon, 1890)",
+   "tags": [
+    "map",
+    "london",
+    "city",
+    "streets",
+    "thames",
+    "1890s",
+    "historical map"
+   ],
+   "era": "1890",
+   "region": "GB",
+   "pd_basis": "Published 1890",
+   "license": "pd",
+   "license_name": "Public domain",
+   "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "author": "George Washington Bacon",
+   "attribution": "\"1890 Bacon Traveler's Pocket Map of London, England - Geographicus - London-bacon-1890\" by George Washington Bacon, via commons; Public domain (https://commons.wikimedia.org/wiki/File:1890_Bacon_Traveler%27s_Pocket_Map_of_London,_England_-_Geographicus_-_London-bacon-1890.jpg)",
+   "source": {
+    "site": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:1890_Bacon_Traveler%27s_Pocket_Map_of_London,_England_-_Geographicus_-_London-bacon-1890.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/1890_Bacon_Traveler%27s_Pocket_Map_of_London%2C_England_-_Geographicus_-_London-bacon-1890.jpg/1920px-1890_Bacon_Traveler%27s_Pocket_Map_of_London%2C_England_-_Geographicus_-_London-bacon-1890.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "retrieved": "2026-11-17"
+   },
+   "build": {
+    "from": "download",
+    "steps": [
+     "resize:2400",
+     "jpeg:88"
+    ]
+   },
+   "file": {
+    "bytes": 1589124,
+    "sha256": "f516aa4741b211157cc0539d7e9c9ab315ce69770be83da7228559fbc0a59511",
+    "w": 1920,
+    "h": 1471,
+    "fp": "d1cecbd1dfc0c7b9c3c0c2c1cbd3cfd8d0cdc2c4c6b7b8bbbbc3b0b1b6c1c6d0cdc9c8bfa7aaa7b9bab6a7aeacb0c8dcc8c4b8b6a4a1a9b1a8a8a6a9a6aaacbfbc9ba3a9a9a8aea9a9a5a3a19fa5abbbb9aea5a7b6ada5a5a7a0a3a3a3a3a1b7b6bfa49fa9a8a6a8a2a3a2a69ea7a2afb1a2a197969ea3a5a89ea8a0a7aba3aab2a1a2a19ea0a3a59fa3a2a3a0a7a3abb0aab3b2aa9da4aaafada49899aca9b5c1afb4b0aea7a5aeaaaea3b0aabdc2bab8aaaaa6a7a9a5a9a7a9a6a6abbcb9c6bfada4a2a2a6adaeaba8a9acafb3b4c4c1aea8a2b2b3b5aeb1abacadbacdbbc3c4b6b8b4b1bdb3b0afaaaaafb0c2aab8c5c8c4bfc4bebcb9bfc0beb7b4bcb3c1"
+   }
+  },
+  {
+   "id": "map-london-temple-ordnance-1890s",
+   "kind": "maps",
+   "path": "assets/library/maps/cities/map-london-temple-ordnance-1890s.jpg",
+   "title": "Ordnance Survey street plan of the Temple area, City of London (1890s)",
+   "tags": [
+    "map",
+    "london",
+    "street plan",
+    "ordnance survey",
+    "streets",
+    "1890s",
+    "black and white"
+   ],
+   "era": "1890s",
+   "region": "GB",
+   "pd_basis": "Ordnance Survey map of the 1890s, published before 1931",
+   "license": "pd",
+   "license_name": "Public domain",
+   "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "author": "Ordnance Survey",
+   "attribution": "\"Temple area, City of London, Ordnance Survey map 1890s\" by Ordnance Survey, via commons; Public domain (https://commons.wikimedia.org/wiki/File:Temple_area,_City_of_London,_Ordnance_Survey_map_1890s.png)",
+   "source": {
+    "site": "Wikimedia Commons",
+    "page": "https://commons.wikimedia.org/wiki/File:Temple_area,_City_of_London,_Ordnance_Survey_map_1890s.png",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Temple_area%2C_City_of_London%2C_Ordnance_Survey_map_1890s.png/1920px-Temple_area%2C_City_of_London%2C_Ordnance_Survey_map_1890s.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "retrieved": "2026-11-17"
+   },
+   "build": {
+    "from": "download",
+    "steps": [
+     "resize:2400",
+     "jpeg:88"
+    ]
+   },
+   "file": {
+    "bytes": 913512,
+    "sha256": "ab081fc1e189f3b048da9dc93846b5775e01922283fce3ca59b30d7f2dfa3eaf",
+    "w": 1920,
+    "h": 1258,
+    "fp": "d6d3e3ebdecee4e0d7d2dcd6d7dae9e4e1cbd1d7c9d6dddde0d2dcd5d8dde0e6d8d4cad4dbd4c2c7d9d0dfd7d5dfdaefebd1cbe5d9dcc4c5d4dddcdcd5e0d7e6e6d1d3ccd9e8cec8d3e1ded5dde1d9dee2cfd4d7e0dee1eadbd8d1dfdedadfdfe2e7d0d1d8d5e4d4d7d6dae3d3d2e2e1ddc7cbd0d0dbdbcdddd8e1e6ebe8e4e6dcc8ccccd9d6d7dee3e1ece7ece4e9e0d5d7ded8cbdadbe1e0e6f4e8f2f2dee3c6dcd4d7c6dddee0e5e5e3e4eeebe8ece3d8d7ddd0dcdde2e1ebf4f0f3f2f1f9d4d9e9e6e6edf7fffafffffefffefdfad7dbdee2fbfefffffcfbf7f9f9fbfbf6dee5e2f5fffffafdf6f3f3fbfffffff8e7ebf7f7fcf6f6fffffffdfffffdfdf8"
+   }
   },
   {
    "id": "map-taunton-birds-eye-1875",
@@ -8729,6 +9072,41 @@
     "w": 3072,
     "h": 3072,
     "fp": "d9d8dadcdedfe1e2dddad7d9d6d8d7dae0dedfe0e1dfdee0dedbd8d8d8d8dadce1e4e4e4e2dedddfdfdbd7d6d8d9d9dce1e2e4e5e2e2e2dddcdbdbdadad8d8dce1e2e1e4e4e2dedcdbd9d9dbdcdcdbdde4e4e2e2e2e3e0dfddd9d8dbdde0dfe1e3e1e0e3e1e1e0e1dedbdadddddfdde0dededfe1e1e0dcdcdcdcdadedfe0dee0dfe0dedfdddedddde0e0dfdedddddfdfe1e0dadcdbdbdadce0dfdedbdddfdfdee0e0dcdcddd8d9dcdedddcdadce2e1e0e1dfdee0dbdadcdcdadcdedddddddfe2dedee1e3dfdfdedbdcdddedddddde0e0dcd9dee0dfe0e2dfdfdedddfdfdddddbdad8d7d9dee2e0dedee0dcdfdddcddddd9d7d8dadddddddddbdadbdbd9d7dbda"
+   }
+  },
+  {
+   "id": "tex-paper-watercolour",
+   "kind": "textures",
+   "path": "textures/paper_watercolour.jpg",
+   "title": "Cold-press watercolour paper, near-white (tinted per section by the scrapbook look)",
+   "tags": [
+    "paper",
+    "watercolour",
+    "cold press",
+    "texture",
+    "scrapbook",
+    "light",
+    "seamless"
+   ],
+   "license": "cc0",
+   "license_name": "CC0 1.0",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "source": {
+    "site": "this repository (procedural, seeded)"
+   },
+   "build": {
+    "from": "generate",
+    "cmd": "tools/textures/generate_textures.py"
+   },
+   "packs": [
+    "core"
+   ],
+   "file": {
+    "bytes": 1109415,
+    "sha256": "1450a1d1f8aacc460e2c3db954762df76c0839aa9a2ef1b043eb711a7bfb6a89",
+    "w": 3072,
+    "h": 3072,
+    "fp": "f0edecedeeeeebeeeee7e4e2e3e7ebf0efefedefedeeeff0f0e7e6e4e3e7eaf0eaecedf0eff0f0f0eee8e6e5e4e9ecebeaedeeeff0f0eeeceae9e7e5e6e9ebe8ebecececeef2eeeceae9ebe9e7e9ebeae9ecececefefeeeeeeedeeedebececebebeeedebefeeeeecededf0eee9eae8e9e9eceaeaebecedebedeff1eee9e6e4e7e8ebe9eaeaebebeceff0efece9e9e5e4e6e6e8ebececedefefedeae7e8e8e7e5e6e7e9eaeceeeeedece9e6e7e4e7e6e4e6e7e8ebece8eaedeaeae8e6e7e5e6e4e8ebecebe8e8eaeeefebe8e5e7e7e7e7eaeaedede9ecedefefede9e5e6e6e7ebededecedeef0f0f1edece9e4e2e5e9ecf0efececeeedefefebe8e4e1e1e6e8eb"
    }
   },
   {
@@ -12198,6 +12576,40 @@
    }
   },
   {
+   "id": "sfx-chime",
+   "kind": "sfx",
+   "path": "audio/sfx/chime.wav",
+   "files": [
+    "audio/sfx/chime.json"
+   ],
+   "title": "Bright end-card chime (bell partials, about 0.5 s)",
+   "tags": [
+    "chime",
+    "bell",
+    "end card",
+    "shimmer",
+    "scrapbook"
+   ],
+   "license": "cc0",
+   "license_name": "CC0 1.0",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "source": {
+    "site": "this repository (procedural, seeded)"
+   },
+   "build": {
+    "from": "generate",
+    "cmd": "tools/audio/make_sfx.py"
+   },
+   "packs": [
+    "core"
+   ],
+   "file": {
+    "bytes": 153644,
+    "sha256": "9a0ede97878777cd34fc28d1cbd80349e1ad54fcd9cd84a8fafbe5979c50b9d5",
+    "duration_s": 1.6
+   }
+  },
+  {
    "id": "sfx-glitch-tick",
    "kind": "sfx",
    "path": "audio/sfx/glitch_tick.wav",
@@ -12266,6 +12678,74 @@
    }
   },
   {
+   "id": "sfx-paper-flick",
+   "kind": "sfx",
+   "path": "audio/sfx/paper_flick.wav",
+   "files": [
+    "audio/sfx/paper_flick.json"
+   ],
+   "title": "Paper flick: a sheet or scrap landing (short slap)",
+   "tags": [
+    "paper",
+    "flick",
+    "slap",
+    "land",
+    "scrapbook"
+   ],
+   "license": "cc0",
+   "license_name": "CC0 1.0",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "source": {
+    "site": "this repository (procedural, seeded)"
+   },
+   "build": {
+    "from": "generate",
+    "cmd": "tools/audio/make_sfx.py"
+   },
+   "packs": [
+    "core"
+   ],
+   "file": {
+    "bytes": 13484,
+    "sha256": "38bfd27b841c012e35e8da9ae1a2b1a02b32bdf58e0032291827aa5ceda2d1d5",
+    "duration_s": 0.14
+   }
+  },
+  {
+   "id": "sfx-paper-swoosh",
+   "kind": "sfx",
+   "path": "audio/sfx/paper_swoosh.wav",
+   "files": [
+    "audio/sfx/paper_swoosh.json"
+   ],
+   "title": "Paper swoosh: a sheet sliding over paper (0.42 s, peak 0.12 s)",
+   "tags": [
+    "paper",
+    "swoosh",
+    "slide",
+    "transition",
+    "scrapbook"
+   ],
+   "license": "cc0",
+   "license_name": "CC0 1.0",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "source": {
+    "site": "this repository (procedural, seeded)"
+   },
+   "build": {
+    "from": "generate",
+    "cmd": "tools/audio/make_sfx.py"
+   },
+   "packs": [
+    "core"
+   ],
+   "file": {
+    "bytes": 40364,
+    "sha256": "390f16e87cde1502306f20fe976d17c056471eb63624aa348b9ebc354c803614",
+    "duration_s": 0.42
+   }
+  },
+  {
    "id": "sfx-radio-static",
    "kind": "sfx",
    "path": "audio/sfx/radio_static.wav",
@@ -12300,6 +12780,41 @@
    }
   },
   {
+   "id": "sfx-stamp-thud",
+   "kind": "sfx",
+   "path": "audio/sfx/stamp_thud.wav",
+   "files": [
+    "audio/sfx/stamp_thud.json"
+   ],
+   "title": "Rubber stamp thud on paper",
+   "tags": [
+    "stamp",
+    "thud",
+    "impact",
+    "paper",
+    "number",
+    "scrapbook"
+   ],
+   "license": "cc0",
+   "license_name": "CC0 1.0",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "source": {
+    "site": "this repository (procedural, seeded)"
+   },
+   "build": {
+    "from": "generate",
+    "cmd": "tools/audio/make_sfx.py"
+   },
+   "packs": [
+    "core"
+   ],
+   "file": {
+    "bytes": 33644,
+    "sha256": "06ea2077eeb0690519e3696ccb0fa46a739733e6702dcff3abca65b8a69befda",
+    "duration_s": 0.35
+   }
+  },
+  {
    "id": "sfx-sub-boom",
    "kind": "sfx",
    "path": "audio/sfx/sub_boom.wav",
@@ -12331,6 +12846,41 @@
     "bytes": 134444,
     "sha256": "77ff367af05a9d8138b3fcd5649d888835d964d45375afc8dab65bb0a0203710",
     "duration_s": 1.4
+   }
+  },
+  {
+   "id": "sfx-sub-swell",
+   "kind": "sfx",
+   "path": "audio/sfx/sub_swell.wav",
+   "files": [
+    "audio/sfx/sub_swell.json"
+   ],
+   "title": "Sub swell into a chapter card (0.7 s rise)",
+   "tags": [
+    "swell",
+    "riser",
+    "sub",
+    "chapter",
+    "structure",
+    "scrapbook"
+   ],
+   "license": "cc0",
+   "license_name": "CC0 1.0",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "source": {
+    "site": "this repository (procedural, seeded)"
+   },
+   "build": {
+    "from": "generate",
+    "cmd": "tools/audio/make_sfx.py"
+   },
+   "packs": [
+    "core"
+   ],
+   "file": {
+    "bytes": 105644,
+    "sha256": "55b13b3482111bfa12e2143911e014d246c3848f86f98bd7be8b9c9883fe842e",
+    "duration_s": 1.1
    }
   },
   {

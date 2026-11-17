@@ -8,6 +8,7 @@ specks, fibres and scratches are drawn with wrap-around for the same reason.
   paper_warm.jpg      warm off-white desk/scrapbook paper (paper-desk style)
   paper_aged.jpg      yellowed newsprint / document paper
   paper_cool.jpg      neutral light-grey card (Vox explainer backgrounds)
+  paper_watercolour.jpg  cold-press watercolour paper, tinted per section (scrapbook look)
   paper_black.jpg     scratched, chalky black paper (dark-collage style)
   paper_desk.jpg      cream desk surface with sparse warm-grey and pink/red flecks (paper desk flyover)
   paper_crumpled.jpg  warm grey crumpled sheet with a crease network (Vox editorial)
@@ -365,6 +366,11 @@ PRESETS = {
     "paper_crumpled": dict(base="#c9c0b5", lum_tint=[1.0, 0.97, 0.88], facet_big=1.2, facet_small=1.5, facet_tiny=1.1,
                            crease_vor=5.0, cracks=90, crease_dark=34, crease_light=14, stain=0.6, cloud=0.4, tooth=2.4,
                            flecks=0.08, crumple=True),
+    # cold-press watercolour paper (scrapbook look, vox_braintravel §4.4): neutral near-white so Paper's `color` tints it
+    # per section; strong soft tooth, gentle pigment-pooling mottle, few fibres. Keep LAST: presets are seeded by position.
+    "paper_watercolour": dict(base="#ecebea", mottle=3.4, cloud=2.8, tooth=4.6, hue_drift=0.0,
+                              fibres=3, fibre_strength=4, soften=0.6,
+                              specks=[("#9a9896", 0.4, (0.15, 0.4)), ("#fbfbfa", 1.0, (0.3, 0.6))]),
 }
 
 

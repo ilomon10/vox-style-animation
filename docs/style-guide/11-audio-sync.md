@@ -220,23 +220,23 @@ const tag = cueFrame({ cues: vo, word: "Parliament", offset: -12 });            
 const exitInPause = bed.snapToEighth(vo.phraseEnds()[3] + 8);                    // music owns the pause
 ```
 
-## 10 · Look profiles: `earworm` vs `standard`
+## 10 · Look profiles: `earworm`, `standard` and `scrapbook`
 
-Everything above was measured on *Earworm*. Six other official Vox videos (2019–2026; `analysis/vox-framework-coverage.md` §2.6 and §5) cut and mix differently: cuts lead the narrator's **phrase** start instead of landing on a keyword's onset, the bed is a **static** library track under the voice, the music changes once per **section**, and a chapter is joined by a short **digital-silence hole** and a hard cut. Both behaviours ship as profiles in `src/audio/profiles.ts`; a storyboard picks one with `profile`, or gets one from its look (`voxEarworm` or no look → `earworm`, any other look → `standard`).
+Everything above was measured on *Earworm*. Six other official Vox videos (2019–2026; `analysis/vox-framework-coverage.md` §2.6 and §5) cut and mix differently: cuts lead the narrator's **phrase** start instead of landing on a keyword's onset, the bed is a **static** library track under the voice, the music changes once per **section**, and a chapter is joined by a short **digital-silence hole** and a hard cut. Both behaviours ship as profiles in `src/audio/profiles.ts`; a storyboard picks one with `profile`, or gets one from its look (`voxEarworm` or no look → `earworm`, `voxScrapbook` → `scrapbook`, any other look → `standard`). The `scrapbook` profile was measured on a Vox brand piece in the scientific-scrapbook look (`analysis/vox-sample/vox_braintravel.md` §7; 4:16, 23.976 fps).
 
-| Setting | `earworm` (unchanged) | `standard` (measured on the sample) |
-|---|---|---|
-| default scene-start kind | `cut`: word onset, 0 f | `phrase`: 3 f before the phrase's first word (sample: 0–12 f before; medians 1–4 f) |
-| `highlight` event | +1 f | +1 f (sample −6…+5 f, sweep 7–22 f) |
-| `lowerThird` event | cut +2 f | cut +2 f (sample 0…+3 f, life 120 f) |
-| `name` (decode card) | +4 f on the surname | +4 f |
-| label text | −7 f | −7 f (sample −4…−16 f) |
-| bed | ridden: gap −7.6 dB re the voice, duck −2.4 dB | static: `ride: false`, −13 dB re the voice (sample −7.3…−19.2 dB), applied only when a music entry sets neither |
-| music changes | 8–12 boundaries per minute | one cue per chapter (validator warns above 2 per minute) |
-| chapter joint | `dip` (picture + sound) | `transitionIn: {kind: "cut", hole: 12}`: bed out 12 f before the cut, next cue 3 f after (sample 5–29 f holes) |
-| new cue vs the cut | 3.5 f before (pre-lap) | 3 f after (sample −1…+6 f) |
-| SFX | about 1 per 13 s; transitions carry their sounds | at most 1.5 per minute (+1); transitions silent unless `sfx: true` |
-| minimum cut spacing | 6 f | 6 f; 3 f into a scene marked `burst: true` |
+| Setting | `earworm` (unchanged) | `standard` (measured on the sample) | `scrapbook` (measured on the brand piece) |
+|---|---|---|---|
+| default scene-start kind | `cut`: word onset, 0 f | `phrase`: 3 f before the phrase's first word (sample: 0–12 f before; medians 1–4 f) | `phrase`: 6 f before (35 cuts and slide starts: median −5.7 f, 60 % within 12 f; no word or beat lock) |
+| `highlight` event | +1 f | +1 f (sample −6…+5 f, sweep 7–22 f) | +1 f |
+| `lowerThird` event | cut +2 f | cut +2 f (sample 0…+3 f, life 120 f) | cut +2 f (labels sit on the picture from its first frame) |
+| `name` (decode card) | +4 f on the surname | +4 f | +4 f |
+| label text | −7 f | −7 f (sample −4…−16 f) | −7 f (reveals −8…+8 f around the keyword; a stat readable +18 f after its number) |
+| bed | ridden: gap −7.6 dB re the voice, duck −2.4 dB | static: `ride: false`, −13 dB re the voice (sample −7.3…−19.2 dB), applied only when a music entry sets neither | static, unducked: −9 dB re the voice (voice 9.0 dB over the music; per-phrase duck median +0.2 dB) |
+| music changes | 8–12 boundaries per minute | one cue per chapter (validator warns above 2 per minute) | one cue per chapter (5 cues in 4:16; warns above 2 per minute) |
+| chapter joint | `dip` (picture + sound) | `transitionIn: {kind: "cut", hole: 12}`: bed out 12 f before the cut, next cue 3 f after (sample 5–29 f holes) | a short hole (measured 4–13 f, one of digital silence) and a hard cut, or a `paperSlide` |
+| new cue vs the cut | 3.5 f before (pre-lap) | 3 f after (sample −1…+6 f) | on the cut (0 f; measured 0 and −2 f) |
+| SFX | about 1 per 13 s; transitions carry their sounds | at most 1.5 per minute (+1); transitions silent unless `sfx: true` | at most 3 per minute (+1): 2.1 likely per minute measured, 5.4 with the possible ones. Paper swooshes on slides (+2…+6 f), foley on objects (−1…+5 f), a chime on the end card; a montage gets none |
+| minimum cut spacing | 6 f | 6 f; 3 f into a scene marked `burst: true` | 6 f; 3 f into a `burst` scene (the montage runs 7 → 3 f) |
 
 All frame values are @25 fps and scale with `fps / 25`. Script markup: `[BEAT kind=phrase|highlight|lowerThird …]`.
 

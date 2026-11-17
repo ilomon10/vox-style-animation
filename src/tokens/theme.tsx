@@ -1,15 +1,15 @@
 import React, { createContext, useContext } from "react";
 import { DrawingRate } from "../lib/time";
-import { darkCollage, paperDesk, voxEarworm, voxEditorial, voxExplainer, voxLight } from "./colors";
+import { darkCollage, paperDesk, voxEarworm, voxEditorial, voxExplainer, voxLight, voxScrapbook } from "./colors";
 import { FINISH, type FinishPreset } from "./finish";
-import { collageType, earwormType, editorialType, paperDeskType, voxLightType, voxType, type TypeRole } from "./type";
+import { collageType, earwormType, editorialType, paperDeskType, voxLightType, voxScrapbookType, voxType, type TypeRole } from "./type";
 
 /**
  * A Theme bundles everything a component needs to render "in style": palette, type roles,
  * finish preset, recommended fps and the background material. Components read it with
  * useTheme() and take props only for what differs from the style default.
  */
-export type StyleName = "paperDesk" | "darkCollage" | "voxExplainer" | "voxEditorial" | "voxEarworm" | "voxLight";
+export type StyleName = "paperDesk" | "darkCollage" | "voxExplainer" | "voxEditorial" | "voxEarworm" | "voxLight" | "voxScrapbook";
 
 export type PaperKind =
   | "warm" // cream scrapbook paper (paper desk)
@@ -21,7 +21,8 @@ export type PaperKind =
   | "crumpled" // warm grey crumpled sheet (Vox editorial)
   | "light" // flat light grey paper (Vox light look)
   | "lightGrid" // light grey with a faint grid (CR, CE)
-  | "lightGhost"; // light grey with ghost newsprint at 5 % contrast (EL)
+  | "lightGhost" // light grey with ghost newsprint at 5 % contrast (EL)
+  | "watercolour"; // cold-press watercolour paper, tinted per section (scrapbook)
 
 export type Theme = {
   name: StyleName;
@@ -106,6 +107,18 @@ export const THEMES: Record<StyleName, Theme> = {
     finish: FINISH.voxLight,
     paper: "light",
     accent: voxLight.highlighter,
+  },
+  voxScrapbook: {
+    name: "voxScrapbook",
+    label: "Vox scientific scrapbook (brand piece: watercolour paper, specimen plates)",
+    fps: 24,
+    // every graphic is on twos (12 drawings/s on 23.976); live action on ones
+    drawingRate: 12,
+    colors: voxScrapbook,
+    type: voxScrapbookType,
+    finish: FINISH.voxScrapbook,
+    paper: "watercolour",
+    accent: voxScrapbook.salmon,
   },
 };
 

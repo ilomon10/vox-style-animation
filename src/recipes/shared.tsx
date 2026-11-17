@@ -50,7 +50,7 @@ export const warnOnce = (msg: string) => {
  */
 export const RecipeFrame: React.FC<{ seed: string; variant?: "black" | "whitePaper"; ground?: "auto" | "collage" | "theme" | "none"; paper?: PaperKind; children: React.ReactNode }> = ({ seed, variant = "black", ground = "auto", paper, children }) => {
   const theme = useTheme();
-  const kind = ground === "auto" ? (theme.name === "voxLight" ? "theme" : "collage") : ground;
+  const kind = ground === "auto" ? (theme.name === "voxLight" || theme.name === "voxScrapbook" ? "theme" : "collage") : ground;
   // short format, landscape recipe: its 1920×1080 design box is a letterboxed band, so the look's paper is drawn ONCE
   // over the whole portrait frame (in the frame's own design space) instead of inside the band
   const { width, height } = useVideoConfig();

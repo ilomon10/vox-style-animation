@@ -2,10 +2,12 @@ import { AUDIO_DEFAULTS, SYNC } from "./defaults";
 
 /**
  * Sync and mix PROFILES. `earworm` is SYNC / AUDIO_DEFAULTS unchanged (Vox Earworm); `standard` holds the defaults measured
- * across five other Vox videos (analysis/vox-framework-coverage.md §6.2 Build 4, §5 conflicts 1–3, 9–12, 19–20).
+ * across five other Vox videos (analysis/vox-framework-coverage.md §6.2 Build 4, §5 conflicts 1–3, 9–12, 19–20); `scrapbook`
+ * the measured practice of the scientific-scrapbook look (analysis/vox-sample/vox_braintravel.md §7): cuts lead phrases by
+ * ≈ 6 f, an unducked bed ≈ 9 dB under the voice, sparse foley and paper swooshes on picture events (≈ 2–3 per minute).
  * Frame values are @25 fps (scale with fps/25, as SYNC); gains are dB. Positive offsets = picture AFTER the anchor.
  */
-export type ProfileName = "earworm" | "standard";
+export type ProfileName = "earworm" | "standard" | "scrapbook";
 /** event kinds a profile can offset (mirror of EventKind in src/studio/types.ts) */
 export type ProfileKind =
   | "cut" | "phrase" | "object" | "text" | "pop" | "title" | "caption" | "lyric" | "name" | "exit" | "highlight" | "lowerThird";
@@ -53,16 +55,25 @@ export const SYNC_PROFILES: Record<ProfileName, SyncProfile> = {
     kindOffsetF, defaultCutKind: "phrase", cueAfterCutF: 3,
     holeMinF: 5, holeMaxF: 29, minCutGapF: 6, burstMinCutGapF: 3,
   },
+  // cuts and slide starts lead the phrase onset by a median 5.7 f @23.976 (≈ 6 f @25); holes measured 4–28 f; the next cue
+  // starts on the cut (rises from digital silence at the chapter-3 cut; enters 2 f before the chapter-4 cut)
+  scrapbook: {
+    kindOffsetF: { ...kindOffsetF, phrase: -6 }, defaultCutKind: "phrase", cueAfterCutF: 0,
+    holeMinF: 5, holeMaxF: 29, minCutGapF: 6, burstMinCutGapF: 3,
+  },
 };
 
 export const MIX_PROFILES: Record<ProfileName, MixProfile> = {
   earworm: { bedRide: true, bedGainDb: AUDIO_DEFAULTS.musicBedDb, sfxPerMin: 60 / 13, maxBoundariesPerMin: 12, transitionSfx: true },
   standard: { bedRide: false, bedGainDb: -13, sfxPerMin: 1.5, maxBoundariesPerMin: 2, transitionSfx: false },
+  // no ducking (median duck +0.2 dB), voice 9 dB above the bed; 2.1 likely SFX/min + structural swells; 5 cues in 4.3 min
+  scrapbook: { bedRide: false, bedGainDb: -9, sfxPerMin: 3, maxBoundariesPerMin: 2, transitionSfx: true },
 };
 
-/** profile of a storyboard: the explicit field, else voxEarworm / no look -> earworm, any other (also an unknown) look -> standard */
+/** profile of a storyboard: the explicit field, else voxEarworm / no look -> earworm, voxScrapbook -> scrapbook, any other
+ *  (also an unknown) look -> standard */
 export const profileOf = (profile: ProfileName | undefined, look: string | undefined): ProfileName =>
-  profile ?? (look === undefined || look === "voxEarworm" ? "earworm" : "standard");
+  profile ?? (look === undefined || look === "voxEarworm" ? "earworm" : look === "voxScrapbook" ? "scrapbook" : "standard");
 
 /**
  * Bed defaults of a music entry: fills only what the entry leaves unset, and only for `standard` (earworm keeps the

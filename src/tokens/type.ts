@@ -1,5 +1,5 @@
 import type React from "react";
-import { darkCollage, paperDesk, voxEarworm, voxEditorial, voxExplainer, voxLight } from "./colors";
+import { darkCollage, paperDesk, voxEarworm, voxEditorial, voxExplainer, voxLight, voxScrapbook } from "./colors";
 import { FONTS, type FontKey } from "./fonts";
 
 /**
@@ -195,3 +195,20 @@ export const earwormType = {
   /** series card (extended heavy grotesque) — design your own; never reproduce a real logo */
   seriesCard: { font: "EXTENDED", cap: 128, weight: 800, color: "#9C9C9C", leading: 1, uppercase: true },
 } satisfies Record<string, TypeRole>;
+
+/** Scientific scrapbook (vox_braintravel §4.2): cap heights in design px @1080p (measured as % of frame height). */
+export const voxScrapbookType = {
+  chapterTitle: { font: "TEXT_SERIF", cap: 122, weight: 700, color: voxScrapbook.slate, leading: 1 }, // 10.8–11.8 %
+  chapterNumber: { font: "TEXT_SERIF", cap: 39, weight: 600, color: voxScrapbook.chapterInk, leading: 1 }, // 3.6 %
+  diagramTitle: { font: "CASLON", cap: 22, weight: 400, color: voxScrapbook.diagramInk, uppercase: true, tracking: 0.12 }, // 2.0 %
+  fig: { font: "CASLON", cap: 30, weight: 400, color: voxScrapbook.labelInk, leading: 1.15 },
+  labelName: { font: "CASLON", cap: 44, weight: 700, color: voxScrapbook.labelInk, leading: 1.1 }, // 4.1 %
+  labelRole: { font: "CASLON", cap: 30, weight: 400, color: voxScrapbook.labelInk, tracking: 0.05, leading: 1.25 }, // 2.8 %
+  labelFigure: { font: "CASLON", cap: 45, weight: 400, color: voxScrapbook.labelInk, numeric: "oldstyle-nums" }, // 4.2 %
+  statNumber: { font: "TEXT_SERIF", cap: 130, weight: 600, color: voxScrapbook.statInk, leading: 1 }, // ≈ 12 %
+  statContext: { font: "CASLON", cap: 34, weight: 400, color: voxScrapbook.labelInk, leading: 1.2 },
+  statPayoff: { font: "CONDENSED", cap: 118, weight: 700, color: voxScrapbook.kraftInk, uppercase: true, leading: 1 }, // ≈ 11 %
+  stamp: { font: "DISPLAY_CONDENSED", cap: 250, weight: 400, color: "#111111", leading: 1, uppercase: true }, // ≈ 23.6 %
+  stampLine: { font: "DISPLAY_CONDENSED", cap: 40, weight: 400, color: "#111111", leading: 1, uppercase: true, tracking: 0.06 },
+  source: { font: "SMALL_SANS", cap: 19, weight: 500, color: "#111111", uppercase: true, tracking: 0.04 }, // 1.7–1.9 %
+} as const satisfies Record<string, TypeRole>;

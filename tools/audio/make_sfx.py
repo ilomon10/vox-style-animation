@@ -148,10 +148,64 @@ def black_thump():
     return norm(y), "peak 5 ms; decays 4.7 dB/f (to -59 dB by 0.4 s)"
 
 
+# --- scrapbook look (analysis/vox-sample/vox_braintravel.md §7.2): each sound has its OWN seeded generator, so adding
+# or reordering sounds never changes the ones above (they share the module rng in registry order)
+def paper_swoosh():
+    """A paper sheet sliding over paper: broad 1.5-9 kHz noise with a crinkly flutter; 0.42 s, peak at 0.12 s."""
+    r = np.random.default_rng(7101)
+    t = t_(0.42)
+    n = len(t)
+    spec = np.fft.rfft(r.standard_normal(n))
+    f = np.fft.rfftfreq(n, 1 / SR)
+    spec *= np.exp(-((np.log2(np.maximum(f, 1) / 3500)) ** 2) / 2.2)
+    y = np.fft.irfft(spec, n)
+    flutter = np.repeat(r.uniform(0.55, 1.0, n // 240 + 1), 240)[:n]
+    env = np.where(t < 0.12, (t / 0.12) ** 1.6, np.exp(-(t - 0.12) / 0.11))
+    return norm(y * flutter * env), "peak at 0.12 s; on the sheet's first move (+2 f)"
+
+
+def paper_flick():
+    """A sheet or scrap landing: short 2-6 kHz slap with a faint body; peak about 3 ms."""
+    r = np.random.default_rng(7102)
+    t = t_(0.14)
+    y = hp(r.standard_normal(len(t)), 2000) * np.exp(-t * 45) + 0.35 * np.sin(2 * np.pi * 140 * t) * np.exp(-t * 60)
+    return norm(y * np.minimum(1, t / 0.002)), "peak about 3 ms"
+
+
+def stamp_thud():
+    """A rubber stamp hitting paper on a desk: low body with a falling pitch, a papery slap and a click."""
+    r = np.random.default_rng(7103)
+    t = t_(0.35)
+    n = len(t)
+    body = np.sin(2 * np.pi * np.cumsum(70 + 60 * np.exp(-t * 50)) / SR) * np.exp(-t * 14)
+    slap = band_noise(n, 300, 3000, seed=7104) * np.exp(-t * 90) * 0.6
+    click = hp(r.standard_normal(n), 4000) * np.exp(-t * 400) * 0.15
+    return norm((body + slap + click) * np.minimum(1, t / 0.002)), "peak about 5 ms"
+
+
+def sub_swell():
+    """Low swell into a chapter card: 0.70 s rise, then a quick fall (measured: onset at the cut, peak +17 f)."""
+    t = t_(1.1)
+    env = np.where(t < 0.7, (t / 0.7) ** 2.5, np.exp(-(t - 0.7) / 0.16))
+    sub = np.sin(2 * np.pi * np.cumsum(38 + 22 * (t / 1.1)) / SR)
+    air = band_noise(len(t), 80, 900, seed=7106) * 0.35
+    return norm((sub + air) * env), "peak at 0.70 s"
+
+
+def chime():
+    """Bright end-card chime: inharmonic bell partials on C6, the bright part decays in about 0.5 s."""
+    t = t_(1.6)
+    parts = [(1.0, 1.0, 2.2), (2.0, 0.45, 3.0), (2.76, 0.35, 4.5), (5.4, 0.18, 7.0), (8.93, 0.08, 9.0)]
+    y = sum(a * np.sin(2 * np.pi * 1046.5 * m * t + i) * np.exp(-t * dec) for i, (m, a, dec) in enumerate(parts))
+    return norm(y * np.minimum(1, t / 0.003), -6), "peak about 3 ms"
+
+
 SFX = {
     "sub_boom": (sub_boom, -3), "whoosh": (whoosh, -6), "needle_drop": (needle_drop, -6), "vinyl_crackle": (vinyl_crackle, -12),
     "tick": (tick, -30), "bass_hit": (bass_hit, -3), "glitch_tick": (glitch_tick, -24), "radio_static": (radio_static, -14),
     "black_thump": (black_thump, -6),
+    "paper_swoosh": (paper_swoosh, -14), "paper_flick": (paper_flick, -16), "stamp_thud": (stamp_thud, -8),
+    "sub_swell": (sub_swell, -6), "chime": (chime, -14),
 }
 
 # --- telephone EQ ------------------------------------------------------------------------------------------------

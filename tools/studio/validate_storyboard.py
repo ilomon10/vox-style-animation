@@ -36,14 +36,16 @@ KIND = {  # frames @25 (SYNC in src/audio/defaults.ts), default edge
 PROFILES = {
     "earworm": {"cut_kind": "cut", "gap": 6, "burst_gap": 6, "sfx_per_min": 60 / 13, "bound_per_min": 12, "cue_after": -3.5, "transition_sfx": True},
     "standard": {"cut_kind": "phrase", "gap": 6, "burst_gap": 3, "sfx_per_min": 1.5, "bound_per_min": 2, "cue_after": 3, "transition_sfx": False},
+    # voxScrapbook (analysis/vox-sample/vox_braintravel.md §7): phrase cuts lead by 6 f, transitions keep their sounds, ~3 SFX/min
+    "scrapbook": {"cut_kind": "phrase", "gap": 6, "burst_gap": 3, "sfx_per_min": 3, "bound_per_min": 2, "cue_after": 0, "transition_sfx": True, "phrase_off": -6},
 }
 VIDEO_EXT = {".mp4", ".webm", ".mov"}  # footage (FootageClip): its CREDITS.md line must name the file (a sourcing sidecar or a stem match is not enough)
 HOLE_RANGE = (5, 29)
 CUE_AFTER_RANGE = (0, 6)
 TEXT_KINDS = {"text", "title", "name", "caption", "lyric", "pop"}
-SPANS = {"blurThrough": (4, 14), "spinSwap": (16, 20), "dip": (35, 36), "drop": (40, 17), "glitchCut": (10, 19)}
+SPANS = {"blurThrough": (4, 14), "spinSwap": (16, 20), "dip": (35, 36), "drop": (40, 17), "glitchCut": (10, 19), "paperSlide": (0, 12)}
 DIP_CHAPTER = (14, 8)
-SFX_OF = {"blurThrough": 1, "spinSwap": 1, "dip": 1, "drop": 0, "glitchCut": 3}
+SFX_OF = {"blurThrough": 1, "spinSwap": 1, "dip": 1, "drop": 0, "glitchCut": 3, "paperSlide": 1}
 norm = lambda s: re.sub(r"[\W_]+", "", s.lower())  # noqa: E731
 
 
@@ -54,7 +56,7 @@ class Ctx:
         self.k = self.fps / cues["fps"]
         self.lead = rnd(sb.get("vo", {}).get("leadSec", 0) * self.fps)
         self.words = [(norm(w["text"]), w) for w in cues["words"]]
-        self.profile = sb.get("profile") or ("earworm" if sb.get("look") in (None, "voxEarworm") else "standard")
+        self.profile = sb.get("profile") or ("earworm" if sb.get("look") in (None, "voxEarworm") else "scrapbook" if sb.get("look") == "voxScrapbook" else "standard")
         self.P = PROFILES[self.profile]
         self.errors, self.warnings, self.report = [], [], []
         self.start_cache = {}
@@ -95,6 +97,8 @@ class Ctx:
     def anchor(self, a, def_kind, is_until=False, label=""):
         kind = a.get("kind") or def_kind
         off0, edge0 = KIND[kind] if kind else (0, "start")
+        if kind == "phrase":
+            off0 = self.P.get("phrase_off", off0)
         if "word" in a:
             off = a["offset"] if "offset" in a else (0 if is_until else rnd(off0 * self.fps / 25))
             base = self.word_frame(a, a.get("edge", edge0))
@@ -331,8 +335,8 @@ def main():
         gap = c.P["burst_gap"] if burst.get(f2) else c.P["gap"]
         if f2 - f1 < gap:
             c.err(f"cuts closer than {gap} f: {l1} f{f1} and {l2} f{f2} ({f2 - f1} f)")
-    # standard: a phrase cut belongs on the first word of a phrase (>= pauseMs of silence before the word's onset)
-    if c.profile == "standard":
+    # standard / scrapbook: a phrase cut belongs on the first word of a phrase (>= pauseMs of silence before the word's onset)
+    if c.profile in ("standard", "scrapbook"):
         for f, label, an in phrase_cuts:
             c.where = label
             gap = c.silence_before(an)
@@ -375,10 +379,10 @@ def main():
             c.warn("hole with no music around the cut (nothing to reset)")
         if nxt:
             after = rnd(c.P["cue_after"] * c.fps / 25)
-            if c.profile == "standard" and not CUE_AFTER_RANGE[0] <= after <= CUE_AFTER_RANGE[1]:
+            if c.profile in ("standard", "scrapbook") and not CUE_AFTER_RANGE[0] <= after <= CUE_AFTER_RANGE[1]:
                 c.warn(f"next cue lands {after} f after the cut (sample 0-6 f)")
         music_ranges = [(r[0], cut + rnd(c.P["cue_after"] * c.fps / 25) if r in nxt else r[1], cut - hole if r in run else r[2]) for r in music_ranges]
-    if c.profile == "standard":
+    if c.profile in ("standard", "scrapbook"):
         # music boundaries: few (one cue per chapter) and each one at a cut / hole
         cue_starts = len(music_ranges) - 1
         per_min = cue_starts / max(end / c.fps / 60, 1e-9)
@@ -411,7 +415,8 @@ def main():
         if nsfx > end / c.fps / 13 + 2:
             c.warn(f"{nsfx} SFX in {end / c.fps:.0f} s: budget is ~1 per 13 s (doc 11 §6)")
     elif nsfx > end / c.fps / 60 * c.P["sfx_per_min"] + 1:
-        c.warn(f"{nsfx} SFX in {end / c.fps:.0f} s: standard-profile budget is <= {c.P['sfx_per_min']} per minute (+1), transitions silent")
+        c.warn(f"{nsfx} SFX in {end / c.fps:.0f} s: {c.profile}-profile budget is <= {c.P['sfx_per_min']} per minute (+1)"
+               + (", transitions silent" if not c.P["transition_sfx"] else ""))
     # assets + credits
     c.where = "assets"
     catalogued = catalog_paths()

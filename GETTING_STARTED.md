@@ -122,8 +122,11 @@ Keep the shape of a starter and change the topic, or start from the template in
 |---|---|
 | <img src="examples/blocks/cold-open-year.gif" width="400" alt="cold-open-year"><br>`[block: cold-open-year]`: open on a year | <img src="examples/blocks/map-route.gif" width="400" alt="map-route"><br>`[block: map-route]`: a route across a map |
 | <img src="examples/blocks/document-highlight.gif" width="400" alt="document-highlight"><br>`[block: document-highlight]`: a document, highlighted and ringed | <img src="examples/blocks/data-bars.gif" width="400" alt="data-bars"><br>`[block: data-bars]`: numbers side by side |
+| <img src="examples/blocks/specimen-plate.gif" width="400" alt="specimen-plate"><br>`[block: specimen-plate]`: a diagram with a magnifier and "fig." labels (scrapbook look) | <img src="examples/blocks/torn-paper-stat.gif" width="400" alt="torn-paper-stat"><br>`[block: torn-paper-stat]`: a number on torn paper (scrapbook look) |
 
-All 14 blocks, each with a prompt template and the scene it produced: **[the block gallery](examples/README.md#blocks)**.
+All 21 blocks, each with a prompt template and the scene it produced: **[the block gallery](examples/README.md#blocks)**.
+They come in two collections, one per look: the Earworm collage (the default) and the scientific scrapbook
+(`Look: voxScrapbook`; its starter is [cab-brain](examples/starters/cab-brain.md)). Build a video from one collection.
 
 You can also use a block on its own, in a video you already have:
 

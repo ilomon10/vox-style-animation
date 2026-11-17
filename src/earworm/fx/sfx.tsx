@@ -6,7 +6,8 @@ import manifest from "../../../public/audio/sfx/manifest.json";
 
 /** Procedural SFX from tools/audio/make_sfx.py. Each has a JSON sidecar with the sound's OWN peak offset. */
 export type SfxName =
-  | "sub_boom" | "whoosh" | "needle_drop" | "vinyl_crackle" | "tick" | "bass_hit" | "glitch_tick" | "radio_static" | "black_thump";
+  | "sub_boom" | "whoosh" | "needle_drop" | "vinyl_crackle" | "tick" | "bass_hit" | "glitch_tick" | "radio_static" | "black_thump"
+  | "paper_swoosh" | "paper_flick" | "stamp_thud" | "sub_swell" | "chime";
 
 export type SfxMeta = {
   name: SfxName; file: string; sample_rate: number; duration_s: number; peak_s: number; onset_s: number; peak_dbfs: number;

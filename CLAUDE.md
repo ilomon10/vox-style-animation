@@ -10,11 +10,12 @@ Remotion (React/TS) kit + measured style guide + Claude Code skills for making V
   gaps: `tools/py tools/studio/director.py <slug>`; board: `tools/studio/board.py`; voices: `tools/voice/voice_samples.py`.
   The claude.ai chat skill (planning only) is `chat-skill/vox-director/`, zipped by `tools/dev/make_chat_skill.py`.
 - Start of a session: `tools/py tools/doctor.py --quick`; if it is not ready, `bash tools/setup.sh` (idempotent).
-- Style rules: `docs/style-guide/` (start at README; 11 = audio sync, 12 = Vox Earworm look, 13 = story → screen, 14 = pipeline).
+- Style rules: `docs/style-guide/` (start at README; 11 = audio sync, 12 = Vox Earworm look, 13 = story → screen, 14 = pipeline, 15 = scrapbook look).
 - Code conventions: `src/CONVENTIONS.md` (12 drawings/s clock, design px, deterministic random, tokens first).
 - Evidence/analysis: `analysis/` (frame-by-frame reports of every reference video). How Vox builds videos across six
   official videos (2019–26), what we cover and where our Earworm-derived rules differ: `analysis/vox-framework-coverage.md`.
-  Looks: `voxEarworm` (default, all recipes) and `voxLight` (today's Vox explainer; partly covered). Sync profiles: doc 11 §10.
+  Looks: `voxEarworm` (default, all recipes), `voxLight` (today's Vox explainer; partly covered) and `voxScrapbook`
+  (scientific scrapbook: its own 6 recipes + the `paperSlide` transition; doc 15, `example-cab-brain`). Sync profiles: doc 11 §10.
 - **Renders:** run every Remotion command through `tools/remotion-locked.sh` (one process at a time; concurrency comes
   from `tools/local.env`, written by setup from this machine's RAM). To wait for a render started elsewhere:
   `tools/remotion-locked.sh --wait`. Never poll with `while pgrep -f "remotion render"`: the pattern matches the loop's

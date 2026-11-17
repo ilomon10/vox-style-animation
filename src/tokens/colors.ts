@@ -185,4 +185,36 @@ export const packaging = {
   footageBars: "#000000", // pillarbox bars (DA)
 } as const;
 
-export const palettes = { paperDesk, darkCollage, voxExplainer, voxEditorial, voxLight, voxEarworm } as const;
+/** Scientific scrapbook (Vox brand piece, analysis/vox-sample/vox_braintravel.md §4): watercolour-paper grounds, one
+ *  colour per chapter or person, engravings multiplied on, old-style serif labels. No single accent. */
+export const voxScrapbook = {
+  white: "#EFEFEF", // watercolour paper: diagram plates, footage mat
+  pink: "#E1D0C6", // chapter 1, first person, cages
+  mint: "#A2C0B8", // cold open, figure cards, second person
+  blue: "#72A0B7", // dusty blue (chapter 2)
+  coral: "#E68B7E", // chapter 4
+  cork: "#AC9560",
+  creamMap: "#EBDABB",
+  sky: "#99B8E4",
+  disc: "#D8C3B5", // backdrop disc behind a specimen
+  labelInk: "#4C3F38", // "fig. a" labels
+  diagramInk: "#4A4A4A", // DIAGRAM OF … titles
+  frameRule: "#3A3A3A", // plate frame, 3 px
+  engravingInk: "#80726C",
+  chapterInk: "#261A12", // "Chapter One"
+  slate: "#314050", // chapter title ink
+  stripBlue: "#BFD0E2", // chapter title strip
+  calendar: "#E2E3E3", // stat scrap (the number)
+  greyStrip: "#C4C1B8", // stat scrap (the context)
+  kraft: "#BDA991", // payoff tile
+  kraftInk: "#342C21",
+  statInk: "#454544",
+  page: "#E7E2DC", // ephemera page under a stamp
+  stampPurple: "#6B598C",
+  stampRed: "#C75C4B",
+  salmon: "#F69585", // data marks
+  mintMark: "#BCDDD4",
+  blueMark: "#81B2C1",
+} as const;
+
+export const palettes = { paperDesk, darkCollage, voxExplainer, voxEditorial, voxLight, voxEarworm, voxScrapbook } as const;
