@@ -1,0 +1,524 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "storyboard.schema.json",
+  "title": "Storyboard",
+  "description": "A whole video as data. Frames never appear: every time is a spoken word (+ offset in frames), a scene id, or seconds (music-only passages).",
+  "type": "object",
+  "required": [
+    "version",
+    "fps",
+    "scenes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "const": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "fps": {
+      "type": "number",
+      "minimum": 12,
+      "maximum": 60
+    },
+    "format": {
+      "enum": [
+        "landscape",
+        "short"
+      ],
+      "description": "landscape (default, 1920x1080 design canvas) or short (YouTube Shorts 9:16, 1080x1920; --scale=2 renders 2160x3840). Portrait recipes (Short*) get the 1080x1920 design space, landscape recipes a letterboxed band"
+    },
+    "captions": {
+      "description": "burned-in karaoke captions built from the voice cue words (src/studio/ShortCaptions.tsx); true = bottom",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "pos": {
+              "enum": [
+                "bottom",
+                "seam",
+                "split"
+              ],
+              "description": "bottom = full-frame shots (block centre y 1688); seam = two-up shots (y 1010); split = old name of seam"
+            },
+            "replace": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "spoken phrase -> display text (multi-word, case-insensitive), e.g. {\"thirty-nine\": \"39\", \"twenty nineteen\": \"2019\"}; one karaoke box covers the replaced token"
+            }
+          }
+        }
+      ]
+    },
+    "shortBand": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scale": {
+          "type": "number",
+          "minimum": 0.3,
+          "maximum": 1.2,
+          "description": "format short: landscape recipes render as a centred band at this scale of the 1080-wide frame (default 0.63 -> 1210x680)"
+        }
+      }
+    },
+    "debug": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "safeArea": {
+          "type": "boolean",
+          "description": "draw the YouTube Shorts UI zones as translucent boxes (QA stills only)"
+        }
+      }
+    },
+    "look": {
+      "enum": [
+        "voxEarworm",
+        "voxLight",
+        "voxExplainer",
+        "voxEditorial",
+        "paperDesk",
+        "darkCollage"
+      ]
+    },
+    "profile": {
+      "enum": [
+        "earworm",
+        "standard"
+      ],
+      "description": "sync + mix defaults (src/audio/profiles.ts); default: voxEarworm / no look -> earworm, any other look -> standard"
+    },
+    "vo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gainDb": {
+          "type": "number"
+        },
+        "leadSec": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "music": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/track"
+      }
+    },
+    "sfx": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/sfx"
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/scene"
+      }
+    },
+    "end": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scene": {
+          "type": "string"
+        },
+        "tailSec": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "anchor"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "anchor": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "kind": {
+      "enum": [
+        "cut",
+        "object",
+        "text",
+        "pop",
+        "title",
+        "caption",
+        "lyric",
+        "name",
+        "exit",
+        "phrase",
+        "highlight",
+        "lowerThird"
+      ]
+    },
+    "anchor": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "word"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "word": {
+              "type": "string",
+              "minLength": 1
+            },
+            "nth": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "edge": {
+              "enum": [
+                "start",
+                "stress",
+                "end"
+              ]
+            },
+            "offset": {
+              "type": "number"
+            },
+            "kind": {
+              "$ref": "#/$defs/kind"
+            },
+            "snap": {
+              "enum": [
+                "beat",
+                "eighth"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "after"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "after": {
+              "type": "string"
+            },
+            "offset": {
+              "type": "number"
+            },
+            "kind": {
+              "$ref": "#/$defs/kind"
+            },
+            "snap": {
+              "enum": [
+                "beat",
+                "eighth"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "sec"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sec": {
+              "type": "number",
+              "minimum": 0
+            },
+            "offset": {
+              "type": "number"
+            },
+            "kind": {
+              "$ref": "#/$defs/kind"
+            },
+            "snap": {
+              "enum": [
+                "beat",
+                "eighth"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "end"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "end": {
+              "const": true
+            },
+            "offset": {
+              "type": "number"
+            },
+            "kind": {
+              "$ref": "#/$defs/kind"
+            },
+            "snap": {
+              "enum": [
+                "beat",
+                "eighth"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "transition": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "cut",
+            "blurThrough",
+            "spinSwap",
+            "dip",
+            "drop",
+            "glitchCut"
+          ]
+        },
+        "variant": {
+          "enum": [
+            "act",
+            "chapter"
+          ]
+        },
+        "sfx": {
+          "type": "boolean"
+        },
+        "hole": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60,
+          "description": "cut only: the running music bed ends this many frames before the cut; the next cue starts after it (profile value)"
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "required": [
+        "id",
+        "recipe",
+        "start"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]+$"
+        },
+        "recipe": {
+          "enum": [
+            "ColdOpenYear",
+            "KeywordCut",
+            "PhotoCollageUnfold",
+            "NameCardInterview",
+            "KaraokeQuote",
+            "GiantWordCard",
+            "MontageCrane",
+            "MapRoute",
+            "DocumentHighlight",
+            "DataChart",
+            "QuoteCard",
+            "EndCard",
+            "SeriesIdent",
+            "FootageClip",
+            "ShortHook",
+            "ShortPhoto",
+            "ShortDocument",
+            "ShortTimeline",
+            "ShortSteps",
+            "ShortQuote",
+            "ShortEnd"
+          ]
+        },
+        "start": {
+          "$ref": "#/$defs/anchor"
+        },
+        "end": {
+          "$ref": "#/$defs/anchor"
+        },
+        "props": {
+          "type": "object"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "at"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "at": {
+                "$ref": "#/$defs/anchor"
+              },
+              "until": {
+                "$ref": "#/$defs/anchor"
+              },
+              "kind": {
+                "$ref": "#/$defs/kind"
+              }
+            }
+          }
+        },
+        "transitionIn": {
+          "$ref": "#/$defs/transition"
+        },
+        "transitionOut": {
+          "$ref": "#/$defs/transition"
+        },
+        "note": {
+          "type": "string"
+        },
+        "burst": {
+          "type": "boolean",
+          "description": "declared montage burst: cut into this scene may be 3 f after the previous cut (standard profile)"
+        },
+        "captionPos": {
+          "enum": [
+            "bottom",
+            "seam",
+            "split"
+          ],
+          "description": "short format with captions: caption position for this scene (bottom = full frame, seam = two-up; split = old name of seam; default: the storyboard's captions.pos, bottom)"
+        }
+      }
+    },
+    "track": {
+      "type": "object",
+      "required": [
+        "id",
+        "src",
+        "in",
+        "out"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "src": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "bed",
+            "song"
+          ]
+        },
+        "in": {
+          "$ref": "#/$defs/anchor"
+        },
+        "out": {
+          "$ref": "#/$defs/anchor"
+        },
+        "gainDb": {
+          "type": "number"
+        },
+        "ride": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "duckDb": {
+                  "type": "number"
+                },
+                "releaseSec": {
+                  "type": "number"
+                },
+                "attackSec": {
+                  "type": "number"
+                }
+              }
+            }
+          ]
+        },
+        "fadeInSec": {
+          "type": "number",
+          "minimum": 0
+        },
+        "fadeOutSec": {
+          "type": "number",
+          "minimum": 0
+        },
+        "startFromSec": {
+          "type": "number",
+          "minimum": 0
+        },
+        "cues": {
+          "type": "string"
+        }
+      }
+    },
+    "sfx": {
+      "type": "object",
+      "required": [
+        "src",
+        "at"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "src": {
+          "type": "string"
+        },
+        "at": {
+          "$ref": "#/$defs/anchor"
+        },
+        "gainDb": {
+          "type": "number"
+        },
+        "peak": {
+          "type": "boolean"
+        },
+        "peakSec": {
+          "type": "number",
+          "minimum": 0,
+          "description": "seconds from clip start to its peak (filled by publish_project.py from the clip's .json sidecar)"
+        }
+      }
+    }
+  }
+}

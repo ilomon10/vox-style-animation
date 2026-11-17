@@ -1,0 +1,51 @@
+{
+  "name": "vox-style-animation",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Code-driven Vox-style explainer videos: a Remotion (React/TS) kit, a measured style guide, an idea-to-video pipeline for Claude Code, and a catalog of free-licence assets fetched on demand",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilomon10/vox-style-animation.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "setup": "bash tools/setup.sh",
+    "doctor": "tools/py tools/doctor.py",
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "still": "remotion still src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "textures": "tools/py tools/textures/generate_textures.py && tools/py tools/textures/earworm_textures.py",
+    "fetch": "tools/py tools/library/fetch.py",
+    "assets": "tools/py tools/library/search.py",
+    "example": "tools/py tools/examples/build_example.py example-time-zones",
+    "gallery": "tools/py tools/examples/make_gallery.py",
+    "director": "tools/py tools/studio/director.py",
+    "board": "tools/py tools/studio/board.py",
+    "voices": "tools/py tools/voice/voice_samples.py",
+    "chat-skill": "tools/py tools/dev/make_chat_skill.py",
+    "audit": "tools/py tools/dev/release_audit.py"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.539",
+    "@remotion/google-fonts": "4.0.539",
+    "@remotion/layout-utils": "4.0.539",
+    "@remotion/media-utils": "4.0.539",
+    "@remotion/noise": "4.0.539",
+    "@remotion/paths": "4.0.539",
+    "@remotion/shapes": "4.0.539",
+    "@remotion/studio": "4.0.539",
+    "@remotion/transitions": "4.0.539",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}

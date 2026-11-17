@@ -1,0 +1,258 @@
+{
+ "$schema": "../../src/studio/storyboard.schema.json",
+ "version": 1,
+ "title": "Why railroads gave America time zones (framework example)",
+ "fps": 25,
+ "look": "voxEarworm",
+ "vo": {
+  "gainDb": 0
+ },
+ "music": [
+  {
+   "id": "bed",
+   "src": "kit:assets/library/music/curious/music-investigations.wav",
+   "kind": "bed",
+   "in": {
+    "sec": 0
+   },
+   "out": {
+    "end": true
+   },
+   "gainDb": -9.6,
+   "fadeInSec": 0.7,
+   "fadeOutSec": 0.04,
+   "ride": true
+  }
+ ],
+ "sfx": [
+  {
+   "src": "kit:assets/library/sfx/foley/sfx-page-flip-a.wav",
+   "at": {
+    "word": "split"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "id": "open",
+   "recipe": "ColdOpenYear",
+   "start": {
+    "word": "Before"
+   },
+   "props": {
+    "year": "1883",
+    "place": "UNITED STATES",
+    "pieces": [
+     {
+      "src": "kit:assets/library/engravings/machines/engr-telegraph-van-1874.jpg",
+      "x": 110,
+      "y": 110,
+      "w": 760,
+      "h": 470,
+      "rotate": -2
+     },
+     {
+      "src": "kit:assets/library/engravings/transport/engr-flatboat-river-waud.jpg",
+      "x": 1060,
+      "y": 540,
+      "w": 700,
+      "h": 485,
+      "rotate": 1.5
+     }
+    ]
+   },
+   "events": [
+    {
+     "id": "year",
+     "at": {
+      "word": "eighteen",
+      "kind": "text"
+     }
+    }
+   ],
+   "note": "slot=hook claim=fact (RESEARCH 1)"
+  },
+  {
+   "id": "noon",
+   "recipe": "KeywordCut",
+   "start": {
+    "word": "Noon"
+   },
+   "props": {
+    "src": "kit:assets/library/photos/cities/photo-mulberry-street-nyc-1900.jpg",
+    "word": "NOON",
+    "sub": "NEW YORK · PHILADELPHIA",
+    "side": "left"
+   },
+   "events": [
+    {
+     "id": "pop",
+     "at": {
+      "word": "Noon",
+      "kind": "pop"
+     }
+    },
+    {
+     "id": "sub",
+     "at": {
+      "word": "Philadelphia",
+      "kind": "object"
+     }
+    }
+   ],
+   "note": "slot=context claim=fact (RESEARCH 1)"
+  },
+  {
+   "id": "railroads",
+   "recipe": "GiantWordCard",
+   "start": {
+    "word": "For"
+   },
+   "props": {
+    "text": "56 TIMES",
+    "ground": "white",
+    "photo": "kit:assets/library/photos/transport/photo-steam-locomotive-side-1901.jpg",
+    "photoBox": {
+     "x": 1180,
+     "y": 660,
+     "w": 560,
+     "h": 182,
+     "rotate": 2
+    }
+   },
+   "events": [
+    {
+     "id": "photo",
+     "at": {
+      "word": "railroads",
+      "kind": "object"
+     }
+    }
+   ],
+   "note": "slot=question claim=number (RESEARCH 2)"
+  },
+  {
+   "id": "zones",
+   "recipe": "MapRoute",
+   "start": {
+    "word": "So",
+    "nth": 2
+   },
+   "props": {
+    "map": "assets/maps/region-usa-time-zones-paper.png",
+    "mapBox": {
+     "x": 0,
+     "y": -36,
+     "w": 1660
+    },
+    "waypoints": [
+     {
+      "x": 1531,
+      "y": 421
+     },
+     {
+      "x": 1178,
+      "y": 382
+     },
+     {
+      "x": 727,
+      "y": 452
+     },
+     {
+      "x": 275,
+      "y": 516
+     }
+    ],
+    "label": {
+     "title": "4 ZONES",
+     "sub": "NOV 18 · 1883"
+    }
+   },
+   "events": [
+    {
+     "id": "route",
+     "at": {
+      "word": "split",
+      "kind": "object"
+     },
+     "until": {
+      "word": "zones",
+      "edge": "end"
+     }
+    },
+    {
+     "id": "label",
+     "at": {
+      "word": "four",
+      "kind": "title"
+     }
+    }
+   ],
+   "note": "slot=turn claim=place (RESEARCH 3); map: tools/library/make_maps.py region usa --time-zones; waypoints: make_maps.py locate"
+  },
+  {
+   "id": "greenwich",
+   "recipe": "KeywordCut",
+   "start": {
+    "word": "year",
+    "offset": -4
+   },
+   "props": {
+    "src": "kit:assets/library/photos/space/photo-blue-marble-1972.jpg",
+    "word": "GREENWICH",
+    "sub": "WASHINGTON · 1884",
+    "side": "right"
+   },
+   "events": [
+    {
+     "id": "pop",
+     "at": {
+      "word": "Greenwich",
+      "kind": "pop"
+     }
+    },
+    {
+     "id": "sub",
+     "at": {
+      "word": "Washington",
+      "kind": "object"
+     }
+    }
+   ],
+   "note": "slot=payoff claim=fact (RESEARCH 4)"
+  },
+  {
+   "id": "law",
+   "recipe": "GiantWordCard",
+   "start": {
+    "word": "Congress"
+   },
+   "props": {
+    "text": "1918",
+    "ground": "white"
+   },
+   "note": "slot=ending claim=date (RESEARCH 5)"
+  },
+  {
+   "id": "end",
+   "recipe": "EndCard",
+   "start": {
+    "word": "eighteen",
+    "nth": 3,
+    "edge": "end",
+    "offset": 20
+   },
+   "transitionIn": {
+    "kind": "glitchCut"
+   },
+   "props": {
+    "title": "TIME DESK",
+    "tagline": "A KIT EXAMPLE"
+   }
+  }
+ ],
+ "end": {
+  "scene": "end",
+  "tailSec": 3.5
+ }
+}

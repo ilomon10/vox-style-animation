@@ -1,0 +1,21 @@
+{
+ "projection": "equirect",
+ "lat0": 37.0,
+ "lonlat_box": [
+  -128.0,
+  22.0,
+  -64.0,
+  52.0
+ ],
+ "xy_box": [
+  -1.7841688542296978,
+  0.3839724354387525,
+  -0.8920844271148489,
+  0.9075712110370514
+ ],
+ "width": 3200,
+ "height": 1878,
+ "source": "Natural Earth v5.1.2 (public domain), https://www.naturalearthdata.com",
+ "region": "usa",
+ "time_zones": true
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "vox-style-animation",
+  "description": "Skills for making Vox-style explainer videos with an open Remotion framework and a catalog of free-licence assets.",
+  "owner": {
+    "name": "ilomon10"
+  },
+  "plugins": [
+    {
+      "name": "vox-studio",
+      "description": "Make Vox-style explainer videos with Claude Code: idea, researched script, scratch voice-over, licensed assets, music, Remotion render, re-timed to your own voice. Installs its framework and tools on first use, brings a catalog of free assets fetched on demand, and cuts assets from references you attach.",
+      "version": "0.2.0",
+      "author": {
+        "name": "ilomon10"
+      },
+      "category": "productivity",
+      "source": "./plugin",
+      "homepage": "https://github.com/ilomon10/vox-style-animation"
+    }
+  ]
+}

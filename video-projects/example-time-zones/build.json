@@ -1,0 +1,7 @@
+{
+ "_about": "Media this project builds locally (read by tools/examples/build_example.py).",
+ "maps": [
+  {"file": "region-usa-time-zones-paper.png",
+   "args": ["region", "usa", "--box", "-128,22,-64,52", "--time-zones", "--style", "paper", "--width", "3200"]}
+ ]
+}

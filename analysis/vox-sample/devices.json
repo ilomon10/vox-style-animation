@@ -1,0 +1,4030 @@
+[
+ {
+  "id": "V-HC",
+  "aliases": [],
+  "description": "Hard cut",
+  "family": "transition",
+  "counts": {
+   "electoral": 19,
+   "creatine": 126,
+   "cleanenergy": 127,
+   "drinkingage": 110,
+   "amazon": 175,
+   "healthcare": 38
+  },
+  "videos_using": 6,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/studio/Timeline.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 21,
+  "approx_videos": [
+   "cleanenergy",
+   "drinkingage",
+   "amazon"
+  ],
+  "evidence": "",
+  "notes": "placed by phrase and turn logic, not word onsets (see NEW-phrase-lead-cut)"
+ },
+ {
+  "id": "NEW-lower-third",
+  "aliases": [
+   "NEW-yellow-bar-lower-third",
+   "NEW-paper-card-lower-third",
+   "R-NameCardInterview / SIG-EW-9 (non-decode variants tagged in electoral, cleanenergy, amazon)"
+  ],
+  "description": "Name super on a person's first full-frame appearance. House style (electoral, creatine, healthcare): white bold serif name 5.2–5.9 % H + grotesque role 2.6–2.8 % H + lemon bar/underline, no plate, x ≈ 12 % W, y 71–83 % H; series variants: stripe bar (EITM), green tab (Atlas), paper card (Almanac)",
+  "family": "packaging",
+  "counts": {
+   "electoral": 1,
+   "creatine": 2,
+   "cleanenergy": 3,
+   "drinkingage": 1,
+   "amazon": 3,
+   "healthcare": 2
+  },
+  "videos_using": 6,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/NameCardInterview.tsx",
+   "src/earworm/DecodeNameCard.tsx"
+  ],
+  "score": 12.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 2,
+  "approx_videos": [],
+  "evidence": "healthcare 0:20.01 (analysis/stills/vox_healthcare/0m20s_namecard-build-cropstrip_f480-507.png); creatine 0:34.01 (analysis/stills/vox_creatine/0m37s_name_card_tiller.jpg); electoral 7:11.04 (analysis/stills/vox_electoral/7m13s03_warren-lower-third.jpg); cleanenergy 1:27.02 (analysis/stills/vox_cleanenergy/1m29s_alex_namecard_call.jpg); amazon 3:49.10 (analysis/stills/vox_amazon/3m51s_namecard-subtitle-field.jpg); drinkingage 4:07.22 (analysis/stills/vox_drinkingage/4m10s_f5999_lower-third-lightner.jpg)",
+  "notes": "ours = Earworm decode card (condensed periwinkle caps, random-letter decode) beside a window on a black plate; no plate-less super over full-frame footage"
+ },
+ {
+  "id": "NEW-corner-bug",
+  "aliases": [
+   "NEW-persistent-corner-bug",
+   "NEW-alternating-corner-bug",
+   "NEW-sponsor-bug-rotation"
+  ],
+  "description": "Channel wordmark bug top-right on every shot (≈ 7.7 % H, ≈ 32 px inset); sponsored films alternate it with a 'Presented by' bug every ≈ 30–50 s (electoral ≈ 7, creatine ≈ 16 switches)",
+  "family": "packaging",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 1,
+   "amazon": 1,
+   "healthcare": 1
+  },
+  "videos_using": 6,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 6.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "all six; creatine sponsor bug in the alternation (analysis/stills/vox_creatine/0m32s_area_chart_sponsor_bug.jpg); healthcare whole film (analysis/stills/vox_healthcare/0m30s_two-up-split.jpg)",
+  "notes": "nothing in the kit; never ship the Vox bug (doc 12 §8): build an own series bug as a storyboard-level overlay"
+ },
+ {
+  "id": "NEW-credits-split-panel",
+  "aliases": [
+   "NEW-host-sponsor-read-credits (credits part)",
+   "R-EndCard (≠, creatine)",
+   "panel wipe (drinkingage)"
+  ],
+  "description": "End credits as a split frame: charcoal #292929 panel (≈ 36 % W), right-aligned serif roles + light-blue caps names (#9DC6D0–#B0D3DB), white rule with lemon dot ends; other side = channel mark (creatine, healthcare; silent) or host / promo video (electoral, cleanenergy, drinkingage, amazon)",
+  "family": "packaging",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 1,
+   "amazon": 1,
+   "healthcare": 1
+  },
+  "videos_using": 6,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/recipes/EndCard.tsx"
+  ],
+  "score": 12.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "healthcare 20:28.14 (analysis/stills/vox_healthcare/20m32s_endcard-credits-p1.jpg); creatine 9:20.06 (analysis/stills/vox_creatine/9m27s_end_card_credits.jpg); cleanenergy 8:57.07 (analysis/stills/vox_cleanenergy/9m01s_credits_panel_jq.jpg); drinkingage 9:09.20 (analysis/stills/vox_drinkingage/9m13s_f13277_outro-credits.jpg); electoral 7:55.04 (analysis/stills/vox_electoral/8m05s04_host-sponsor-credits.jpg); amazon 11:17.05",
+  "notes": "R-EndCard renders only a glitch-built series card on #141414 with a bass hit; no credits, pages, rule or video panel"
+ },
+ {
+  "id": "SIG-VX-2",
+  "aliases": [],
+  "description": "Lemon yellow is the accent: the only accent in creatine (#E4EC0B–#F9FF0C, 0.13 % of pixels), cleanenergy (#FBFF0B, 2.5 %) and healthcare (#FDF203); one of several in electoral (#FBF303 + party red/blue, swing orange), drinkingage (#FAFE0A + cyan #159EC8) and amazon (#f2ec0e + coral, green)",
+  "family": "look",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 1,
+   "amazon": 1,
+   "healthcare": 1
+  },
+  "videos_using": 6,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/tokens/colors.ts"
+  ],
+  "score": 6.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "creatine 4:23.19 (analysis/stills/vox_creatine/4m33s_verdict_checklist.jpg); cleanenergy 1:02.19 (analysis/stills/vox_cleanenergy/1m06s_series_title_card.jpg); healthcare 0:20.21 (analysis/stills/vox_healthcare/0m20s_namecard-yellow-sweep.jpg)",
+  "notes": "voxExplainer tokens carry yellows, but every recipe hard-codes periwinkle"
+ },
+ {
+  "id": "NEW-fullframe-archival-broll",
+  "aliases": [
+   "NEW-stock-footage-montage",
+   "NEW-field-report-broll",
+   "archival TV / ads (creatine)"
+  ],
+  "description": "Full-frame footage in its native colour and grade (no cut-out, no B&W): 1920s–70s film (creatine), TV news (electoral, amazon), 1950s road films (drinkingage), stock montages of 6–15 clips (cleanenergy), own field b-roll (amazon)",
+  "family": "footage",
+  "counts": {
+   "electoral": 4,
+   "creatine": 33,
+   "cleanenergy": 30,
+   "drinkingage": 25,
+   "amazon": 106,
+   "healthcare": 0
+  },
+  "videos_using": 5,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/ZoomWindow.tsx",
+   "src/effects/Pillarbox.tsx",
+   "src/tokens/finish.ts"
+  ],
+  "score": 7.5,
+  "impact": 3,
+  "effort": "M",
+  "earworm": 1,
+  "approx_videos": [
+   "creatine",
+   "cleanenergy",
+   "drinkingage",
+   "amazon"
+  ],
+  "evidence": "creatine 0:46.15, 3:57.23; drinkingage 1:29.12, 5:31.20; amazon 0:13, 4:47 (analysis/stills/vox_amazon/1m18s_year-tag-corner-archival.jpg); cleanenergy 0:44.02",
+  "notes": "nearest = ZoomWindow (muted, windowed); PHOTO_GRADE.voxEarworm desaturates archive"
+ },
+ {
+  "id": "SIG-VX-5",
+  "aliases": [
+   "VX-5",
+   "K-Highlighter"
+  ],
+  "description": "Flat lemon highlighter sweeping left → right over the key phrase of a scan, clipping, journal or web page (7–22 f), or of a quote card (electoral)",
+  "family": "document",
+  "counts": {
+   "electoral": 1,
+   "creatine": 14,
+   "cleanenergy": 14,
+   "drinkingage": 5,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 5,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/type/Highlighter.tsx"
+  ],
+  "score": 10.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [
+   "creatine",
+   "cleanenergy"
+  ],
+  "evidence": "creatine 1:26.08 (analysis/stills/vox_creatine/1m27s_newspaper_isolate_highlight.jpg), 5:49.00 (analysis/stills/vox_creatine/5m52s_web_article_highlight.jpg); drinkingage 2:07.05 (analysis/stills/vox_drinkingage/2m09s_f3097_document-highlighter.jpg); electoral 6:22.17 (analysis/stills/vox_electoral/6m27s20_quote-card-highlight.jpg); cleanenergy 1:39.10",
+  "notes": "Highlighter exists (multiply, 12 f) but no recipe uses it; DocumentHighlight draws periwinkle rings only"
+ },
+ {
+  "id": "T-DS",
+  "aliases": [
+   "X-Dissolve"
+  ],
+  "description": "Short dissolve on ones, 5–28 f: between graphic states, into archival, inside isolation moves",
+  "family": "transition",
+  "counts": {
+   "electoral": 6,
+   "creatine": 3,
+   "cleanenergy": 1,
+   "drinkingage": 9,
+   "amazon": 6,
+   "healthcare": 0
+  },
+  "videos_using": 5,
+  "status": "proof-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/proof/earwormC/Melvin.tsx"
+  ],
+  "score": 5.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [
+   "creatine",
+   "drinkingage"
+  ],
+  "evidence": "electoral 1:11.20 (28 f, colour → B&W); amazon 7:39.20 (analysis/strips/vox_amazon_11015-11062.png); drinkingage 0:51.17",
+  "notes": "no `dissolve` transition kind; doc 07 forbids dissolves for the Vox explainer"
+ },
+ {
+  "id": "NEW-music-reset-hole",
+  "aliases": [
+   "SIG-EW-12 (variant: holes without a picture dip)"
+  ],
+  "description": "At section joints the music fades (14–16 f), a 5–29 f silent hole follows, the picture hard-cuts inside it and the new cue enters 0–6 f after the cut; no picture dip",
+  "family": "audio",
+  "counts": {
+   "electoral": 3,
+   "creatine": 5,
+   "cleanenergy": 6,
+   "drinkingage": 3,
+   "amazon": 4,
+   "healthcare": 0
+  },
+  "videos_using": 5,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/studio/StoryAudio.tsx",
+   "docs/style-guide/11-audio-sync.md"
+  ],
+  "score": 10.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 3,
+  "approx_videos": [],
+  "evidence": "creatine 0:59.06, 3:03.03, 5:44.18, 8:43.11; electoral 1:10.20 (analysis/av/vox_electoral_064.00-072.00.png), 4:29.13 (analysis/av/vox_electoral_264.00-272.00.png); amazon 4:40.04, 7:03.22",
+  "notes": "doable by hand with music in/out anchors; doc 11 rule 5 measures 8–11 f; our `dip`/`drop` also black out the picture"
+ },
+ {
+  "id": "K-SketchArrow",
+  "aliases": [],
+  "description": "Drawn arrows to a subject or a number: curved arrows with typeset labels (electoral), yellow arrow 13 f (creatine), hand arrows and swooshes (cleanenergy), coral arrows 16 f (drinkingage), yellow arrow (amazon)",
+  "family": "annotation",
+  "counts": {
+   "electoral": 6,
+   "creatine": 2,
+   "cleanenergy": 7,
+   "drinkingage": 3,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 5,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/explainer/strokes.tsx"
+  ],
+  "score": 5.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [
+   "electoral",
+   "cleanenergy"
+  ],
+  "evidence": "electoral 1:52.00 (analysis/stills/vox_electoral/1m52s15_texas-vermont-hand-arrows.jpg); creatine 1:02.02 (analysis/stills/vox_creatine/strip_01484-01531_arrow_label_drawon.png)",
+  "notes": "SketchArrow exists in the kit; no recipe draws an arrow"
+ },
+ {
+  "id": "NEW-host-on-camera",
+  "aliases": [
+   "NEW-host-presenter-desk",
+   "NEW-host-on-camera-studio",
+   "NEW-host-sponsor-read-credits (host part)"
+  ],
+  "description": "Host to camera: signposts, turn and answer at a desk (cleanenergy 9 shots), thesis + outro (drinkingage), outro or sponsor read beside the credits (electoral, amazon), open + sign-off (healthcare)",
+  "family": "packaging",
+  "counts": {
+   "electoral": 1,
+   "creatine": 0,
+   "cleanenergy": 9,
+   "drinkingage": 2,
+   "amazon": 1,
+   "healthcare": 3
+  },
+  "videos_using": 5,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/ZoomWindow.tsx"
+  ],
+  "score": 5.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "cleanenergy 1:07.15, 7:33.10; drinkingage 0:33.18; healthcare 0:00.00 (analysis/stills/vox_healthcare/0m22s_jessica-single-namecard.jpg)",
+  "notes": "no live-action slot: ZoomWindow plays a muted clip in a window; needs a full-frame clip with its own sound (build 6)"
+ },
+ {
+  "id": "K-HandDrawnRing",
+  "aliases": [
+   "SIG-VX-4 (rings)",
+   "SIG-PD-9",
+   "K-MarkerRing",
+   "K-MarkerUnderline"
+  ],
+  "description": "Rings/underlines drawn on the stressed word: smooth vector ellipses in lemon/orange 6–16 f (electoral), yellow rings then a bar tint (cleanenergy), red pencil (drinkingage), red ring (amazon), root underline 9 f (creatine)",
+  "family": "annotation",
+  "counts": {
+   "electoral": 6,
+   "creatine": 1,
+   "cleanenergy": 2,
+   "drinkingage": 4,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 5,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/DocumentHighlight.tsx",
+   "src/earworm/HandRing.tsx",
+   "src/explainer/rings.tsx"
+  ],
+  "score": 5.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "electoral 2:40.06 (analysis/stills/vox_electoral/4m08s04_influence-squares-rings.jpg); cleanenergy 5:09.10 (analysis/strips/vox_cleanenergy_07412-07459.png)",
+  "notes": "the recipe ring is periwinkle and only on documents"
+ },
+ {
+  "id": "NEW-phrase-lead-cut",
+  "aliases": [],
+  "description": "Cuts lead the narrator's phrase onset by 0–12 f (median −1…−4 f) and avoid word onsets inside phrases; the conversation cuts in the breath before a sentence",
+  "family": "sync",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 1,
+   "amazon": 0,
+   "healthcare": 1
+  },
+  "videos_using": 5,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/studio/resolve.ts",
+   "src/audio/defaults.ts"
+  ],
+  "score": 10.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "analysis/audio/vox_creatine_sync.json (25.2 % vs 7.5 %); analysis/audio/vox_cleanenergy_sync.json (24.8 % vs 9.8 %); analysis/audio/vox_drinkingage_sync.json (20.7 % vs 8.8 %)",
+  "notes": "reachable with a manual `offset`; the default `cut` kind lands on the word onset (0 f)"
+ },
+ {
+  "id": "NEW-section-cue-music",
+  "aliases": [],
+  "description": "Music changes per section, not per sentence: 8–15 library cues per 8–12 min film (0.7–1.6 cues/min), each ≈ 30–120 s",
+  "family": "audio",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 1,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 5,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "docs/style-guide/13-story-to-screen.md"
+  ],
+  "score": 10.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "cue tables in analysis/vox-sample/vox_electoral.md, analysis/vox-sample/vox_creatine.md, analysis/vox-sample/vox_cleanenergy.md, analysis/vox-sample/vox_drinkingage.md, analysis/vox-sample/vox_amazon.md (§7.1 each)",
+  "notes": "cues: electoral ≈ 11, creatine ≈ 8, cleanenergy 11, drinkingage ≈ 15, amazon 10; Earworm changes every 5.7 s (10.5 boundaries/min) and doc 13 asks for 8–12/min"
+ },
+ {
+  "id": "NEW-series-title-card",
+  "aliases": [
+   "NEW-brand-ident-over-footage",
+   "NEW-series-title-knot",
+   "NEW-ransom-collage-series-card",
+   "NEW-hud-series-intro",
+   "title build (electoral)",
+   "R-GiantWordCard (ATLAS card, amazon)"
+  ],
+  "description": "Series ident right after the thesis/question at 9.6–16.5 % of the runtime, 3.5–10.5 s, music alone (sting or swell) then a 6–24 f hole or a drop: build on the data grid (electoral), wordmark over footage (creatine), yellow card + rope (cleanenergy), cyan ransom collage (drinkingage), HUD aerial + ATLAS word (amazon)",
+  "family": "packaging",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 1,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 5,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/EndCard.tsx",
+   "src/earworm/SeriesCard.tsx"
+  ],
+  "score": 10.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "electoral 1:08.09 (analysis/stills/vox_electoral/1m09s14_title-card-on-grid.jpg); creatine 0:55.09 (analysis/stills/vox_creatine/0m59s_vox_ident_presented_by.jpg); cleanenergy 1:02.19 (analysis/stills/vox_cleanenergy/1m06s_series_title_card.jpg); drinkingage 1:34.07 (analysis/stills/vox_drinkingage/1m34s_f2267_almanac-series-collage.jpg); amazon 1:35.05 (analysis/stills/vox_amazon/1m42s_atlas-title-card.jpg)",
+  "notes": "EndCard can be placed mid-video, but it is the end glitch card; doc 13 templates put the series card only at the end (Earworm: 98 %)"
+ },
+ {
+  "id": "NEW-static-low-bed",
+  "aliases": [],
+  "description": "One library bed at a constant level under the voice, not ridden: speech 7.3–19.2 dB over the music, per-phrase duck 0.1–2.4 dB; pulled only for key archival bites (drinkingage) or under interviews (amazon)",
+  "family": "audio",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 1,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 5,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/studio/StoryAudio.tsx",
+   "src/audio/defaults.ts"
+  ],
+  "score": 10.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "analysis/audio/vox_electoral_sync.json (19.2 dB, duck 2.3 dB); analysis/audio/vox_creatine_sync.json (9.3 dB, 0.6 dB); analysis/audio/vox_cleanenergy_sync.json (14.2 dB, 0.1 dB)",
+  "notes": "`ride: false` exists; the default rides the bed (duck −2.4 dB, gap level −7.6 dB)"
+ },
+ {
+  "id": "NEW-uncaptioned-archival-speech",
+  "aliases": [
+   "quote → the clip itself (creatine)"
+  ],
+  "description": "Archival or source speech carries the argument without Vox captions: Reagan ≈ 2¼ min in bites up to 23 s (drinkingage), anchors finishing each other's lines (amazon), social/podcast clips with their own captions (creatine), news clips (electoral)",
+  "family": "footage",
+  "counts": {
+   "electoral": 2,
+   "creatine": 14,
+   "cleanenergy": 0,
+   "drinkingage": 14,
+   "amazon": 45,
+   "healthcare": 0
+  },
+  "videos_using": 4,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/KaraokeQuote.tsx"
+  ],
+  "score": 8.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 2,
+  "approx_videos": [
+   "amazon"
+  ],
+  "evidence": "drinkingage 2:36, 4:31, 6:08 (analysis/stills/vox_drinkingage/4m05s_f5888_madd-rid-labels.jpg); amazon 0:00–1:28; creatine 0:12.08 (analysis/stills/vox_creatine/0m03s_triptych_social_clips.jpg)",
+  "notes": "KaraokeQuote plays the clip's audio but always captions it word by word, over a still at most; doc 13 rule 8 typesets every archival word"
+ },
+ {
+  "id": "NEW-fullframe-interview",
+  "aliases": [
+   "NEW-fullframe-remote-interview",
+   "NEW-video-call-pip-interview",
+   "interview (remote, full-frame)"
+  ],
+  "description": "Interviews full-frame, not windowed: remote self-shot webcams (creatine, healthcare), raw video-call frame with the interviewer's inset (cleanenergy), crew-shot field and seated interviews (amazon); card on the first appearance only",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 19,
+   "cleanenergy": 12,
+   "drinkingage": 0,
+   "amazon": 10,
+   "healthcare": 17
+  },
+  "videos_using": 4,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/NameCardInterview.tsx",
+   "src/earworm/ZoomWindow.tsx"
+  ],
+  "score": 6.0,
+  "impact": 3,
+  "effort": "M",
+  "earworm": 0,
+  "approx_videos": [
+   "amazon"
+  ],
+  "evidence": "creatine 0:33.23 (analysis/stills/vox_creatine/0m37s_name_card_tiller.jpg); cleanenergy 1:26.14 (analysis/stills/vox_cleanenergy/1m29s_alex_namecard_call.jpg); healthcare 0:55.01 (analysis/stills/vox_healthcare/0m58s_dylan-single-namecard.jpg); amazon 3:49.10",
+  "notes": "ours: a muted window on the black plate with a decode card beside it"
+ },
+ {
+  "id": "R-DocumentHighlight",
+  "aliases": [
+   "NEW-browser-window-capture",
+   "SIG-VX-12 / VX-2 (prints on a mat, cleanenergy)",
+   "ED-2 (clipping, drinkingage)"
+  ],
+  "description": "A document as proof (journal, web page in a browser frame, print on a cutting mat, clipping, scan) with a stepped push or reframe on the line being read",
+  "family": "document",
+  "counts": {
+   "electoral": 0,
+   "creatine": 12,
+   "cleanenergy": 24,
+   "drinkingage": 5,
+   "amazon": 4,
+   "healthcare": 0
+  },
+  "videos_using": 4,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/DocumentHighlight.tsx"
+  ],
+  "score": 8.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [
+   "cleanenergy",
+   "drinkingage"
+  ],
+  "evidence": "cleanenergy 5:28.19 (analysis/stills/vox_cleanenergy/5m11s_joule_chart_rings.jpg); creatine 3:28.16; drinkingage 4:17 (analysis/stills/vox_drinkingage/4m19s_f6234_newspaper-clipping-highlight.jpg); amazon 10:17.17",
+  "notes": "ours: torn B&W print on the black collage, linear 6 % push, periwinkle rings; no full-bleed page, browser frame, highlighter or source line"
+ },
+ {
+  "id": "T-PCap",
+  "aliases": [],
+  "description": "A label, caption or subtitle persists across a cut (rescaled grid labels, subtitles over maps)",
+  "family": "transition",
+  "counts": {
+   "electoral": 2,
+   "creatine": 1,
+   "cleanenergy": 0,
+   "drinkingage": 10,
+   "amazon": 12,
+   "healthcare": 0
+  },
+  "videos_using": 4,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/type/VideoCaption.tsx"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "M",
+  "earworm": 0,
+  "approx_videos": [
+   "amazon"
+  ],
+  "evidence": "amazon 3:52.02; drinkingage 4:34.14",
+  "notes": "no storyboard layer spans scenes"
+ },
+ {
+  "id": "NEW-source-line",
+  "aliases": [],
+  "description": "On-screen source line: bottom-left 'Source:' lines and chart subtitles (electoral), one under every chart (creatine), under chart titles and at the bottom-left of maps (amazon), one in the film (cleanenergy)",
+  "family": "data",
+  "counts": {
+   "electoral": 4,
+   "creatine": 4,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 12,
+   "healthcare": 0
+  },
+  "videos_using": 4,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 8.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [
+   "amazon"
+  ],
+  "evidence": "amazon 3:07 (analysis/stills/vox_amazon/3m07s_bar-chart-ring-source.jpg); creatine 0:32 (analysis/stills/vox_creatine/0m32s_area_chart_sponsor_bug.jpg); electoral 6:27.20 (analysis/stills/vox_electoral/6m27s20_quote-card-highlight.jpg); cleanenergy 2:22 (analysis/stills/vox_cleanenergy/2m22s_iea_bar_sweden.jpg)",
+  "notes": "no component; RESEARCH.md/CREDITS.md hold sources but nothing reaches the picture"
+ },
+ {
+  "id": "R-DataChart",
+  "aliases": [
+   "PD-8",
+   "K-BarChart"
+  ],
+  "description": "Titled charts on the look's ground: stacked/state bars, projected-vs-actual bars, area, lines, one recurring bar chart; title top-left, italic axis, source line, end labels, word-locked build",
+  "family": "data",
+  "counts": {
+   "electoral": 9,
+   "creatine": 4,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 7,
+   "healthcare": 0
+  },
+  "videos_using": 4,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/DataChart.tsx",
+   "src/explainer/BarChart.tsx"
+  ],
+  "score": 6.0,
+  "impact": 3,
+  "effort": "M",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "electoral 2:27.10 (analysis/stills/vox_electoral/3m27s19_state-bars-campaign-events.jpg); creatine 0:24.07 (analysis/stills/vox_creatine/0m32s_area_chart_sponsor_bug.jpg), 6:08.11 (analysis/stills/vox_creatine/6m13s_line_chart_growth.jpg); cleanenergy 2:05.03 (analysis/stills/vox_cleanenergy/2m22s_iea_bar_sweden.jpg); amazon 3:02.05 (analysis/stills/vox_amazon/3m07s_bar-chart-ring-source.jpg)",
+  "notes": "ours: a counter or periwinkle bars on the black plate; no title, axis, line/area/stacked mode, source line or theme colours"
+ },
+ {
+  "id": "NEW-corner-source-tag",
+  "aliases": [
+   "on-image credit"
+  ],
+  "description": "Small on-image credit top-left: platform icon + handle or owner on third-party clips (creatine ≈ 50 shots), 'Greenpeace, 2006' (amazon), photographer credit (drinkingage)",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 50,
+   "cleanenergy": 0,
+   "drinkingage": 1,
+   "amazon": 40,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/tokens/type.ts"
+  ],
+  "score": 3.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [
+   "creatine",
+   "amazon"
+  ],
+  "evidence": "creatine 0:14.08 (analysis/stills/vox_creatine/0m20s_podcast_source_label_name_super.jpg); amazon 4:47",
+  "notes": "only the `nowPlaying` type role exists; no component"
+ },
+ {
+  "id": "V-MOV",
+  "aliases": [],
+  "description": "Cut onto a camera that is already moving and settles (ease-out)",
+  "family": "transition",
+  "counts": {
+   "electoral": 2,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 35,
+   "amazon": 10,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/motion/CameraRig.tsx",
+   "src/tokens/easing.ts"
+  ],
+  "score": 1.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [
+   "drinkingage",
+   "amazon"
+  ],
+  "evidence": "",
+  "notes": "the `settle` ease exists; no recipe starts on a moving camera"
+ },
+ {
+  "id": "NEW-ease-out-reframe",
+  "aliases": [
+   "E-SZ / SIG-ED-3 (≈, creatine)",
+   "K-CameraRig on full-bleed photos (drinkingage)"
+  ],
+  "description": "Camera moves on graphics/photos start fast and settle: 11–15 f reframe bursts ×0.87–1.27 (creatine), ease-out moves on twos (drinkingage, 19 of 27), head pull-outs peaking in the first 0–17 % (amazon); holds stay still",
+  "family": "camera",
+  "counts": {
+   "electoral": 0,
+   "creatine": 8,
+   "cleanenergy": 0,
+   "drinkingage": 19,
+   "amazon": 10,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/motion/CameraRig.tsx",
+   "src/tokens/easing.ts"
+  ],
+  "score": 3.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [
+   "creatine",
+   "amazon"
+  ],
+  "evidence": "creatine 2:19.24, 4:18.12; drinkingage 1:40.00, 4:06.06 (analysis/stills/vox_drinkingage/4m10s_f5999_lower-third-lightner.jpg); amazon 2:08.00 (×0.27 in 22 f)",
+  "notes": "recipes expose no camera keys; Earworm's push stops dead"
+ },
+ {
+  "id": "K-Typewriter",
+  "aliases": [],
+  "description": "Labels and titles typed on (and un-typed) letter by letter: map labels ≈ 14 chars/s (amazon), box-wipe + type-on labels 15 f (electoral), 'CREATINE' 11 f (creatine)",
+  "family": "annotation",
+  "counts": {
+   "electoral": 6,
+   "creatine": 3,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 25,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/type/Typewriter.tsx",
+   "src/earworm/TypewriterSlide.tsx",
+   "src/earworm/StationLabel.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 3,
+  "approx_videos": [
+   "amazon"
+  ],
+  "evidence": "",
+  "notes": "matches; our recipes type in condensed caps"
+ },
+ {
+  "id": "T-IC",
+  "aliases": [],
+  "description": "In-place swap on a held ground: the paper stays, content changes with a 4–15 f fade (electoral), page/panel swaps (creatine, amazon)",
+  "family": "transition",
+  "counts": {
+   "electoral": 13,
+   "creatine": 5,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 4,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/studio/Timeline.tsx"
+  ],
+  "score": 3.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "electoral 1:24.00, 2:07.23 (analysis/stills/vox_electoral/xsheet_shot16_1m12-2m27.jpg); creatine 4:23.19, 6:49.01",
+  "notes": "a cut between two scenes on the same static ground looks alike, but the content cannot fade"
+ },
+ {
+  "id": "NEW-tv-static-flip",
+  "aliases": [
+   "NEW-tv-flicker-glitch-cut"
+  ],
+  "description": "2–9 f TV static / flicker / glitch frames as cuts between archival clips: silent (electoral), with a zap (drinkingage), teal glitch (amazon)",
+  "family": "transition",
+  "counts": {
+   "electoral": 3,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 7,
+   "amazon": 6,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/earworm/fx/GlitchCut.tsx"
+  ],
+  "score": 3.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [
+   "amazon"
+  ],
+  "evidence": "drinkingage 0:13.18 (analysis/stills/vox_drinkingage/strip_00330-00377_date-tag-build.png); electoral 0:00.00 (analysis/stills/vox_electoral/strip_00000-00047_coldopen-static.png); amazon 1:16.08 (analysis/strips/vox_amazon_01822-01869.png)",
+  "notes": "glitchCut = 6 f dip + 4 f zoom blur + 18 f glitch build + bass hit (an end-card transition)"
+ },
+ {
+  "id": "NEW-choropleth-map",
+  "aliases": [
+   "NEW-choropleth-us-map",
+   "NEW-choropleth-raster-legend"
+  ],
+  "description": "Regions filled by category or value with a legend, per-region stagger (≈ 12 f) and a year label: US states (electoral, drinkingage's hand-coloured wall map), FAO yield raster (amazon)",
+  "family": "map",
+  "counts": {
+   "electoral": 7,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 5,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 4.5,
+  "impact": 3,
+  "effort": "M",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "electoral 2:31.11 (analysis/stills/vox_electoral/strip_03626-03673_bars-to-map.png); drinkingage 0:48.10 (analysis/stills/vox_drinkingage/0m54s_f1299_map-selective-colour-legend.jpg); amazon 3:27 (analysis/stills/vox_amazon/3m31s_map-choropleth-legend.jpg)",
+  "notes": "needs public-domain region geometry (US Census / Natural Earth)"
+ },
+ {
+  "id": "PD-5",
+  "aliases": [],
+  "description": "Map with place labels: archival colonial map with yellow outlines (electoral), world map pan and Netherlands silhouette (cleanenergy), satellite place labels (amazon)",
+  "family": "map",
+  "counts": {
+   "electoral": 1,
+   "creatine": 0,
+   "cleanenergy": 2,
+   "drinkingage": 0,
+   "amazon": 6,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/MapRouteScene.tsx",
+   "src/earworm/StationLabel.tsx"
+  ],
+  "score": 3.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": 1,
+  "approx_videos": [
+   "amazon"
+  ],
+  "evidence": "amazon 1:56 (analysis/stills/vox_amazon/1m56s_map-label-photo-window.jpg)",
+  "notes": "ours: dark vector map + Earworm station label + X"
+ },
+ {
+  "id": "NEW-flat-vector-diagram",
+  "aliases": [
+   "NEW-flat-icon-illustration",
+   "SIG-VX-7",
+   "K-DiagramCard",
+   "VX-3",
+   "VX-6"
+  ],
+  "description": "Flat vector concept diagrams and icons: ballot box, vote bar, pictograms (electoral), 32 s battery diagram with functional colours (creatine), nested circles, labels → hero object (cleanenergy)",
+  "family": "data",
+  "counts": {
+   "electoral": 3,
+   "creatine": 1,
+   "cleanenergy": 2,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/collage/Props.tsx",
+   "src/proof/vox/Shot2Concept.tsx"
+  ],
+  "score": 3.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "creatine 2:17.18 (analysis/stills/vox_creatine/2m46s_battery_diagram.jpg); electoral 0:21.08 (analysis/stills/vox_electoral/0m25s07_ballot-bar-popular-vote.jpg)",
+  "notes": "DiagramCard draws a black Vox card; diagrams exist only in a proof shot; no diagram recipe"
+ },
+ {
+  "id": "NEW-speech-prelap",
+  "aliases": [
+   "NEW-archival-prelap"
+  ],
+  "description": "Speech J/L-cuts: the next speaker's voice starts 6–7 f (creatine, cleanenergy) or seconds (drinkingage) under the previous picture",
+  "family": "audio",
+  "counts": {
+   "electoral": 0,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 3,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "doc-only",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/11-audio-sync.md",
+   "src/audio/defaults.ts"
+  ],
+  "score": 1.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": 3,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "doc 11 §2 has the offsets (speakerCutLagF, ≤ 31 f pre-lap), but no recipe plays a clip's audio across a cut"
+ },
+ {
+  "id": "NEW-archival-news-supercut",
+  "aliases": [
+   "NEW-claim-supercut",
+   "NEW-tv-frame-news-montage"
+  ],
+  "description": "Hook built from many sources' voices: news clips finishing each other's lines (amazon ≈ 45 clips; electoral 8 clips in a TV bezel), podcast claims ping-ponging 1.2–1.6 s each (creatine)",
+  "family": "footage",
+  "counts": {
+   "electoral": 1,
+   "creatine": 2,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 3.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "amazon 0:00–1:28; electoral 0:00–0:19 (analysis/stills/vox_electoral/0m00s08_tv-frame-newsclip.jpg); creatine 0:18.16",
+  "notes": "news clips need a fair-use path outside our PD-first sourcing"
+ },
+ {
+  "id": "NEW-line-chart-draw",
+  "aliases": [
+   "NEW-dual-axis-line-overlay"
+  ],
+  "description": "Line chart drawing on: dots then strokes (electoral), 54 f draw from 'grew' +2 f (creatine), 12 f stepped lines and a second-axis overlay (amazon)",
+  "family": "data",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/explainer/DrawPath.tsx"
+  ],
+  "score": 6.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "creatine 6:08.11 (analysis/stills/vox_creatine/6m13s_line_chart_growth.jpg); amazon 3:16.04",
+  "notes": "DrawPath can draw the line; DataChart has no line mode"
+ },
+ {
+  "id": "NEW-read-along-highlight",
+  "aliases": [
+   "NEW-karaoke-highlighter"
+  ],
+  "description": "Highlight advances with the reading: one line per 12 f (cleanenergy), spans timed to the read quote 18/56/40 f (electoral), phrase by phrase on a clipping (drinkingage)",
+  "family": "document",
+  "counts": {
+   "electoral": 1,
+   "creatine": 0,
+   "cleanenergy": 2,
+   "drinkingage": 1,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/type/Highlighter.tsx"
+  ],
+  "score": 6.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "cleanenergy 5:28.19, 6:45.08; electoral 7:29.09; drinkingage 4:17",
+  "notes": "Highlighter makes one sweep; no per-line timing"
+ },
+ {
+  "id": "NEW-cut-on-music-edit",
+  "aliases": [],
+  "description": "Cuts coincide with music edits/boundaries ×2.7–4.6 over chance",
+  "family": "sync",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/11-audio-sync.md",
+   "src/audio/defaults.ts"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "doc 11 rule 5; placed by hand"
+ },
+ {
+  "id": "NEW-light-paper-ground",
+  "aliases": [
+   "NEW-light-grid-paper-ground",
+   "SIG-EW-2 (variant: off-white, static; electoral)"
+  ],
+  "description": "Static light paper ground under graphics: off-white #E9E9E9 with faint ghost newsprint (electoral, 83 % of runtime), light grey #EAEAEA with a faint grid (creatine), white #FEFEFE graph paper (cleanenergy); no weave, no re-seeded grain",
+  "family": "look",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/effects/Paper.tsx",
+   "src/tokens/theme.tsx",
+   "src/recipes/shared.tsx"
+  ],
+  "score": 4.5,
+  "impact": 3,
+  "effort": "M",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "electoral 4:17 (analysis/stills/vox_electoral/4m17s01_spending-map-arrow.jpg); creatine 1:09.03 (analysis/stills/vox_creatine/1m13s_greek_word_card.jpg); cleanenergy 4:05.14 (analysis/stills/vox_cleanenergy/4m13s_bloom_equation_card.jpg)",
+  "notes": "Paper kinds `grid` (cream) and `dots` exist; RecipeFrame always draws the black collage ground"
+ },
+ {
+  "id": "NEW-sponsor-segment",
+  "aliases": [
+   "NEW-midroll-sponsor-ad",
+   "NEW-sponsor-progress-bar",
+   "NEW-host-sponsor-read-credits (sponsor part)"
+  ],
+  "description": "Sponsor block: produced 59 s mid-roll ad (creatine, 10.3 %), 32 s host read with a progress bar at 26 % (cleanenergy), host read beside the credits (electoral)",
+  "family": "packaging",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 3,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 3.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "creatine 4:46.08; cleanenergy 2:24.09 (analysis/stills/vox_cleanenergy/2m55s_sponsor_url_pill.jpg); electoral 7:55.04 (analysis/stills/vox_electoral/8m05s04_host-sponsor-credits.jpg)",
+  "notes": "build only an empty slot in the templates; never reproduce a sponsor's marks"
+ },
+ {
+  "id": "R-EndCard",
+  "aliases": [
+   "VX-8"
+  ],
+  "description": "Brand/series card at the very end: lockup on black (electoral), wordmark beside the credits (creatine), slice-glitch wordmark build with a lemon glint inside the credits panel (healthcare)",
+  "family": "packaging",
+  "counts": {
+   "electoral": 1,
+   "creatine": 1,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 1
+  },
+  "videos_using": 3,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/EndCard.tsx",
+   "src/earworm/fx/GlitchCut.tsx"
+  ],
+  "score": 3.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "healthcare 20:28.18 (analysis/stills/vox_healthcare/20m29s_endcard-logo-glitch-build.jpg)",
+  "notes": "glitch build matches healthcare's mark build; no credits beside it; ours always gets a bass hit"
+ },
+ {
+  "id": "SIG-PD-8",
+  "aliases": [],
+  "description": "Cuts hidden in morphs, slides and page flips on one flat plane",
+  "family": "transition",
+  "counts": {
+   "electoral": 30,
+   "creatine": 0,
+   "cleanenergy": 2,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/transitions/Shot.tsx",
+   "src/transitions/effects.ts"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [
+   "electoral"
+  ],
+  "evidence": "",
+  "notes": "head/tail effects exist for coded shots; the storyboard cannot hide a cut in a morph"
+ },
+ {
+  "id": "NEW-archival-date-tag",
+  "aliases": [
+   "NEW-vhs-spine-date-tag",
+   "NEW-year-tag-corner"
+  ],
+  "description": "Year tag on archival footage on the spoken year (0 f): VHS-spine box glitching in 14 f + digits sliding 12 f on twos (drinkingage), cream year top-left (amazon)",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 8,
+   "amazon": 6,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/LabelStrip.tsx"
+  ],
+  "score": 4.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "drinkingage 0:13.20 (analysis/stills/vox_drinkingage/0m15s_f379_date-tag-1984.jpg); amazon 1:16.14 (analysis/stills/vox_amazon/1m18s_year-tag-corner-archival.jpg)",
+  "notes": "nearest: LabelStrip (an Earworm strip label)"
+ },
+ {
+  "id": "NEW-chart-morph-chain",
+  "aliases": [
+   "NEW-map-to-chart-morph",
+   "NEW-recurring-bar-chart"
+  ],
+  "description": "A persistent data stage that changes state per idea instead of cutting: bars snap and squash, tile → unit dots, map → stacked bar (36 f), one chart extended across 6 returns",
+  "family": "data",
+  "counts": {
+   "electoral": 3,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 8,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/explainer/BarChart.tsx"
+  ],
+  "score": 2.0,
+  "impact": 3,
+  "effort": "L",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "electoral 1:24–2:27 (analysis/stills/vox_electoral/xsheet_shot16_1m12-2m27.jpg); amazon 5:19.04 (analysis/strips/vox_amazon_07652-07699.png)",
+  "notes": "BarChart animates one state; no morph between views"
+ },
+ {
+  "id": "NEW-question-led-chapters",
+  "aliases": [
+   "NEW-handwritten-question-card",
+   "NEW-writing-to-card-match-cut"
+  ],
+  "description": "Chapters are questions: 4 handwritten sub-question cards entered by a writing → card match cut at 13/35/64/82 % (cleanenergy); 7 spoken host questions of 2–3.7 min (healthcare)",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 4,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 7
+  },
+  "videos_using": 2,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/type/HandwritingWriteOn.tsx"
+  ],
+  "score": 4.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "cleanenergy 1:12.21 (analysis/stills/vox_cleanenergy/1m16s_handwritten_question_card.jpg); healthcare 0:33.00 … 16:51.06",
+  "notes": "our chapter marker is a dip to black (doc 13 §4.1); handwriting write-on exists only as a kit component"
+ },
+ {
+  "id": "V-RET",
+  "aliases": [],
+  "description": "Return cut to an earlier composition with something new on it",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 2,
+   "drinkingage": 7,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/index.ts"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "re-call the recipe; annotations do not persist"
+ },
+ {
+  "id": "PD-2",
+  "aliases": [],
+  "description": "Year odometer/flipbook: years step with the map on the music pulse (electoral, 18.6 f per step), odometer on the satellite map at 12 f per year across 5 returns (amazon)",
+  "family": "data",
+  "counts": {
+   "electoral": 2,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 5,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/DataChart.tsx",
+   "src/type/Figures.tsx"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "amazon 0:09.16 (analysis/stills/vox_amazon/0m11s_year-odometer-satellite.jpg)",
+  "notes": "DataChart counter or SlotReel; no year flipbook on a map"
+ },
+ {
+  "id": "T-WH",
+  "aliases": [],
+  "description": "Eased pan/scroll as the transition (13–49 px/f, no blur); vertical UI scroll (amazon)",
+  "family": "transition",
+  "counts": {
+   "electoral": 5,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/transitions/effects.ts"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "whipIn/whipOut are coded shot head/tails, not storyboard transitions"
+ },
+ {
+  "id": "NEW-name-label-arrow",
+  "aliases": [
+   "PD-4 (creatine)"
+  ],
+  "description": "Person label + arrow drawn on an archival photo or clip (13–16 f), persisting across a cut",
+  "family": "annotation",
+  "counts": {
+   "electoral": 0,
+   "creatine": 2,
+   "cleanenergy": 0,
+   "drinkingage": 3,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/Marks.tsx",
+   "src/explainer/strokes.tsx"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "drinkingage 0:06.12 (analysis/stills/vox_drinkingage/0m08s_f200_name-label-arrow.jpg); creatine 1:02.02 (analysis/stills/vox_creatine/1m03s_arrow_label_portrait.jpg)",
+  "notes": "AnnotationLabel + SketchArrow, in no recipe"
+ },
+ {
+  "id": "NEW-beat-locked-montage-burst",
+  "aliases": [],
+  "description": "2–7 s bursts cut on 16th notes (±1 f, drinkingage); a map flipbook stepping on the music pulse (electoral, 18.6 f)",
+  "family": "sync",
+  "counts": {
+   "electoral": 1,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 3,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/studio/resolve.ts",
+   "tools/studio/validate_storyboard.py"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "drinkingage 5:31.20 (analysis/stills/vox_drinkingage/strip_02252-02299_almanac-title-collage.png)",
+  "notes": "`snap` (beat or eighth) only in music-only passages; no 16th-note grid"
+ },
+ {
+  "id": "NEW-headline-card",
+  "aliases": [
+   "NEW-headline-card-over-plate",
+   "SIG-ED-5",
+   "ED-2"
+  ],
+  "description": "Typeset headline card: kicker + typed headline + byline over a dimmed plate (amazon); NYT headline card and torn clipping (drinkingage)",
+  "family": "document",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 2,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "proof-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/proof/editorial/ClippingScene.tsx"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "amazon 9:23.22 (analysis/stills/vox_amazon/9m23s_headline-card-typing.jpg)",
+  "notes": "ClippingScene is a proof of the editorial look"
+ },
+ {
+  "id": "E-CB",
+  "aliases": [],
+  "description": "Cut to black: 5.4 s of black with the music decaying before the outro (drinkingage); before the credits (amazon)",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 1,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "doc-only",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/07-transitions.md"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "no black or empty scene in the storyboard"
+ },
+ {
+  "id": "K-RackFocus",
+  "aliases": [],
+  "description": "Rack focus: blur → sharp, then a pull-out",
+  "family": "transition",
+  "counts": {
+   "electoral": 1,
+   "creatine": 2,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/transitions/effects.ts"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "rackFocusIn is a coded shot head"
+ },
+ {
+  "id": "NEW-scatter-letter-type-on",
+  "aliases": [],
+  "description": "Letters appear (or fade in) in random order at their final places, on twos: kinetic phrase (drinkingage), lower-third name (healthcare)",
+  "family": "packaging",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 1,
+   "amazon": 0,
+   "healthcare": 2
+  },
+  "videos_using": 2,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/DecodeNameCard.tsx"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "healthcare 0:20.01 (analysis/stills/vox_healthcare/0m20s_namecard-letter-stagger.jpg); drinkingage 2:22.14 (analysis/stills/vox_drinkingage/strip_03409-03456_kinetic-phrase-reveal.png)",
+  "notes": "DecodeNameCard scrambles letters (random glyphs), it does not reveal them in place"
+ },
+ {
+  "id": "SIG-EW-7",
+  "aliases": [
+   "R-GiantWordCard"
+  ],
+  "description": "Giant single-word card: 'BUT' over a dimmed cell (drinkingage), ATLAS filled with map texture (amazon)",
+  "family": "annotation",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 1,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/recipes/GiantWordCard.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 4,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "matches (GiantWordCard)"
+ },
+ {
+  "id": "T-CS",
+  "aliases": [],
+  "description": "Card swap inside a fixed panel: 16 f with a reframe (creatine), credits page swap 7 f out + 1 f empty + 6 f in (healthcare)",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 1,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 1
+  },
+  "videos_using": 2,
+  "status": "doc-only",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/07-transitions.md"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "healthcare 20:34.07 (analysis/stills/vox_healthcare/20m34s_credits-page-swap-cropstrip_f29618-29637.png)",
+  "notes": "no panel persists across scenes"
+ },
+ {
+  "id": "T-FB",
+  "aliases": [],
+  "description": "Fade to black at the very end (42 f)",
+  "family": "transition",
+  "counts": {
+   "electoral": 1,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/transitions/effects.ts"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "fadeToBlack is a coded shot tail; storyboards end on a cut"
+ },
+ {
+  "id": "T-WL",
+  "aliases": [],
+  "description": "Word-lock montage: the keyword held in one screen box across 3 speakers (creatine) or 8 web pages ≈ 18 f each (cleanenergy)",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 1,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 2,
+  "status": "doc-only",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/07-transitions.md"
+  ],
+  "score": 2.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "cleanenergy 3:48.09 (analysis/stills/vox_cleanenergy/3m49s_closed_source_wordlock.jpg)",
+  "notes": "5 f cards would also break the validator's 6 f cut rule"
+ },
+ {
+  "id": "NEW-voice-only-claim",
+  "aliases": [],
+  "description": "Numbers, places and concepts carried by speech alone (no insert, no type, no source line)",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 110
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/13-story-to-screen.md"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [
+   "healthcare"
+  ],
+  "evidence": "",
+  "notes": "doc 13 §5.5 forbids 'a number that no picture carries'; acceptable only in the conversation format"
+ },
+ {
+  "id": "NEW-burned-subtitles",
+  "aliases": [],
+  "description": "White bold subtitles for foreign-language interviews, left-aligned at x ≈ 100 px, baseline 92 % H, ≤ 2 lines, persisting across cuts",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 45,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/type/VideoCaption.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [
+   "amazon"
+  ],
+  "evidence": "amazon 3:50.17 (analysis/stills/vox_amazon/3m51s_namecard-subtitle-field.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-mixed-weight-type",
+  "aliases": [],
+  "description": "All designed type in a white grotesque whose letters are randomly Regular or Black",
+  "family": "look",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 40,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 2.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [
+   "drinkingage"
+  ],
+  "evidence": "drinkingage 2:23 (analysis/stills/vox_drinkingage/2m23s_f3452_kinetic-phrase-drafted.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-two-up-single-alternation",
+  "aliases": [],
+  "description": "Edit rule: two-up for host turns and answer starts/ends, guest single for answer bodies; a switch every 11–76 s (median 29 s), half in the pre-sentence breath",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 34
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-pixel-stripe-texture",
+  "aliases": [],
+  "description": "Vertical pixel-stripe gradients on grounds, walls, bars and as a button glitch",
+  "family": "look",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 20,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [
+   "cleanenergy"
+  ],
+  "evidence": "cleanenergy 0:16.16 (analysis/stills/vox_cleanenergy/0m22s_question_doc_typing.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-satellite-basemap",
+  "aliases": [],
+  "description": "Flat true-colour satellite photo-map, near-black ocean, 2D camera zooming ×0.18–×7.1; 139 s in 17 shots",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 17,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 3,
+  "effort": "L",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "amazon 1:50–2:36 (analysis/stills/vox_amazon/2m23s_map-pins-route-photo.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-two-up-call-windows",
+  "aliases": [],
+  "description": "Designed two-up of two rounded (r ≈ 55 px), 3 px white-keylined portrait windows on flat #262626; carries every host turn",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 17
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/ZoomWindow.tsx"
+  ],
+  "score": 1.0,
+  "impact": 3,
+  "effort": "L",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "healthcare 0:25.01 (analysis/stills/vox_healthcare/0m30s_two-up-split.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-vertical-social-panels",
+  "aliases": [],
+  "description": "9:16 social clips on the paper ground: centred single, or 2–3 panels added left to right on word onsets; own captions kept",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 16,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [
+   "creatine"
+  ],
+  "evidence": "creatine 0:00.01 (analysis/stills/vox_creatine/0m03s_triptych_social_clips.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-isometric-hero-object",
+  "aliases": [],
+  "description": "Isometric data centre transformed once per idea (built, scaled, multiplied, night, beside coal, rated, in a city); 17.6 % of the runtime",
+  "family": "data",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 13,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 3,
+  "effort": "L",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "cleanenergy 1:16.06 (analysis/stills/vox_cleanenergy/1m26s_list_to_isometric_datacenter.jpg), 1:50.03 (analysis/stills/vox_cleanenergy/1m58s_scale_80000_households.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-hands-on-wall-map",
+  "aliases": [],
+  "description": "Host's hands colour, wipe and trace a real laminated wall map (live action), composited with digital isolation and tags",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 10,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.7,
+  "impact": 2,
+  "effort": "L",
+  "earworm": null,
+  "approx_videos": [
+   "drinkingage"
+  ],
+  "evidence": "drinkingage 0:54 (analysis/stills/vox_drinkingage/0m54s_f1299_map-selective-colour-legend.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "K-Pillarbox",
+  "aliases": [],
+  "description": "4:3 archival pillarboxed with black bars (content x ≈ 195–1719), ≈ 123 s in 9 runs",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 9,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/effects/Pillarbox.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "drinkingage 4:05 (analysis/stills/vox_drinkingage/4m05s_f5888_madd-rid-labels.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-state-badge-tile",
+  "aliases": [],
+  "description": "Charcoal tile with a state silhouette and serif name; row header; tile size = value",
+  "family": "data",
+  "counts": {
+   "electoral": 9,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 2.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 4:08 (analysis/stills/vox_electoral/4m08s04_influence-squares-rings.jpg)",
+  "notes": "≈ 30 tiles in 9 set-ups"
+ },
+ {
+  "id": "NEW-host-at-work-b-roll",
+  "aliases": [],
+  "description": "Host typing, reading, highlighting prints",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 8,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [
+   "cleanenergy"
+  ],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-map-texture-stacked-bar",
+  "aliases": [],
+  "description": "Map texture squashes into a 100 % stacked bar (36 f); segments wipe, % callouts, leader labels, greys out; returns 8×",
+  "family": "data",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 8,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "amazon 5:17.08 (analysis/stills/vox_amazon/5m24s_map-texture-stacked-bar.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-portrait-roundel-tags",
+  "aliases": [],
+  "description": "Circular portraits with a mustard name tag and a red year tag, in a panned row",
+  "family": "data",
+  "counts": {
+   "electoral": 7,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 0:46.01 (analysis/stills/vox_electoral/0m49s23_portrait-row-name-tags.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-selective-colour-isolation",
+  "aliases": [],
+  "description": "All but one category desaturates over 25 f, starting 11 f before the colour word; dissenters tinted red",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 7,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "drinkingage 0:51.17 (analysis/stills/vox_drinkingage/0m54s_f1299_map-selective-colour-legend.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-map-region-mask",
+  "aliases": [],
+  "description": "Region flattened to dark green + bold label",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 6,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [
+   "amazon"
+  ],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-engraving-section-icon",
+  "aliases": [],
+  "description": "19th-c. engravings (arm, brain) as section icons, reused on the verdict and recap cards",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 5,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "creatine 2:59.09 (analysis/stills/vox_creatine/3m00s_engravings_arm_brain.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-two-tone-party-label",
+  "aliases": [],
+  "description": "White serif keyword on a red box with an offset teal-navy block, rotated −3…−4°, box-wipe + type-on 15 f",
+  "family": "annotation",
+  "counts": {
+   "electoral": 5,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/StationLabel.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 0:19.10 (analysis/stills/vox_electoral/0m20s15_swing-states-label.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-unit-grid-cartogram",
+  "aliases": [],
+  "description": "538-square elector grid: state borders stroke on in 12 f, party fill, 270 line; also the ground of the title and the ending",
+  "family": "data",
+  "counts": {
+   "electoral": 5,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.5,
+  "impact": 3,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 1:08.09 (analysis/stills/vox_electoral/1m09s14_title-card-on-grid.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "K-DotField",
+  "aliases": [],
+  "description": "Unit dots: House 435 / Senate 100, electoral-vote columns, a 1969 vote",
+  "family": "data",
+  "counts": {
+   "electoral": 4,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/explainer/DotPop.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "K-LabelStrip",
+  "aliases": [],
+  "description": "Wide-tracked yellow category labels over footage ('MADD', 'RID')",
+  "family": "annotation",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 4,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/earworm/LabelStrip.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "K-LeaderLine",
+  "aliases": [],
+  "description": "Segment labels on leader lines",
+  "family": "annotation",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 4,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/explainer/strokes.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-document-isolate-blur",
+  "aliases": [],
+  "description": "Page defocuses while one sentence strip lifts sharp with a soft shadow (13 f), then the highlight",
+  "family": "document",
+  "counts": {
+   "electoral": 0,
+   "creatine": 4,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/motion/blur.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "creatine 1:25.18 (analysis/stills/vox_creatine/strip_02026-02073_newspaper_isolate_highlight.png)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-era-band-under-axis",
+  "aliases": [],
+  "description": "President-term bands under a bar chart's x-axis",
+  "family": "data",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 4,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-map-fly-out-fly-in",
+  "aliases": [],
+  "description": "Region ↔ world zooms, symmetric ease (peak at 45–51 %), crash push ×7.1 in 39 f",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 4,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/motion/CameraRig.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "amazon 7:32.07 (analysis/stills/vox_amazon/7m36s_map-flow-arrows-world.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-protected-areas-mosaic",
+  "aliases": [],
+  "description": "Coral/yellow protected-area mosaic fading in/out",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 4,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-relatable-unit-equation",
+  "aliases": [
+   "PD-1"
+  ],
+  "description": "Icon = value = everyday unit (1,300 MWh = 130 homes)",
+  "family": "data",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 4,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "doc-only",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/08-scene-recipes.md"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "cleanenergy 4:05.14 (analysis/stills/vox_cleanenergy/4m13s_bloom_equation_card.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-ui-window-genie",
+  "aliases": [],
+  "description": "UI windows (webcam, email, doc) genie-warp open/closed in ≈ 4 f",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 4,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "cleanenergy 0:10.08 (analysis/stills/vox_cleanenergy/0m11s_kathy_namecard_desktop.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "T-PC",
+  "aliases": [],
+  "description": "Punch-in onto the line being read",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 4,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "doc-only",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/07-transitions.md"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-addressee-cut",
+  "aliases": [],
+  "description": "Cut to whoever is named or addressed (guest on his name, 1.4 f before it)",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 3
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-dot-hemicycle",
+  "aliases": [],
+  "description": "Seat dots in a hemicycle, yellow faction, rolling year, big %",
+  "family": "data",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 3,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "amazon 8:17.07 (analysis/stills/vox_amazon/8m22s_hemicycle-dot-chart.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-filmed-monitor-punch-in",
+  "aliases": [],
+  "description": "Source list filmed on a monitor (macro), cut tighter twice",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 3,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-map-tile-accretion",
+  "aliases": [],
+  "description": "Clearing tiles pop over green texture",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 3,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-verdict-checklist",
+  "aliases": [],
+  "description": "Question lines with ✓ / ? / ✗ popping on the spoken answer; returns as the recap card, one line per keyword",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 3,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 2.0,
+  "impact": 2,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "creatine 4:23.19 (analysis/stills/vox_creatine/4m33s_verdict_checklist.jpg), 8:43.13 (analysis/stills/vox_creatine/9m11s_recap_brain_checklist.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-vhs-artifact-finish",
+  "aliases": [],
+  "description": "VHS finish on archival: scanlines, dropout specks, RGB fringe",
+  "family": "look",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 3,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/effects/ChromaticAberration.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "drinkingage 0:06–0:19 (analysis/stills/vox_drinkingage/0m15s_f379_date-tag-1984.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-3d-medical-render",
+  "aliases": [],
+  "description": "Stock-like glossy 3D medical render (mitochondria, ATP particles)",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 2,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "licensed stock footage → a full-frame clip"
+ },
+ {
+  "id": "NEW-bar-tilt-org-chart",
+  "aliases": [],
+  "description": "Bar tilts onto a perspective floor (24 f); org labels type on",
+  "family": "data",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "amazon 9:14.21 (analysis/strips/vox_amazon_13304-13351.png)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-bubble-map",
+  "aliases": [],
+  "description": "Proportional circles + serif callout + arrow",
+  "family": "map",
+  "counts": {
+   "electoral": 2,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 4:11.22 (analysis/stills/vox_electoral/4m17s01_spending-map-arrow.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-chart-slide-swap",
+  "aliases": [],
+  "description": "Chart view slides out sideways (24 f) while the next view fades in staggered",
+  "family": "transition",
+  "counts": {
+   "electoral": 2,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 2:31.11 (analysis/stills/vox_electoral/strip_03626-03673_bars-to-map.png)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-desktop-ui-callback",
+  "aliases": [],
+  "description": "Desktop UI set-up paid off later ('STORE IN CLOUD' → 'Are you sure? NO/YES')",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 2,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "cleanenergy 7:50.06 (analysis/stills/vox_cleanenergy/7m54s_desktop_are_you_sure.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-document-text-overprint",
+  "aliases": [],
+  "description": "Document text dissolved over a photo",
+  "family": "document",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 2,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "drinkingage 7:21.09 (analysis/stills/vox_drinkingage/7m33s_f10865_ruling-7-2-red-tint.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-fire-dot-overlay",
+  "aliases": [],
+  "description": "NASA FIRMS fire dots + title",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-flicker-fade-out",
+  "aliases": [],
+  "description": "Lower third exits in a 5 f flicker (lines alternate opacity frame to frame), gone the frame before the cut",
+  "family": "packaging",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 2
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "healthcare 0:24.20 (analysis/stills/vox_healthcare/0m24s_namecard-flicker-exit-cropstrip_f592-603.png)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-focus-scale-swap",
+  "aliases": [],
+  "description": "Chapter switch: the active icon grows and sharpens, the other shrinks and blurs (≈ 30 f)",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 2,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "creatine 3:01.08 (analysis/stills/vox_creatine/strip_08290-08337_focus_swap_chapter.png)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-map-band-label",
+  "aliases": [],
+  "description": "Terracotta band with a rotated label, growing north",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "amazon 3:09.12 (analysis/stills/vox_amazon/3m14s_map-arc-region.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-map-photo-window",
+  "aliases": [],
+  "description": "Archival photo window in the ocean, under the land, with a caption chip",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-monitor-wall-grid",
+  "aliases": [],
+  "description": "2×2 / 1×2 wall of dimmed 4:3 'monitors': active cell lit with a yellow label, cuts into a cell and back, summaries written in",
+  "family": "annotation",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 2,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 2,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "drinkingage 4:29.23 (analysis/stills/vox_drinkingage/5m27s_f7851_argument-grid.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-paper-timeline-scroll",
+  "aliases": [],
+  "description": "White-band timeline with period bands and event markers, camera scroll",
+  "family": "data",
+  "counts": {
+   "electoral": 2,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/explainer/TimelineMarker.tsx"
+  ],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 5:31.00 (analysis/stills/vox_electoral/5m42s18_timeline-bands.jpg)",
+  "notes": "TimelineMarker is the dark-map timeline (PD-11)"
+ },
+ {
+  "id": "NEW-tile-to-unit-dots",
+  "aliases": [],
+  "description": "Tile dissolves while N dots count in at ≈ 1 per frame",
+  "family": "data",
+  "counts": {
+   "electoral": 2,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/explainer/DotPop.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 1:30.00 (analysis/stills/vox_electoral/strip_02152-02199_tile-to-dots.png)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-two-panel-split",
+  "aliases": [],
+  "description": "Two panels side by side on black",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "R-KeywordCut",
+  "aliases": [],
+  "description": "Keyword on the cut ('vote', 'Withhold highway funds'), lower case, no photo slam",
+  "family": "annotation",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 2,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/recipes/KeywordCut.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "R-QuoteCard",
+  "aliases": [],
+  "description": "Centred serif quote card shown whole (no typing), em-dash attribution, source line, highlighter on the key words",
+  "family": "document",
+  "counts": {
+   "electoral": 2,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/QuoteCard.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 0,
+  "approx_videos": [],
+  "evidence": "electoral 6:17.07 (analysis/stills/vox_electoral/6m27s20_quote-card-highlight.jpg)",
+  "notes": "ours types the quote letter by letter in condensed caps on black"
+ },
+ {
+  "id": "X-BlurThroughCut",
+  "aliases": [],
+  "description": "Defocus between web pages, silent, no zoom blur",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 2,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/fx/BlurThroughCut.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 2,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "use `sfx: false`"
+ },
+ {
+  "id": "X-DipToBlack",
+  "aliases": [
+   "C-FTB",
+   "dip"
+  ],
+  "description": "Act break: 29 f picture + 23 f music fade at 85 %, 5 f silence, hard in; an 18 f dip between two interviews",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 2,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/fx/BlackBridge.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 2,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "E-TB",
+  "aliases": [],
+  "description": "Tilt to the quote card + build",
+  "family": "transition",
+  "counts": {
+   "electoral": 1,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/type/Reveals.tsx",
+   "src/motion/CameraRig.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "K-ColorFlash",
+  "aliases": [],
+  "description": "Non-swing states blink twice",
+  "family": "data",
+  "counts": {
+   "electoral": 1,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/explainer/DotPop.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-big-title-over-dimmed-photo",
+  "aliases": [],
+  "description": "'THE RURALISTAS' typed big over a photo, which then dims",
+  "family": "annotation",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-build-time-dial",
+  "aliases": [],
+  "description": "Month dial + year counter",
+  "family": "data",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "cleanenergy 6:33.22 (analysis/stills/vox_cleanenergy/6m39s_build_time_dial.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-day-night-ground-swap",
+  "aliases": [],
+  "description": "Same iso layout cut from the white ground to the charcoal ground",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "cleanenergy 6:14.05 (analysis/strips/vox_cleanenergy_08950-08997.png)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-efficiency-badges",
+  "aliases": [],
+  "description": "A–D rating badges pop on 'an energy efficiency rating' (−1 f)",
+  "family": "data",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-flow-ribbon-world",
+  "aliases": [],
+  "description": "Coral country fills + flow ribbons to Brazil",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "amazon 7:34.08 (analysis/stills/vox_amazon/7m36s_map-flow-arrows-world.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-hatched-region-label-box",
+  "aliases": [],
+  "description": "Hatched region + black-on-yellow label boxes",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-host-outro-comments",
+  "aliases": [],
+  "description": "Host reads viewer comments in a bordered window with app panels, then the next edition's theme",
+  "family": "packaging",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 1,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-host-recap-check",
+  "aliases": [],
+  "description": "Host restates the key number and asks the guest to confirm ('Was that right?')",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 1
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-key-line-caption-box",
+  "aliases": [],
+  "description": "Caption box quoting a news clip's key line",
+  "family": "document",
+  "counts": {
+   "electoral": 1,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 0:15.11 (analysis/stills/vox_electoral/0m17s00_vox-caption-box-on-clip.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-location-tag",
+  "aliases": [],
+  "description": "'ACRE, BRAZIL' location tag with a green square",
+  "family": "footage",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-phone-mockup-screen-swap",
+  "aliases": [],
+  "description": "Phone mock-up on yellow, screens swap in place every ≈ 17 f",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-photo-flash-burst",
+  "aliases": [],
+  "description": "4 photos × 3 f burst",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-podcast-host-promo",
+  "aliases": [],
+  "description": "Another show's host pitches her podcast in a selfie video beside the credits",
+  "family": "packaging",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-print-slide-over",
+  "aliases": [],
+  "description": "A print rises over the chart with a name super",
+  "family": "transition",
+  "counts": {
+   "electoral": 1,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "electoral 5:26.22 (analysis/stills/vox_electoral/strip_07834-07881_portrait-card-slide.png)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-satellite-timelapse",
+  "aliases": [],
+  "description": "Roadside clearing time-lapse, 1 image per 12 f",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-scale-card-map-texture",
+  "aliases": [],
+  "description": "Scale card: a rectangle of map texture, caps title, number",
+  "family": "data",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "amazon 2:44.05 (analysis/stills/vox_amazon/2m46s_map-scale-card.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-sponsor-cliffhanger",
+  "aliases": [],
+  "description": "One-line tease before the ad ('I'll explain why in a minute.')",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "script device; doc 13 has no sponsor slot"
+ },
+ {
+  "id": "NEW-stutter-jumpcut",
+  "aliases": [],
+  "description": "3–8 f jump cuts + 3 f blur dissolves inside one clip ('cognition is a difficult thing to measure')",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 1,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "NEW-typed-question-doc",
+  "aliases": [],
+  "description": "Viewer's question typed word by word into a document window, +9.5 f behind her voice",
+  "family": "structure",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/type/Typewriter.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "cleanenergy 0:16.16 (analysis/stills/vox_cleanenergy/0m22s_question_doc_typing.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "NEW-word-morph-etymology",
+  "aliases": [],
+  "description": "Word types on (11 f), morphs letter by letter into its Greek root (11 f), root underline (9 f), italic gloss",
+  "family": "document",
+  "counts": {
+   "electoral": 0,
+   "creatine": 1,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "missing",
+  "spec_differs": false,
+  "our_files": [
+   "src/type/Typewriter.tsx",
+   "src/explainer/strokes.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "creatine 1:09.03 (analysis/stills/vox_creatine/1m13s_greek_word_card.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "R-KaraokeQuote",
+  "aliases": [
+   "SIG-EW-6"
+  ],
+  "description": "Oral-argument words captioned on their onsets (+1 f) with a tick waveform",
+  "family": "annotation",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 1,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/recipes/KaraokeQuote.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 3,
+  "approx_videos": [],
+  "evidence": "drinkingage 7:10.19 (analysis/stills/vox_drinkingage/7m19s_f10547_waveform-karaoke-captions.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "R-MapRoute",
+  "aliases": [],
+  "description": "Dashed route, square pins, typed city labels on the satellite map",
+  "family": "map",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "covered",
+  "spec_differs": true,
+  "our_files": [
+   "src/recipes/MapRouteScene.tsx",
+   "src/explainer/MapRoute.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "amazon 2:13–2:26 (analysis/stills/vox_amazon/2m23s_map-pins-route-photo.jpg)",
+  "notes": ""
+ },
+ {
+  "id": "SIG-EW-10",
+  "aliases": [],
+  "description": "Audio graphic: tick waveform under the archival speech",
+  "family": "annotation",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 1,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "kit-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/audio/Visualizer.tsx"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": 4,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "T-SP",
+  "aliases": [],
+  "description": "Torn-edged photos rise from black (stop-motion paper wipe)",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 1,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "doc-only",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/07-transitions.md"
+  ],
+  "score": 0.5,
+  "impact": 1,
+  "effort": "M",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "V-SRP",
+  "aliases": [],
+  "description": "Speed-ramped push ×1.27 in 24 f into the series card",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 1,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "doc-only",
+  "spec_differs": false,
+  "our_files": [
+   "docs/style-guide/07-transitions.md"
+  ],
+  "score": 1.0,
+  "impact": 1,
+  "effort": "S",
+  "earworm": null,
+  "approx_videos": [],
+  "evidence": "cleanenergy 1:01.18 (analysis/strips/vox_cleanenergy_01506-01553.png)",
+  "notes": ""
+ },
+ {
+  "id": "X-Drop",
+  "aliases": [],
+  "description": "Fade to black 27 f → 5 f digital silence → new cue + picture on one frame (after the series intro)",
+  "family": "transition",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 1,
+   "healthcare": 0
+  },
+  "videos_using": 1,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/fx/BlackBridge.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": ""
+ },
+ {
+  "id": "R-ColdOpenYear",
+  "aliases": [],
+  "description": "Year digits fly in over an unfolding collage",
+  "family": "packaging",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 0,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/recipes/ColdOpenYear.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "no match in the sample (amazon's odometer is PD-2)"
+ },
+ {
+  "id": "R-MontageCrane",
+  "aliases": [],
+  "description": "Multiplane crane through cut-outs",
+  "family": "camera",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 0,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/recipes/MontageCrane.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "no match in the sample (no multiplane anywhere)"
+ },
+ {
+  "id": "R-PhotoCollageUnfold",
+  "aliases": [],
+  "description": "Torn B&W prints unfold from a hinge",
+  "family": "packaging",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 0,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/recipes/PhotoCollageUnfold.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 7,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "no match in the sample"
+ },
+ {
+  "id": "SIG-EW-1",
+  "aliases": [],
+  "description": "Keyword cuts on the word onset (0 f), pops on the stressed syllable",
+  "family": "sync",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 0,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/studio/resolve.ts",
+   "src/audio/defaults.ts"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "absent in all six: cuts avoid word onsets (electoral p 0.97, creatine p 1.0, cleanenergy p 0.98, drinkingage p 0.95, amazon enrichment 0.67)"
+ },
+ {
+  "id": "SIG-EW-11",
+  "aliases": [],
+  "description": "Hard camera: pushes accelerate and stop dead on the keyword; crash pushes; mega pull-backs",
+  "family": "camera",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 0,
+  "status": "proof-only",
+  "spec_differs": false,
+  "our_files": [
+   "src/proof/earworm/Shot1.tsx",
+   "src/motion/CameraRig.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "absent in all six; the snap-stop push lives only in the proof shot"
+ },
+ {
+  "id": "SIG-EW-2/3",
+  "aliases": [],
+  "description": "Earworm's dark collage ground with torn B&W archival cut-outs (doc 12 §1 #2–#3)",
+  "family": "look",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 0,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/BlackCollageGround.tsx",
+   "src/earworm/TornPhoto.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 1,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "absent in all six"
+ },
+ {
+  "id": "SIG-EW-9",
+  "aliases": [],
+  "description": "Decode name card (tracking +1 em → 0, random-letter decode)",
+  "family": "packaging",
+  "counts": {
+   "electoral": 0,
+   "creatine": 0,
+   "cleanenergy": 0,
+   "drinkingage": 0,
+   "amazon": 0,
+   "healthcare": 0
+  },
+  "videos_using": 0,
+  "status": "covered",
+  "spec_differs": false,
+  "our_files": [
+   "src/earworm/DecodeNameCard.tsx"
+  ],
+  "score": null,
+  "impact": null,
+  "effort": null,
+  "earworm": 2,
+  "approx_videos": [],
+  "evidence": "",
+  "notes": "absent in all six (all name cards are other styles)"
+ }
+]

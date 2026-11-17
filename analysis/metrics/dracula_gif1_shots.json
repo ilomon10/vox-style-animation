@@ -1,0 +1,64 @@
+{
+ "summary": {
+  "id": "dracula_gif1",
+  "fps": 10,
+  "frames": 50,
+  "duration_s": 5.0,
+  "shots": 2,
+  "hard_cuts": 1,
+  "soft_transitions": 0,
+  "shot_dur_s": {
+   "median": 2.5,
+   "mean": 2.5,
+   "p10": 2.34,
+   "p90": 2.66
+  },
+  "held_frame_frac": 0.02
+ },
+ "cuts": [
+  23
+ ],
+ "soft_transitions": [],
+ "shots": [
+  {
+   "shot": 1,
+   "start": 0,
+   "end": 22,
+   "frames": 23,
+   "t0": 0.0,
+   "t1": 2.2,
+   "dur_s": 2.3,
+   "moving_frac": 0.95,
+   "cadence_hold": 0,
+   "longest_hold_f": 1,
+   "cam_tx_px1920": 0.2,
+   "cam_ty_px1920": -0.2,
+   "cam_zoom_total": 0.999,
+   "cam_rot_deg": 0.0,
+   "luma": 205.7,
+   "sat": 0.035,
+   "warmth": 0.9,
+   "motion_energy": 0.93
+  },
+  {
+   "shot": 2,
+   "start": 23,
+   "end": 49,
+   "frames": 27,
+   "t0": 2.3,
+   "t1": 4.9,
+   "dur_s": 2.7,
+   "moving_frac": 1.0,
+   "cadence_hold": 0,
+   "longest_hold_f": 0,
+   "cam_tx_px1920": 4.8,
+   "cam_ty_px1920": 5.7,
+   "cam_zoom_total": 1.106,
+   "cam_rot_deg": 0.38,
+   "luma": 203.0,
+   "sat": 0.524,
+   "warmth": 113.8,
+   "motion_energy": 2.43
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# The one Python entry point for tools/: the project venv (tools/.venv, made by tools/setup.sh) when it exists,
+# else the system python3. Always isolated mode (-I): neither the script's folder nor the current folder is put on
+# sys.path and PYTHON* variables are ignored, so a downloaded file named like a module is never imported by accident.
+#   tools/py tools/library/search.py "factory"
+set -euo pipefail
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -x "$here/.venv/bin/python" ]; then exec "$here/.venv/bin/python" -I "$@"; fi
+exec python3 -I "$@"

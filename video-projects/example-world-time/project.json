@@ -1,0 +1,12 @@
+{
+  "slug": "example-world-time",
+  "script": "script.md",
+  "fps": 25,
+  "idea": "How the world agreed on time",
+  "vo": "video-projects/example-world-time/audio/vo_scratch.wav",
+  "voSource": "scratch",
+  "voice": "am_michael",
+  "cues": "public/audio/example-world-time/vo.cues.json",
+  "vo_static": "audio/example-world-time/vo.wav",
+  "cues_name": "example-world-time/vo"
+}

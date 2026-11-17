@@ -1,0 +1,74 @@
+[
+ {
+  "text": "Chocolate",
+  "start": 1.4,
+  "end": 2.02,
+  "prob": 1.0
+ },
+ {
+  "text": "is",
+  "start": 2.09,
+  "end": 2.27,
+  "prob": 1.0
+ },
+ {
+  "text": "the",
+  "start": 2.34,
+  "end": 2.48,
+  "prob": 1.0
+ },
+ {
+  "text": "sweetest",
+  "start": 2.55,
+  "end": 3.05,
+  "prob": 1.0
+ },
+ {
+  "text": "lie",
+  "start": 3.12,
+  "end": 3.46,
+  "prob": 1.0
+ },
+ {
+  "text": "we",
+  "start": 3.53,
+  "end": 3.69,
+  "prob": 1.0
+ },
+ {
+  "text": "tell",
+  "start": 3.76,
+  "end": 4.06,
+  "prob": 1.0
+ },
+ {
+  "text": "But",
+  "start": 9.2,
+  "end": 9.4,
+  "prob": 1.0
+ },
+ {
+  "text": "the",
+  "start": 9.47,
+  "end": 9.61,
+  "prob": 1.0
+ },
+ {
+  "text": "beat",
+  "start": 9.68,
+  "end": 10.04,
+  "prob": 1.0
+ },
+ {
+  "text": "never",
+  "start": 10.11,
+  "end": 10.49,
+  "prob": 1.0
+ },
+ {
+  "text": "lies",
+  "start": 10.56,
+  "end": 10.96,
+  "prob": 1.0
+ }
+]

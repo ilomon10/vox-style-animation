@@ -1,0 +1,12 @@
+{
+  "slug": "example-time-zones",
+  "script": "script.md",
+  "fps": 25,
+  "idea": "Why railroads gave America time zones",
+  "vo": "video-projects/example-time-zones/audio/vo_scratch.wav",
+  "voSource": "scratch",
+  "voice": "am_michael",
+  "cues": "public/audio/example-time-zones/vo.cues.json",
+  "vo_static": "audio/example-time-zones/vo.wav",
+  "cues_name": "example-time-zones/vo"
+}

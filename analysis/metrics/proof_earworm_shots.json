@@ -1,0 +1,85 @@
+{
+ "summary": {
+  "id": "proof_earworm",
+  "fps": 25,
+  "frames": 791,
+  "duration_s": 31.64,
+  "shots": 3,
+  "hard_cuts": 2,
+  "soft_transitions": 0,
+  "shot_dur_s": {
+   "median": 12.64,
+   "mean": 10.55,
+   "p10": 5.54,
+   "p90": 14.72
+  },
+  "held_frame_frac": 0.404
+ },
+ "cuts": [
+  316,
+  697
+ ],
+ "soft_transitions": [],
+ "shots": [
+  {
+   "shot": 1,
+   "start": 0,
+   "end": 315,
+   "frames": 316,
+   "t0": 0.0,
+   "t1": 12.6,
+   "dur_s": 12.64,
+   "moving_frac": 0.53,
+   "cadence_hold": 1,
+   "longest_hold_f": 2,
+   "cam_tx_px1920": 67.2,
+   "cam_ty_px1920": 1041.1,
+   "cam_zoom_total": 0.796,
+   "cam_rot_deg": -18.62,
+   "luma": 38.5,
+   "sat": 0.012,
+   "warmth": -1.7,
+   "motion_energy": 2.57
+  },
+  {
+   "shot": 2,
+   "start": 316,
+   "end": 696,
+   "frames": 381,
+   "t0": 12.64,
+   "t1": 27.84,
+   "dur_s": 15.24,
+   "moving_frac": 0.67,
+   "cadence_hold": 1,
+   "longest_hold_f": 2,
+   "cam_tx_px1920": -82.5,
+   "cam_ty_px1920": 372.4,
+   "cam_zoom_total": 1.629,
+   "cam_rot_deg": -17.16,
+   "luma": 31.1,
+   "sat": 0.006,
+   "warmth": -0.5,
+   "motion_energy": 1.59
+  },
+  {
+   "shot": 3,
+   "start": 697,
+   "end": 790,
+   "frames": 94,
+   "t0": 27.88,
+   "t1": 31.6,
+   "dur_s": 3.76,
+   "moving_frac": 0.52,
+   "cadence_hold": 1,
+   "longest_hold_f": 2,
+   "cam_tx_px1920": -255.4,
+   "cam_ty_px1920": 223.9,
+   "cam_zoom_total": 0.462,
+   "cam_rot_deg": -0.7,
+   "luma": 75.4,
+   "sat": 0.0,
+   "warmth": 0.0,
+   "motion_energy": 5.21
+  }
+ ]
+}

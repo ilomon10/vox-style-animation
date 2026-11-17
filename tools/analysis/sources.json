@@ -1,0 +1,102 @@
+{
+ "highlight": {
+  "path": "reference/The Highlight by Vox - Animation like Vox.mp4",
+  "fps": 10,
+  "style": "vox-explainer"
+ },
+ "porsche": {
+  "path": "reference/VOX-Style-Animated-Documentary-The-History-of-Porsche/VOX-Style Animated Documentary _ The History of Porsche.mp4",
+  "fps": 30,
+  "style": "paper-desk"
+ },
+ "dracula": {
+  "path": "reference/Vox-style-collage-animation-The-histoty-of-Dracula/dracula_collage_animation_video.__special_halloween_project (1080p).mp4",
+  "fps": 24,
+  "style": "dark-collage"
+ },
+ "epigenetics": {
+  "path": "reference/Vox-style-collage-animation-The-histoty-of-Dracula/vox_-_epigenetics (1080p).mp4",
+  "fps": 23.976,
+  "style": "vox-explainer"
+ },
+ "dracula_gif1": {
+  "path": "reference/Vox-style-collage-animation-The-histoty-of-Dracula/9675aa176695925.64c9844a78827.gif",
+  "fps": 10,
+  "style": "dark-collage"
+ },
+ "dracula_gif2": {
+  "path": "reference/Vox-style-collage-animation-The-histoty-of-Dracula/9e9317176695925.64c9844a7a518.gif",
+  "fps": 10,
+  "style": "dark-collage"
+ },
+ "earworm": {
+  "path": "reference/vox_-_earworm__ep._quiet_storm.mp4",
+  "fps": 25,
+  "style": "vox-explainer"
+ },
+ "proof_earworm": {
+  "path": "out/proof/earworm/proof-earworm.mp4",
+  "fps": 25,
+  "style": "vox-earworm"
+ },
+ "proof_earworm_C": {
+  "path": "out/proof/earwormC/proof-earworm-C.mp4",
+  "fps": 25,
+  "style": "vox-earworm"
+ },
+ "proof_earworm_D": {
+  "path": "out/proof/earwormD/proof-earworm-D.mp4",
+  "fps": 25,
+  "style": "vox-earworm"
+ },
+ "proof_earworm_B": {
+  "path": "out/proof/earwormB/proof-earworm-B.mp4",
+  "fps": 25,
+  "style": "vox-earworm"
+ },
+ "vox_creatine": {
+  "path": "reference/vox-sample/uK_1UiwTANw_creatine_debunked.mp4",
+  "fps": 23.976023976023978,
+  "style": "vox-sample/main-2026"
+ },
+ "vox_electoral": {
+  "path": "reference/vox-sample/ajavsMbCapY_the_electoral_college_explained.mp4",
+  "fps": 23.976023976023978,
+  "style": "vox-sample/politics-2020"
+ },
+ "vox_cleanenergy": {
+  "path": "reference/vox-sample/YGfJeH5HRDQ_can_clean_energy_handle_the_ai_boom.mp4",
+  "fps": 23.976023976023978,
+  "style": "vox-sample/explain-it-to-me-2024"
+ },
+ "vox_drinkingage": {
+  "path": "reference/vox-sample/9aWYJugVTs4_why_the_us_drinking_age_is_21.mp4",
+  "fps": 23.976023976023978,
+  "style": "vox-sample/almanac-2019"
+ },
+ "vox_amazon": {
+  "path": "reference/vox-sample/SAZAKPUQMw0_the_destruction_of_the_amazon_explained.mp4",
+  "fps": 23.976023976023978,
+  "style": "vox-sample/atlas-2019"
+ },
+ "vox_healthcare": {
+  "path": "reference/vox-sample/Y0OTKFdbfcc_can_democrats_fix_healthcare.mp4",
+  "fps": 24.0,
+  "style": "vox-sample/main-2026"
+ },
+ "vox_short_healthcare": {
+  "path": "reference/vox-sample/shorts/WEeMrjIcmTE_democrats_path_to_healthcare_reform.mp4",
+  "fps": 24.0,
+  "style": "vox-short-2026"
+ },
+ "vox_short_mississippi": {
+  "path": "reference/vox-sample/shorts/0Ng3XddWk2s_the_long_road_to_change_in_mississippi.mp4",
+  "fps": 24.0,
+  "style": "vox-short-2026"
+ },
+ "vox_short_creatine": {
+  "path": "reference/vox-sample/shorts/aH1J_S2U_sk_does_creatine_really_make_you_stronger.mp4",
+  "fps": 23.976023976023978,
+  "style": "vox-short-2026"
+ }
+}

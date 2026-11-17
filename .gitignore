@@ -1,0 +1,84 @@
+# ---------------------------------------------------------------------------------------------------------------
+# Dependencies, caches, build output, machine-local settings
+# ---------------------------------------------------------------------------------------------------------------
+node_modules/
+out/
+.remotion/
+**/__pycache__/
+*.pyc
+tools/.venv/
+tools/voice/models/
+tools/local.env
+tools/analysis/sources.local.json
+.DS_Store
+
+# ---------------------------------------------------------------------------------------------------------------
+# Media: git holds none.
+# The asset library is catalog-only: public/assets/library/catalog.json lists every file with its source and
+# checksum, and `tools/library/fetch.py` downloads it on demand. Textures, SFX and demo audio are generated from
+# fixed seeds. `bash tools/setup.sh` restores everything.
+# The one exception: the gallery previews in examples/ (GIFs of the example scenes, <= 2 MB each, reels <= 4 MB, made by
+# tools/examples/make_gallery.py), so the prompts can show what they make. The release audit enforces the sizes.
+# ---------------------------------------------------------------------------------------------------------------
+public/*
+!public/assets/
+!public/audio/
+!public/textures/
+
+public/assets/*
+!public/assets/library/
+!public/assets/cc0/
+!public/assets/cutouts/
+public/assets/library/*
+!public/assets/library/catalog.json
+!public/assets/library/*.md
+public/assets/cc0/*
+!public/assets/cc0/CREDITS.md
+public/assets/cutouts/*
+!public/assets/cutouts/SOURCES.md
+
+public/textures/*
+!public/textures/README.md
+
+public/audio/*
+!public/audio/*.cues.json
+!public/audio/demo.words.json
+!public/audio/sfx/
+public/audio/sfx/*
+!public/audio/sfx/README.md
+
+# ---------------------------------------------------------------------------------------------------------------
+# Video projects: only the text that defines a video is shared (script, storyboard, research, credits, notes).
+# Voice-overs (yours or the scratch take), music, cues and downloaded assets are rebuilt locally; a user's own
+# reference material and everything cut from it stay private.
+# In a private fork you may delete this block to keep your project media under version control.
+# ---------------------------------------------------------------------------------------------------------------
+video-projects/*/reference/
+video-projects/*/audio/
+video-projects/*/script.parsed.json
+video-projects/*/assets/**
+!video-projects/*/assets/**/
+!video-projects/*/assets/**/*.md
+!video-projects/*/assets/**/*.json
+video-projects/*/assets/ref/
+
+# ---------------------------------------------------------------------------------------------------------------
+# Reference videos and everything derived from them: private study material, never published.
+# Regenerable with tools/source/fetch_reference.py and tools/analysis/* (see analysis/README.md).
+# ---------------------------------------------------------------------------------------------------------------
+reference/
+analysis/frames/
+analysis/segments/
+analysis/sheets/
+analysis/strips/
+analysis/stills/
+analysis/av/
+analysis/compare/
+analysis/audio/*.wav
+# transcripts and word timings are copies of the narration
+analysis/audio/*_words.json
+analysis/audio/*_transcript.md
+analysis/audio/*_phrases.json
+analysis/audio/*_sync.json
+# analyses of a user's own reference (registry ids <slug>__<ref id>, see tools/reference/ingest.py)
+analysis/**/*__*

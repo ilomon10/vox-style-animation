@@ -1,0 +1,13 @@
+# Python packages for tools/ (installed into tools/.venv by `bash tools/setup.sh`).
+# Python 3.10 or newer. The exact set this repository is tested with: tools/requirements.lock.txt.
+numpy>=1.26             # every analysis / audio / texture tool
+pillow>=10.1            # images: library, cut-outs, contact sheets
+scipy>=1.11             # scratch voice-over resampling
+contourpy>=1.2          # tools/assets/scissor_cut.py
+requests>=2.31          # sourcing tools, asset library downloads
+jsonschema>=4.20        # storyboard validation
+faster-whisper>=1.0     # word timing of voice-overs and references
+kokoro-onnx>=0.4.7      # scratch voice-over (Kokoro-82M, Apache-2.0 weights)
+soundfile>=0.12
+rembg[cpu,cli]>=2.0.60  # AI cut-outs (models download on first use; never the default bria-rmbg)
+yt-dlp>=2025.1.1        # references given as a URL (only material you may use)

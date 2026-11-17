@@ -1,0 +1,399 @@
+{
+ "$schema": "../../src/studio/storyboard.schema.json",
+ "version": 1,
+ "title": "How the world agreed on time (framework example: the block gallery)",
+ "fps": 25,
+ "look": "voxEarworm",
+ "vo": {
+  "gainDb": 0
+ },
+ "music": [
+  {
+   "id": "bed",
+   "src": "kit:assets/library/music/serious/music-thinking-music.wav",
+   "kind": "bed",
+   "in": {
+    "sec": 0
+   },
+   "out": {
+    "end": true
+   },
+   "gainDb": -9.2,
+   "fadeInSec": 0.7,
+   "fadeOutSec": 0.04,
+   "ride": true
+  }
+ ],
+ "sfx": [
+  {
+   "src": "sub_boom",
+   "at": {
+    "word": "clock",
+    "edge": "end",
+    "offset": 12
+   },
+   "gainDb": -6,
+   "peak": true
+  }
+ ],
+ "scenes": [
+  {
+   "id": "collage",
+   "recipe": "PhotoCollageUnfold",
+   "start": {
+    "word": "Towns"
+   },
+   "props": {
+    "items": [
+     {
+      "src": "kit:assets/library/maps/cities/map-taunton-birds-eye-1875.jpg",
+      "x": 150,
+      "y": 90,
+      "w": 600,
+      "h": 434,
+      "rotate": -2
+     },
+     {
+      "src": "kit:assets/library/photos/cities/photo-buffalo-main-genesee-1870s.jpg",
+      "x": 1200,
+      "y": 80,
+      "w": 560,
+      "h": 352,
+      "rotate": 2
+     },
+     {
+      "src": "kit:assets/library/photos/cities/photo-buffalo-hazard-block-1870s.jpg",
+      "x": 220,
+      "y": 600,
+      "w": 520,
+      "h": 345,
+      "rotate": 1
+     },
+     {
+      "src": "kit:assets/library/engravings/science/engr-travelers-sundial-1891.jpg",
+      "x": 1300,
+      "y": 520,
+      "w": 400,
+      "h": 408,
+      "rotate": -1.5,
+      "at": {
+       "word": "sun"
+      }
+     }
+    ],
+    "title": "SUN TIME"
+   },
+   "events": [
+    {
+     "id": "title",
+     "at": {
+      "word": "sun",
+      "kind": "text"
+     }
+    }
+   ],
+   "note": "block photo-collage; slot=hook claim=fact (RESEARCH 1)"
+  },
+  {
+   "id": "ident",
+   "recipe": "SeriesIdent",
+   "start": {
+    "word": "clock",
+    "edge": "end",
+    "offset": 12
+   },
+   "props": {
+    "title": "Time Desk",
+    "tagline": "HOW THE WORLD AGREED ON TIME",
+    "style": "card",
+    "holdSec": 3.0,
+    "holeF": 6,
+    "cardColor": "#6B74DE"
+   },
+   "note": "block series-ident; after the question, music alone, then a silence hole and a hard cut"
+  },
+  {
+   "id": "montage",
+   "recipe": "MontageCrane",
+   "start": {
+    "word": "By",
+    "nth": 2
+   },
+   "transitionIn": {
+    "kind": "cut",
+    "hole": 6
+   },
+   "props": {
+    "items": [
+     {
+      "src": "kit:assets/library/cutouts/transport/cut-steam-locomotive-1901.png",
+      "cutout": true,
+      "w": 900,
+      "h": 243,
+      "label": "RAILROADS",
+      "at": {
+       "word": "seventies"
+      }
+     },
+     {
+      "src": "kit:assets/library/cutouts/transport/cut-telegraph-van-1874.png",
+      "cutout": true,
+      "w": 640,
+      "h": 395,
+      "label": "TELEGRAPH",
+      "at": {
+       "word": "telegraph"
+      }
+     },
+     {
+      "src": "kit:assets/library/maps/historical/map-rand-mcnally-railroads-us.jpg",
+      "w": 640,
+      "h": 382,
+      "label": "COAST TO COAST",
+      "at": {
+       "word": "continent"
+      }
+     }
+    ]
+   },
+   "note": "block montage-crane; slot=context claim=fact (RESEARCH 2)"
+  },
+  {
+   "id": "fleming",
+   "recipe": "NameCardInterview",
+   "start": {
+    "word": "Railway"
+   },
+   "props": {
+    "src": "kit:assets/library/portraits/named/portrait-sandford-fleming-1895.jpg",
+    "name": "Sandford Fleming",
+    "title": "Chief engineer",
+    "affiliation": "Canadian Pacific Survey"
+   },
+   "events": [
+    {
+     "id": "resolve",
+     "at": {
+      "word": "Sandford",
+      "kind": "name"
+     }
+    }
+   ],
+   "note": "block name-card; slot=expert claim=person (RESEARCH 3)"
+  },
+  {
+   "id": "plan",
+   "recipe": "DataChart",
+   "start": {
+    "word": "His"
+   },
+   "props": {
+    "mode": "counter",
+    "value": 24,
+    "label": "TIME ZONES · ONE PER HOUR",
+    "ring": true
+   },
+   "events": [
+    {
+     "id": "count",
+     "at": {
+      "word": "twenty-four",
+      "kind": "object"
+     },
+     "until": {
+      "word": "zones",
+      "edge": "end"
+     }
+    }
+   ],
+   "note": "block data-counter; slot=evidence claim=number (RESEARCH 4)"
+  },
+  {
+   "id": "map1883",
+   "recipe": "DocumentHighlight",
+   "start": {
+    "word": "In"
+   },
+   "props": {
+    "src": "kit:assets/library/maps/historical/map-standard-railway-time-1884.jpg",
+    "box": {
+     "x": 300,
+     "y": 60,
+     "w": 1380,
+     "h": 895
+    },
+    "highlights": [
+     {
+      "x": 1147,
+      "y": 124,
+      "w": 291,
+      "h": 48,
+      "at": {
+       "word": "adopted",
+       "kind": "highlight"
+      }
+     }
+    ],
+    "rings": [
+     {
+      "cx": 398,
+      "cy": 710,
+      "rx": 100,
+      "ry": 96,
+      "at": {
+       "word": "Pacific"
+      }
+     },
+     {
+      "cx": 758,
+      "cy": 846,
+      "rx": 100,
+      "ry": 96,
+      "at": {
+       "word": "Mountain"
+      }
+     },
+     {
+      "cx": 1151,
+      "cy": 858,
+      "rx": 100,
+      "ry": 96,
+      "at": {
+       "word": "Central"
+      }
+     },
+     {
+      "cx": 1551,
+      "cy": 704,
+      "rx": 100,
+      "ry": 96,
+      "at": {
+       "word": "Eastern"
+      }
+     }
+    ],
+    "source": "Popular Science Monthly, vol. 26 (1884-85)"
+   },
+   "note": "block document-highlight; slot=evidence claim=document (RESEARCH 5)"
+  },
+  {
+   "id": "resolution",
+   "recipe": "QuoteCard",
+   "start": {
+    "word": "year",
+    "offset": -4
+   },
+   "props": {
+    "quote": "…to adopt a single prime meridian for all nations…",
+    "attribution": "International Meridian Conference, 1884"
+   },
+   "events": [
+    {
+     "id": "type",
+     "at": {
+      "word": "year",
+      "kind": "text"
+     }
+    },
+    {
+     "id": "done",
+     "at": {
+      "word": "nations",
+      "edge": "end"
+     }
+    },
+    {
+     "id": "credit",
+     "at": {
+      "word": "delegates"
+     }
+    }
+   ],
+   "note": "block quote-card; slot=evidence claim=quote (RESEARCH 6)"
+  },
+  {
+   "id": "vote",
+   "recipe": "DataChart",
+   "start": {
+    "word": "Greenwich"
+   },
+   "props": {
+    "mode": "bars",
+    "label": "THE GREENWICH VOTE · 1884",
+    "bars": [
+     {
+      "label": "FOR",
+      "value": 22,
+      "display": "22"
+     },
+     {
+      "label": "AGAINST",
+      "value": 1,
+      "display": "1"
+     },
+     {
+      "label": "ABSTAINED",
+      "value": 2,
+      "display": "2"
+     }
+    ]
+   },
+   "events": [
+    {
+     "id": "count",
+     "at": {
+      "word": "twenty-two",
+      "kind": "object"
+     }
+    }
+   ],
+   "note": "block data-bars; slot=payoff claim=number (RESEARCH 7)"
+  },
+  {
+   "id": "today",
+   "recipe": "FootageClip",
+   "start": {
+    "word": "conference",
+    "offset": -6
+   },
+   "props": {
+    "src": "kit:assets/library/footage/space/film-earth-from-iss-clouds.mp4",
+    "startFromSec": 1,
+    "audio": false,
+    "tag": "NASA",
+    "dateTag": {
+     "text": "TODAY"
+    }
+   },
+   "events": [
+    {
+     "id": "date",
+     "at": {
+      "word": "Today",
+      "kind": "text"
+     }
+    }
+   ],
+   "note": "block footage-clip; slot=turn claim=fact (RESEARCH 8, 9)"
+  },
+  {
+   "id": "end",
+   "recipe": "EndCard",
+   "start": {
+    "word": "That's"
+   },
+   "transitionIn": {
+    "kind": "glitchCut"
+   },
+   "props": {
+    "title": "TIME DESK",
+    "tagline": "A BLOCK GALLERY"
+   },
+   "note": "ending"
+  }
+ ],
+ "end": {
+  "scene": "end",
+  "tailSec": 3.0
+ }
+}
